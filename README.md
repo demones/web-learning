@@ -1,4 +1,4 @@
-My Awesome Book
+H5 学习笔记
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.22
+This book help us to quickly build h5 page. It contain html5 css3 javascript and the front-end technology for web etc.
