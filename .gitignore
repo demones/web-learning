@@ -1,6 +1,5 @@
 ## Dependency directory
-## Commenting this out is preferred by some people, see
-## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+## node
 node_modules
 
 # Book build output
@@ -13,3 +12,4 @@ _book
 
 # WebStorm
 .idea
+.DS_Store
