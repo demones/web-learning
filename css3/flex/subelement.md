@@ -1,14 +1,14 @@
-## Flewbox 子元素属性
+## Flexbox 子元素属性
 
 Flexbox 布局用在子元素上的属性有以下6个
 
 * order 属性是用来控制flex容器中flex子元素的排列顺序。默认情况下flex子元素在flex容器的顺序是按flex子元素出现的顺序排列的。
 属性值为数值，数值越小，排列越靠前，默认为0。
-* flex-grow
-* flex-shrink
-* flex-basis
-* flex
-* align-self
+* flex-grow 这个属性用来指定 flex子元素放大比例
+* flex-shrink 定义了子元素的缩小比例
+* flex-basis 属性定义了在分配多余空间之前，子元素占据的主轴空间（main size）
+* flex 属性flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto
+* align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性
 
 ### order
 属性是用来控制flex容器中flex子元素的排列顺序。默认情况下flex子元素在flex容器的顺序是按flex子元素出现的顺序排列的。

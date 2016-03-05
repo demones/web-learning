@@ -1,5 +1,5 @@
-## Flewbox 容器属性
-Flewbox 容器属性主要有以下六个属性
+## Flexbox 容器属性
+Flexbox 容器属性主要有以下六个属性
 
 * flex-direction  设置flex容器的主轴方向
 * flex-wrap 设置一行或多行布局
@@ -132,7 +132,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
 
 **示例**
 
-左对齐 flex-start 
+左对齐 flex-start
 <div style="display:flex;justify-content: flex-start; border: 1px solid darkcyan;padding: 10px;margin-bottom: 20px;">
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">1</div>
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">2</div>
@@ -140,7 +140,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">4</div>
 </div>
 
-右对齐 flex-end 
+右对齐 flex-end
 <div style="display:flex;justify-content: flex-end; border: 1px solid darkcyan;padding: 10px;margin-bottom: 20px;">
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">1</div>
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">2</div>
@@ -148,7 +148,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">4</div>
 </div>
 
-居中 center 
+居中 center
 <div style="display:flex;justify-content: center; border: 1px solid darkcyan;padding: 10px;margin-bottom: 20px;">
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">1</div>
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">2</div>
@@ -156,7 +156,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">4</div>
 </div>
 
-两端对齐 space-between 
+两端对齐 space-between
 <div style="display:flex;justify-content: space-between; border: 1px solid darkcyan;padding: 10px;margin-bottom: 20px;">
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">1</div>
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">2</div>
@@ -164,7 +164,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">4</div>
 </div>
 
-平均分布 space-around 
+平均分布 space-around
 <div style="display:flex;justify-content: space-around; border: 1px solid darkcyan;padding: 10px;margin-bottom: 20px;">
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">1</div>
   <div style="width:30px;height:30px;border:1px solid darkcyan;text-align:center;">2</div>
@@ -237,8 +237,8 @@ Flex子元素在容器侧轴对齐方式，类似于justify-content，只不过�
 ### align-content
 
 align-content 属性是指flex容器内的每行在flex容器中侧轴排列方式，类似于justify-content在主轴方向单个Flex子元素对齐方式。
-    
-**注意：这个属性只有当flex容器有多行时，flex子元素才生效，如果flex容器只有一行，这个属性没有效果。** 
+
+**注意：这个属性只有当flex容器有多行时，flex子元素才生效，如果flex容器只有一行，这个属性没有效果。**
 所以需要设置 flex-wrap: wrap; 或 flex-wrap: wrap-reverse;
 
 ```
@@ -320,7 +320,7 @@ margin-bottom: 20px;width: 100px;height:200px;flex-wrap: wrap;">
   <div style="width:30px;border:1px solid darkcyan;text-align:center;">4</div>
 </div>
 
-### flex容器无效属性
+### Flexbox容器无效属性
 
 * 所有column-*属性在flex容器上都不生效
 * flex容器上不能使用::first-line和::first-letter伪元素

@@ -1,10 +1,11 @@
 # Summary
 
 * [css3](css3/README.md)
- - [Flewbox 布局详解](css3/flewbox/README.md)
-   * [Flewbox 布局容器属性](css3/flewbox/container.md)
-   * [Flewbox 布局子元素属性](css3/flewbox/subelement.md)
-   * [Flewbox 布局兼容性](css3/flewbox/compatibility.md)
+ - [Flex 布局详解](css3/flex/README.md)
+   * [Flex 布局容器属性](css3/flex/container.md)
+   * [Flex 布局子元素属性](css3/flex/subelement.md)
+   * [Flex 布局兼容性](css3/flex/compatibility.md)
+   * [Flex 布局兼容性续](css3/flex/compatibility2.md)
 * [html5](html5/README.md)
 * [JavaScript](javascript/README.md)
 * [参考资料](reference/README.md)
@@ -13,3 +14,4 @@
  - [git](tools/git.md)
  - [Atom 编辑器使用教程](tools/atom.md)
  - [Markdown 使用帮助](tools/markdown.md)
+ - [SwitchHosts 切换 host](tools/switchHosts.md)
