@@ -8,6 +8,7 @@
    * [Flex 布局兼容性续](css3/flex/compatibility2.md)
 * [html5](html5/README.md)
 * [JavaScript](javascript/README.md)
+ - [es.next 学习笔记](javascript/es.next/README.md)
 * [参考资料](reference/README.md)
 * [相关工具](tools/README.md)
  - [chrome](tools/chrome.md)
@@ -15,3 +16,4 @@
  - [Atom 编辑器使用教程](tools/atom.md)
  - [Markdown 使用帮助](tools/markdown.md)
  - [SwitchHosts 切换 host](tools/switchHosts.md)
+ - [Charles 抓包工具](tools/charles.md)
