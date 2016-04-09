@@ -1,16 +1,15 @@
 {
   "language" : "zh-hans",
   "plugins": [
-      "disqus",
       "-search",
       "search-pro",
       "emphasize",
       "splitter",
       "include-codeblock",
       "tbfed-pagefooter",
-      "toggle-chapters",
       "sectionx",
       "prism",
+      "toggle-chapters",
       "-highlight"
   ],
   "pluginsConfig": {

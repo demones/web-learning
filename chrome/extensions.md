@@ -5,7 +5,7 @@
 
 * [Prism-Pretty](https://github.com/L3au/prism-pretty)
   这是一款非常不错的 JS、CSS 代码格式化高亮的 Chrome 扩展，详细介绍看这里，http://www.v2ex.com/t/164225
-* [Devtools Terminal](https://chrome.google.com/webstore/detail/devtools-terminal/leakmhneaibbdapdoienlkifomjceknl)浏览器终端操作，安装过程稍微有点复杂，按照官方说的一步一步安装即可，需要 nodejs 环境
+* [Devtools Terminal](https://chrome.google.com/webstore/detail/devtools-terminal/leakmhneaibbdapdoienlkifomjceknl)浏览器终端操作，安装过程稍微有点复杂，按照官方说的一步一步安装即可，需要 nodejs 环境，参考帮助文档 http://blog.dfilimonov.com/2013/09/12/devtools-terminal.html
 * [Eye Dropper](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) 吸取网页中的颜色
 * [BrowserStack Local](https://chrome.google.com/webstore/detail/browserstack-local/mfiddfehmfdojjfdpfngagldgaaafcfo) 本地测试app，没搞明白怎么用，待研究
 * [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler/jlpkojjdgbllmedoapgfodplfhcbnbpn) ——画一把尺子以得到像素维数和定位，并测量任何网页上的元素。
@@ -19,7 +19,6 @@
 
 ## 开发者工具
 
-* [Chrome-DevTools](https://github.com/L3au/CN-Chrome-DevTools) 中文翻译，不是很全
 * [像Sublime Text一样使用Chrome DevTools](http://mp.weixin.qq.com/s?__biz=MjM5OTkwOTA5Mw==&mid=407509981&idx=1&sn=eeed81afcad7389bdf5da3ee622bab33&scene=0#wechat_redirect)
 * [chrome-devtools-zerodarkmatrix-theme](https://github.com/mauricecruz/chrome-devtools-zerodarkmatrix-theme) 该主题不错
 * [greybeard-devtools](https://github.com/xero/greybeard-devtools)

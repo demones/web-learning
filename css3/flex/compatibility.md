@@ -14,7 +14,7 @@
 * Android 4.4+
 * iOS 7.1+ (prefixed with -webkit-)
 
-更多关于 flexbox 兼容型可以从 [Can I Use](http://caniuse.com/) 中查看
+更多关于 flexbox 兼容型可以从 [Can I Use](http://caniuse.com/) 中查看 http://caniuse.com/#feat=flexbox
 
 <iframe height="380px" src="http://caniuse.com/flexbox/embed" width="100%"></iframe>
 
