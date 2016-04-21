@@ -53,7 +53,7 @@ transform:  <transform-function> [<transform-function>]* | none
 
 ### 例子
 
-[各种属性值实例](../../examples/css3/animation/transform.html)
+[各种属性值实例](../../examples/css3/animation/transform/transform.html)
 
 transform运用多个属性值例子
 
@@ -128,7 +128,7 @@ transform-style属性可以指定该元素在三维空间（3D）中展示，还
 
 transform-style属性需要设置在父元素中，并且高于任何嵌套的变形元素。
 
-[实例](../../examples/css3/animation/transform-style.html)
+[实例](../../examples/css3/animation/transform/transform-style.html)
 
 从上面的实例可以看出，当元素.rotate设置了flat值时，其子元素img不会根据translateZ()值摊开，而在同一平面旋转；当元素.rotate设置了preserve-3d值时，其子元素img会根据translateZ()值摊开，不再会堆叠在一起。
 
@@ -142,7 +142,7 @@ perspective 属性对于3D变形来说至关重要。该属性会设置查看者
 
 上面的描述可能让人难以理解，其实对于perspective属性，我们可以简单的理解为视距，用来设置用户和元素3D空间Z平面之间的距离。而其效应由他的值来决定，值越小，用户与3D空间Z平面距离越近，3D视觉效果更令人印象深刻；反之，值越大，用户与3D空间Z平面距离越远，3D视觉效果就很小。
 
-[实例](../../examples/css3/animation/perspective.html)
+[实例](../../examples/css3/animation/transform/perspective.html)
 
 从上面的例子中可以看出，当没有设置 perspective 时，3d 属性值是不起作用的。
 
@@ -171,7 +171,7 @@ perspective属性包括两个属性值：none和具有单位的长度值。其�
 
 比如你站在10英尺和1000英尺的地方看一个10英尺的立方体。在10英尺的地方，你距离立方体是一样的尺寸。因此视角转变远远大于站在1000英尺处的，立体尺寸是你距离立方体距离的百分之一。同样的思维适用于perspective的<length>值。我们一起来看一个实例，来加强这方面的理解：
 
-[实例2](../../examples/css3/animation/perspective2.html)
+[实例2](../../examples/css3/animation/transform/perspective2.html)
 
 
 ### perspective 属性 与 transform 属性函数值 perspective 的区别
@@ -196,7 +196,7 @@ perspective属性包括两个属性值：none和具有单位的长度值。其�
 
 看以下例子：
 
-[实例3](../../examples/css3/animation/perspective3.html)
+[实例3](../../examples/css3/animation/transform/perspective3.html)
 
 从上面的例子可以看出，虽然书写的形式，属性名称不一致，但是效果却一样。
 
@@ -227,7 +227,7 @@ perspective-origin：[<percentage> | <length> | left | center | right | top | bo
 
 ### 示例
 
-[例子](../../examples/css3/animation/perspective3.html)
+[例子](../../examples/css3/animation/transform/perspective3.html)
 
 该示例来至于 https://css-tricks.com/almanac/properties/p/perspective-origin/
 
@@ -251,15 +251,15 @@ backface-visibility: hidden
 
 简单点来说，backface-visibility 属性可用于隐藏内容的背面。默认情况下，背面可见，这意味着即使在翻转后，旋转的内容仍然可见。但当 backface-visibility 设置为hidden时，旋转后内容将隐藏，因为旋转后正面将不再可见。该功能可帮助您模拟多面的对象，例如下例中使用的纸牌。通过将backface-visibility设置为hidden，您可以轻松确保只有正面可见。
 
-[扑克牌翻转例子](../../examples/css3/animation/backface-visibility.html)
+[扑克牌翻转例子](../../examples/css3/animation/transform/backface-visibility.html)
 
 下面我们再看一个例子，通过3D立方体的展示来说明 backface-visibility 的用法
 
-[3D立方体](../../examples/css3/animation/backface-visibility2.html)
+[3D立方体](../../examples/css3/animation/transform/backface-visibility2.html)
 
 ## 3D 翻转例子
 该例子来至于互联网
-[3D翻转](../../examples/css3/animation/Cubelnformation/)
+[3D翻转](../../examples/css3/animation/transform/Cubelnformation/)
 
 ## 参考文章
 

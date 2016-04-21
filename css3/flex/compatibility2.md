@@ -113,6 +113,8 @@
 
 ### flex 属性flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto
 
+下面以 flex 来给出其兼容性写法，注意： <span style="color: #F10C49">**子元素必须是 display 为 block**</span>
+
 <div class="flex-container container-demo">
   <div class="item-demo box-flex-1">flex:1</div>
   <div class="item-demo box-flex-2">flex:2</div>

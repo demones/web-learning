@@ -31,6 +31,7 @@
 * [Flewbox 相关文章](http://www.w3cplus.com/blog/tags/157.html)
 * [Flexbox 非常容易 制作 CSS 布局](http://www.tuicool.com/articles/quQVv2)
 * [Flex弹性布局在移动设备上的应用](http://my.oschina.net/yinyongcom666/blog/151085)
+* [Flexbox 非常容易 制作 CSS 布局](http://www.tuicool.com/articles/quQVv2)
 
 ## 兼容性写法例子
 <style>
