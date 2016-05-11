@@ -1,0 +1,14 @@
+## Dependency directory
+node_modules
+
+# GitBook source
+_book
+.DS_Store
+
+# eBook build output
+*.epub
+*.mobi
+*.pdf
+
+# WebStorm
+.idea
