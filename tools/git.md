@@ -67,18 +67,19 @@
 
 ## 快速把代码发布到 Github Pages
 
-假设你要发布的内容位于 dist 下，首先需要把 .gitignore 中已或略的文件 dist 去掉，然后执行以下命令
+假设你要发布的内容位于 _book 下，首先需要把 .gitignore 中已或略的文件 _book 去掉，然后执行以下命令
 
 ```
-git add dist
-git subtree push --prefix=dist origin gh-pages
+git add _book
+git commit -m "add dist"
+git subtree push --prefix=_book origin gh-pages
 ```
 
 
-发布完后，执行以下命令，把 dist 从 git 暂存区中删除，注意，如果不加 --cached，表示除了从暂存区中删除，还会物理删除该文件夹
+发布完后，执行以下命令，把 _book 从 git 暂存区中删除，注意，如果不加 --cached，表示除了从暂存区中删除，还会物理删除该文件夹
 
 ```
-git rm --cached dist
+git rm --cached _book
 ```
 
 同时恢复 .gitignore
