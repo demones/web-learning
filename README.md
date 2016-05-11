@@ -1,5 +1,4 @@
-H5 学习笔记
+web 前端学习笔记
 =======
 
-This book help us to quickly build h5 page. It contain html5 css3 javascript and the front-end technology for web etc.
-
+This book help us to quickly build web front-end page. It contain html5 css3 javascript and the front-end technology for web etc.

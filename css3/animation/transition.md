@@ -139,9 +139,6 @@ a {
 [import, demo2.html](../../examples/css3/animation/transition/demo2.html)
 
 
-
-
-
 ## 参考文章
 
 * http://www.w3cplus.com/content/css3-transition

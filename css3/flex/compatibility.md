@@ -292,7 +292,34 @@
 
 [import:1-15, flex-direction.md](../../codes/flex/flex-direction.md)
 
-### 一行或多行布局（没有找到更好的兼容型写法，有 box-lines 属性，但支持性不是很好）
+### 多列和多行布局（没有找到更好的兼容型写法，有 box-lines 属性，但支持性不是很好）
+如果想要实现多行和多列布局，我们可以采取 float 布局来实现。也可以通过判断 flex-wrap 支持性来动态设置 css 样式
+
+```javascript
+  /**
+   * 判断样式在浏览器中是否支持
+   * @param styleProp
+   * @returns {boolean}
+   */
+  function styleSupport(styleProp) {
+    const prefix = ['webkit', 'moz', 'ms'];
+    const $el = document.createElement('div');
+    const styleText = $el.style;
+    if (styleText[styleProp] !== undefined) {
+      return true;
+    }
+
+    for (let i = 0; i < 3; i++) {
+      const _styleProp = prefix[i] + styleProp[0].toUpperCase() + styleProp.substring(1);
+      if (styleText[_styleProp] !== undefined) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  styleSupport('flexWrap');
+```
 
 ### 主轴方向对齐方式
 
