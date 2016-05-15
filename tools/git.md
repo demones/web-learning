@@ -64,6 +64,14 @@
 
 2. 撤销已经同步到服务器的提交
 
+### 推送 'git push'
+
+1. 删除远程分支和tag
+  ```
+  git push origin --delete <branchName>
+  git push origin --delete tag <tagname>
+  ```
+
 
 ### git subtree
 
@@ -111,32 +119,51 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
 对于 master 和 gh-pages 中的内容一样的情况下，这种实现尚且可以，如果不一样，我们就得复制来复制去，很麻烦，还容易出错，
 有了 `git subtree` 后，一切变得是那么简单。下面看具体实现（以 gitbook 的生成为例）
 
-1. 首先需要在 github 中创建分支 gh-pages ，当然本地创建后再同步到服务器端也可以。本人建议直接在 github 中创建，这样会更便捷些。
+1. 首先需要在本地或 github 中创建分支 gh-pages，如果要发布到 gh-pages 分支与 master 上的内容不同，首先需要删除分支中的内容，执行命令为
+
+  ```
+  git checkout gh-pages
+  //利用命令或手动删除不需要放到 gh-pages 分支中的内容
+  git add -A
+  git commit -m "clear gh-pages"
+  git push （如果远程分支 gh-pages 不存在的话，命令是 git push --set-upstream origin gh-pages）
+  git checkout master
+  ```
+
 2. 把分支 gh-pages 添加到本地 subtree 中
 
   ```
-  git subtree add --prefix=_book --squash origin gh-pages
+  git subtree add --prefix=_book origin gh-pages --squash
   ```
 
-3. 往 github pages 上提交的内容位于 _book 下，该目录是不需要提交到 master 上的，所以首先需要把 .gitignore 中已或略的文件 _book 去掉，当然如果 _book 也想提交到 master 分支中，则不用修改 .gitignore
+3. 执行 `gitbook build` 重新在目录 _book 中生成 gitbook 文件，注意：** 2 和 3 的顺序颠倒也是可以的**
 
-4. 修改 _book 文件后，执行以下命令，提交修改的文件
+4. 执行以下命令，提交修改的文件
 
   ```
   git add -A _book
-  git commit -m "Update _book"
-  git subtree push --prefix=_book origin gh-pages
+  git commit -m "Update gitbook"
   ```
+  如果_book 在 master 分支上是忽略提交的（即在 .gitignore 中有此过滤条件），需要添加 `-f` 参数来提交
+
+  ```
+  git add -A -f _book
+  git commit -m "Update gitbook"
+  ```
+
 5. push 到远程 gh-pages 分支中
   ```
   git subtree push --prefix=_book origin gh-pages --squash
   ```
 
-6. 同时恢复 .gitignore
-7. 远程的分支有更新了，拉下来合并
+  如果本地与远程不同步，需要执行
   ```bash
-  $ git subtree pull --prefix=_book origin gh-pages --squash
+  git subtree pull --prefix=_book origin gh-pages --squash
   ```
+  所以建议先 pull 再 push，这样确保本地与远程同步
+
+6. 下次修改 _book 文件夹下的内容，只需从上面第三步执行即可。
+
 
 ## 在 mac 系统下，终端（terminal）显示分支等版本信息的设置
 
