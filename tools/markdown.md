@@ -2,6 +2,7 @@
 
 * [Markdown 基本语法](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 * [Markdown 高级语法](https://help.github.com/articles/working-with-advanced-formatting/)
+* [语法高亮格式](https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown)
 
 ## Markdown 编辑器
 

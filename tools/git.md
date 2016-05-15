@@ -54,35 +54,141 @@
 
 ### 提交 `git commit`
 
-### 撤销上一次的 commit
+1. 撤销上一次的 commit
 
-`git reset --soft HEAD~1` 后面数字可以看作是取消的 commit 次数，--soft 参数表示只取消 commit 但保留文件的修改（相当于git add 之后的的状态），如果你想连修改都不要的话就用 --hard 参数。
+  `git reset --soft HEAD~1` 后面数字可以看作是取消的 commit 次数，--soft 参数表示只取消 commit 但保留文件的修改（相当于git add 之后的的状态），如果你想连修改都不要的话就用 --hard 参数。
 
-取消上一次操作，还可以这样 `git reset HEAD^`
+  取消上一次操作，还可以这样 `git reset HEAD^`
 
-根据每次版本 hashId 来撤销，首先执行 `git log` ，找到要恢复的 hashId，然后 `git reset --hard hashId`
+  根据每次版本 hashId 来撤销，首先执行 `git log` ，找到要恢复的 hashId，然后 `git reset --hard hashId`
 
-### 撤销已经同步到服务器的提交
+2. 撤销已经同步到服务器的提交
 
+
+### git subtree
+
+在 git 版本 1.7.9.4 中，引入了 git-subtree，基本是用于替换 git-submodule。git-submodule 处理太复杂，git-subtree 因此应运而生。git 官方也推荐尽量采用 git-subtree。
+
+git subtree 不只是可以引用其他的仓库，也可以引用自己仓库下不同的分支，这样就可以在当前分支下处理其他分支了，一个重要的应用，
+就是把代码发布到 Github Pages 上，不用来回的切换分支了，下面也会着重介绍怎样快速把代码发布到 Github Pages。
+
+下面看 git subtree 的一些基本操作，以下操作为两个不同的仓库，同一仓库不同的分支，可以参考“快速把代码发布到 Github Pages”一节
+
+1. clone 一个远程仓库 dotfiles 到你本地
+
+  ```bash
+  $ git clone git@github.com:username/dotfiles.git
+  $ cd dotfiles
+  ```
+
+2. 增加一个 subtree bash
+  ```bash
+  $ git remote add bash git@github.com:username/bash.git  # bash 可以理解为远程仓库的别名
+  $ git subtree add pull -P home/bash bash master --squash # 拉取远程仓库 bash 到本地仓库的home/bash 目录  
+  ```
+
+3. 修改 subtree bash 下代码然后提交到远程 bash 的 master分支
+
+  ```bash
+  ...... edit home/bash/file......
+  $ git commit -a -m 'update bash content'
+  $ git subtree push -P home/bash bash master
+  $ git push origin master # 顺便主项目也 push
+  ```
+
+4. 远程的子项目有更新了，拉下来合并
+  ```bash
+  $ git subtree pull -P home/bash bash master --squash
+  ```
+5. 参考
+  * http://havee.me/linux/2012-07/the-git-advanced-subtree.html
+  * http://aoxuis.me/post/2013-08-06-git-subtree
+  * https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt
 
 ## 快速把代码发布到 Github Pages
+这里要利用到 `git subtree` 命令来实现。首先我们想一想，如果不借助于 `git subtree` ，通常做法是怎样来处理的。
+我们首先需要创建分支 gh-pages, 然后切换到该分支下，最后把文件提交到 gh-pages 分支中。
+对于 master 和 gh-pages 中的内容一样的情况下，这种实现尚且可以，如果不一样，我们就得复制来复制去，很麻烦，还容易出错，
+有了 `git subtree` 后，一切变得是那么简单。下面看具体实现（以 gitbook 的生成为例）
 
-假设你要发布的内容位于 _book 下，首先需要把 .gitignore 中已或略的文件 _book 去掉，然后执行以下命令
+1. 首先需要在 github 中创建分支 gh-pages ，当然本地创建后再同步到服务器端也可以。本人建议直接在 github 中创建，这样会更便捷些。
+2. 把分支 gh-pages 添加到本地 subtree 中
 
-```
-git add _book
-git commit -m "add dist"
-git subtree push --prefix=_book origin gh-pages
-```
+  ```
+  git subtree add --prefix=_book --squash origin gh-pages
+  ```
+
+3. 往 github pages 上提交的内容位于 _book 下，该目录是不需要提交到 master 上的，所以首先需要把 .gitignore 中已或略的文件 _book 去掉，当然如果 _book 也想提交到 master 分支中，则不用修改 .gitignore
+
+4. 修改 _book 文件后，执行以下命令，提交修改的文件
+
+  ```
+  git add -A _book
+  git commit -m "Update _book"
+  git subtree push --prefix=_book origin gh-pages
+  ```
+5. push 到远程 gh-pages 分支中
+  ```
+  git subtree push --prefix=_book origin gh-pages
+  ```
+
+6. 同时恢复 .gitignore
+
+## 在 mac 系统下，终端（terminal）显示分支等版本信息的设置
+
+* 方法一： 在 ~/.bash_profile 中添加以下脚本（如果不存在~/.bash_profile则创建，命令为： `touch ~/.bash_profile`）
+  ```
+  parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+  }
+  export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+  ```
+* 方法二：也是在 ~/.bash_profile 中添加脚本
+  主要实现有：
+    * 显示当前路径
+    * 显示当前所在分支
+    * 显示当前修改状态
+      *   = 表示一个干净的分支
+      *   ~ 表示文件有改动
+      *   * 表示文件有增加或删除 但未 commit
+      *   + 表示有新文件
+      *   # 表示已commit 但未 push
+
+  ```
+  function parse_git_dirty {
+    local git_status=$(git status 2> /dev/null | tail -n1) || $(git status 2> /dev/null | head -n 2 | tail -n1);
+    if [[ "$git_status" != "" ]]; then
+        local git_now; # 标示
+        if [[ "$git_status" =~ nothing\ to\ commit || "$git_status" =~  Your\ branch\ is\ up\-to\-date\ with ]]; then
+            git_now="=";
+        elif [[ "$git_status" =~ Changes\ not\ staged || "$git_status" =~ no\ changes\ added ]]; then
+            git_now='~';
+        elif [[ "$git_status" =~ Changes\ to\ be\ committed ]]; then #Changes to be committed
+            git_now='*';
+        elif [[ "$git_status" =~ Untracked\ files ]]; then
+            git_now="+";
+        elif [[ "$git_status" =~ Your\ branch\ is\ ahead ]]; then
+            git_now="#";
+        fi
+        echo "${git_now}";
+    fi
+  }
+
+  function git_branch {
+      ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
+      echo "("${ref#refs/heads/}") ";
+  }
 
 
-发布完后，执行以下命令，把 _book 从 git 暂存区中删除，注意，如果不加 --cached，表示除了从暂存区中删除，还会物理删除该文件夹
+  export PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;31m\]\$(parse_git_dirty)\[\033[0m\]$ "
 
-```
-git rm --cached _book
-```
-
-同时恢复 .gitignore
+  ```
+* 方法三： 推荐使用强大的 zsh https://github.com/robbyrussell/oh-my-zsh
+  比较好的主题
+  * robbyrussell 官方默认的
+  * blinks 每次执行命令时，背景高亮显示
+  * ys 可以显示时间
+  * pygmalion 样式风格不错
 
 ## Github
 
