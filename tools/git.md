@@ -129,7 +129,7 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   ```
 5. push 到远程 gh-pages 分支中
   ```
-  git subtree push --prefix=_book origin gh-pages
+  git subtree push --prefix=_book origin gh-pages --squash
   ```
 
 6. 同时恢复 .gitignore

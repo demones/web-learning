@@ -1,0 +1,1104 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book web 前端学习笔记 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>动画 animation | web 前端学习笔记</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search-pro/search-pro.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../css3/animation/compatibility.html" />
+    
+    
+    <link rel="prev" href="../../css3/animation/transition.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="1.2.3"
+        data-chapter-title="动画 animation"
+        data-filepath="css3/animation/animation.md"
+        data-basepath="../.."
+        data-revision="Sun May 15 2016 14:04:08 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="css3/index.html">
+            
+                
+                    <a href="../../css3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        css3
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="css3/flex/index.html">
+            
+                
+                    <a href="../../css3/flex/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Flex 布局详解
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="css3/flex/container.html">
+            
+                
+                    <a href="../../css3/flex/container.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Flex 布局容器属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="css3/flex/subelement.html">
+            
+                
+                    <a href="../../css3/flex/subelement.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Flex 布局子元素属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="css3/flex/compatibility.html">
+            
+                
+                    <a href="../../css3/flex/compatibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        Flex 布局兼容性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="css3/flex/compatibility2.html">
+            
+                
+                    <a href="../../css3/flex/compatibility2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.4.</b>
+                        
+                        Flex 布局兼容性续
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="css3/animation/index.html">
+            
+                
+                    <a href="../../css3/animation/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        css3 动画
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="css3/animation/transform.html">
+            
+                
+                    <a href="../../css3/animation/transform.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        变形 transform
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="css3/animation/transition.html">
+            
+                
+                    <a href="../../css3/animation/transition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        转换 transition
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="css3/animation/animation.html">
+            
+                
+                    <a href="../../css3/animation/animation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.3.</b>
+                        
+                        动画 animation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="css3/animation/compatibility.html">
+            
+                
+                    <a href="../../css3/animation/compatibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.4.</b>
+                        
+                        css3 动画兼容性
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="html5/index.html">
+            
+                
+                    <a href="../../html5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        html5
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="javascript/index.html">
+            
+                
+                    <a href="../../javascript/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        JavaScript
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="javascript/es.next/index.html">
+            
+                
+                    <a href="../../javascript/es.next/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        es.next 学习笔记
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="javascript/standard/index.html">
+            
+                
+                    <a href="../../javascript/standard/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        JavaScript 代码规范
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="javascript/test/index.html">
+            
+                
+                    <a href="../../javascript/test/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        JavaScript 单元测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="javascript/react/index.html">
+            
+                
+                    <a href="../../javascript/react/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        React ecosystem
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="plugins/index.html">
+            
+                
+                    <a href="../../plugins/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        插件与框架
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chrome/index.html">
+            
+                
+                    <a href="../../chrome/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Chrome 相关
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chrome/devtools.html">
+            
+                
+                    <a href="../../chrome/devtools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Chrome 开发者工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chrome/extensions_development.html">
+            
+                
+                    <a href="../../chrome/extensions_development.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Chrome extensions 开发
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chrome/app.html">
+            
+                
+                    <a href="../../chrome/app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Chrome app 开发
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chrome/extensions.html">
+            
+                
+                    <a href="../../chrome/extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Chrome 扩展程序
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="reference/index.html">
+            
+                
+                    <a href="../../reference/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        参考资料
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="tools/index.html">
+            
+                
+                    <a href="../../tools/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        相关工具
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="tools/git.html">
+            
+                
+                    <a href="../../tools/git.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        git
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="tools/atom.html">
+            
+                
+                    <a href="../../tools/atom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Atom 编辑器使用教程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="tools/markdown.html">
+            
+                
+                    <a href="../../tools/markdown.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Markdown 使用帮助
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="tools/switchHosts.html">
+            
+                
+                    <a href="../../tools/switchHosts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        SwitchHosts 切换 host
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="tools/charles.html">
+            
+                
+                    <a href="../../tools/charles.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        Charles 抓包工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="tools/mac.html">
+            
+                
+                    <a href="../../tools/mac.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        Mac 学习笔记
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="tools/codelint.html">
+            
+                
+                    <a href="../../tools/codelint.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        规范化代码风格插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="tools/WebStorm.html">
+            
+                
+                    <a href="../../tools/WebStorm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        WebStorm
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >web 前端学习笔记</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="css-&#x52A8;&#x753B;--animation-&#x52A8;&#x753B;&#x6548;&#x679C;">css &#x52A8;&#x753B; - animation &#x52A8;&#x753B;&#x6548;&#x679C;</h1>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>animation &#x52A8;&#x753B;&#x662F;&#x5229;&#x7528; css3 &#x4E2D;&#x7684; animation &#x548C; keyframes  &#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;animation &#x662F;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x540D;&#x79F0;&#x3001;
+&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x3001;&#x52A8;&#x753B;&#x9891;&#x7387;&#x3001;&#x52A8;&#x753B;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x3001;&#x662F;&#x5426;&#x5FAA;&#x73AF;&#x64AD;&#x653E;&#x3001;&#x52A8;&#x753B;&#x65B9;&#x5F0F;&#x7B49;&#x3002;&#x800C; keyframes &#x4FD7;&#x79F0;&#x201C;&#x5173;&#x952E;&#x5E27;&#x201D;&#x662F;&#x6765;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x64AD;&#x653E;&#x5404;&#x5E27;&#x6548;&#x679C;&#x7684;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E; flash &#x4E2D;&#x7684;&#x5E27;&#x3002;</p>
+<h2 id="keyframes">keyframes</h2>
+<p>Keyframes &#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x662F;&#x7531;&quot;@keyframes&quot;&#x5F00;&#x5934;&#xFF0C;&#x540E;&#x9762;&#x7D27;&#x63A5;&#x7740;&#x662F;&#x8FD9;&#x4E2A;&#x201C;&#x52A8;&#x753B;&#x7684;&#x540D;&#x79F0;&#x201D;&#x52A0;&#x4E0A;&#x4E00;&#x5BF9;&#x82B1;&#x62EC;&#x53F7;&#x201C;{}&#x201D;&#xFF0C;&#x62EC;&#x53F7;&#x4E2D;&#x5C31;&#x662F;&#x4E00;&#x4E9B;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x6BB5;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#xFF0C;&#x6709;&#x70B9;&#x50CF;&#x6211;&#x4EEC;css&#x7684;&#x6837;&#x5F0F;&#x5199;&#x6CD5;&#x4E00;&#x6837;&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&quot;@keyframes&quot;&#x4E2D;&#x7684;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#x662F;&#x7531;&#x591A;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#x6784;&#x6210;&#x7684;&#xFF0C;&#x5982;&#x201C;0%&#x201D;&#x5230;&quot;100%&quot;&#x4E4B;&#x95F4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x89C4;&#x5219;&#x4E2D;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x5206;&#x522B;&#x7ED9;&#x6BCF;&#x4E00;&#x4E2A;&#x767E;&#x5206;&#x6BD4;&#x4E2D;&#x7ED9;&#x9700;&#x8981;&#x6709;&#x52A8;&#x753B;&#x6548;&#x679C;&#x7684;&#x5143;&#x7D20;&#x52A0;&#x4E0A;&#x4E0D;&#x540C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4ECE;&#x800C;&#x8BA9;&#x5143;&#x7D20;&#x8FBE;&#x5230;&#x4E00;&#x79CD;&#x5728;&#x4E0D;&#x65AD;&#x53D8;&#x5316;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x79FB;&#x52A8;&#xFF0C;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x989C;&#x8272;&#xFF0C;&#x4F4D;&#x7F6E;&#xFF0C;&#x5927;&#x5C0F;&#xFF0C;&#x5F62;&#x72B6;&#x7B49;&#xFF0C;&#x4E0D;&#x8FC7;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x201C;from&#x201D;&#x548C;&#x201C;to&#x201D;&#x6765;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x662F;&#x4ECE;&#x54EA;&#x5F00;&#x59CB;&#xFF0C;&#x5230;&#x54EA;&#x7ED3;&#x675F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8FD9;&#x4E2A; &quot;from&quot;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&quot;0%&quot;&#x800C;&quot;to&quot;&#x76F8;&#x5F53;&#x4E8E;&quot;100%&quot;,&#x503C;&#x5F97;&#x4E00;&#x8BF4;&#x7684;&#x662F;&#xFF0C;&#x5176;&#x4E2D;&quot;0%&quot;&#x4E0D;&#x80FD;&#x50CF;&#x522B;&#x7684;&#x5C5E;&#x6027;&#x53D6;&#x503C;&#x4E00;&#x6837;&#x628A;&#x767E;&#x5206;&#x6BD4;&#x7B26;&#x53F7;&#x7701;&#x7565;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x5FC5;&#x987B;&#x52A0;&#x4E0A;&#x767E;&#x5206;&#x7B26;&#x53F7;&#xFF08;&#x201C;%&#x201D;&#xFF09;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x52A0;&#x4E0A;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;keyframes&#x662F;&#x65E0;&#x6548;&#x7684;&#xFF0C;&#x4E0D;&#x8D77;&#x4EFB;&#x4F55;&#x4F5C;&#x7528;&#x3002;&#x56E0;&#x4E3A;keyframes&#x7684;&#x5355;&#x4F4D;&#x53EA;&#x63A5;&#x53D7;&#x767E;&#x5206;&#x6BD4;&#x503C;&#x3002;</p>
+<p>keyframes&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x6765;&#x51B3;&#x5B9A;Animation&#x52A8;&#x753B;&#x53D8;&#x5316;&#x7684;&#x5173;&#x952E;&#x4F4D;&#x7F6E;&#x3002;&#x5176;&#x5177;&#x4F53;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-css"> <span class="token property">keyframes-rule</span><span class="token punctuation">:</span> &apos;<span class="token atrule">@keyframes&apos; IDENT &apos;</span><span class="token punctuation">{</span><span class="token string">&apos; keyframes-blocks &apos;</span><span class="token punctuation">}</span>&apos;<span class="token punctuation">;</span>
+ <span class="token property">keyframes-blocks</span><span class="token punctuation">:</span> [ keyframe-selectors block ]* <span class="token punctuation">;</span>
+ <span class="token property">keyframe-selectors</span><span class="token punctuation">:</span> [ <span class="token string">&apos;from&apos;</span> | <span class="token string">&apos;to&apos;</span> | PERCENTAGE ] [ <span class="token string">&apos;,&apos;</span> [ <span class="token string">&apos;from&apos;</span> | <span class="token string">&apos;to&apos;</span> | PERCENTAGE ] ]*<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5206;&#x5F00;&#x5C55;&#x793A;&#x5176;&#x8BED;&#x6CD5;&#x4E3A;</p>
+<pre><code class="lang-css">   <span class="token atrule">@keyframes animation-name</span> <span class="token punctuation">{</span>
+     <span class="token selector">from </span><span class="token punctuation">{</span>
+       <span class="token property">properties</span><span class="token punctuation">:</span> properties value<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token selector">percentage </span><span class="token punctuation">{</span>
+       <span class="token property">properties</span><span class="token punctuation">:</span> properties value<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token selector">to </span><span class="token punctuation">{</span>
+       <span class="token property">properties</span><span class="token punctuation">:</span> properties value<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+   //&#x6216;&#x8005;&#x5168;&#x90E8;&#x5199;&#x6210;&#x767E;&#x5206;&#x6BD4;&#x7684;&#x5F62;&#x5F0F;
+   <span class="token atrule">@keyframes IDENT</span> <span class="token punctuation">{</span>
+      <span class="token selector">0% </span><span class="token punctuation">{</span>
+         <span class="token property">properties</span><span class="token punctuation">:</span> properties value<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token selector">Percentage </span><span class="token punctuation">{</span>
+         <span class="token property">properties</span><span class="token punctuation">:</span> properties value<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token selector">100% </span><span class="token punctuation">{</span>
+         <span class="token property">properties</span><span class="token punctuation">:</span> properties value<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="animation">animation</h2>
+<p>animation &#x662F;&#x5982;&#x4E0B;&#x5C5E;&#x6027;&#x7684;&#x7B80;&#x5199;&#x5F62;&#x5F0F;&#xFF1A;animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction &#x548C; animation-fill-mode.</p>
+<p>&#x5404;&#x5C5E;&#x6027;&#x521D;&#x59CB;&#x503C;&#x4E3A;</p>
+<ul>
+<li>animation-name: none</li>
+<li>animation-duration: 0s</li>
+<li>animation-timing-function: ease</li>
+<li>animation-delay: 0s</li>
+<li>animation-iteration-count: 1</li>
+<li>animation-direction: normal</li>
+<li>animation-fill-mode: none</li>
+<li>animation-play-state: runnin</li>
+</ul>
+<p>animation &#x9002;&#x5E94;&#x4E8E;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x5305;&#x62EC;&#x4F2A;&#x7C7B; after &#x548C; before</p>
+<p>&#x4E0B;&#x9762;&#x5206;&#x522B;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x7528;&#x6CD5;</p>
+<h3 id="1-animationname">1. animation-name:</h3>
+<p>&#x8BED;&#x6CD5;</p>
+<p><code>animation-name: none | IDENT[,none | IDENT]*;</code></p>
+<p>&#x53D6;&#x503C;&#x8BF4;&#x660E;</p>
+<p>animation-name: &#x662F;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5176;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;&#x503C;&#xFF1A;IDENT&#x662F;&#x7531;Keyframes&#x521B;&#x5EFA;&#x7684;&#x52A8;&#x753B;&#x540D;&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#x6B64;&#x5904;&#x7684;IDENT
+&#x8981;&#x548C;Keyframes&#x4E2D;&#x7684;IDENT&#x4E00;&#x81F4;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4E00;&#x81F4;,&#x5C06;&#x4E0D;&#x80FD;&#x5B9E;&#x73B0;&#x4EFB;&#x4F55;&#x52A8;&#x753B;&#x6548;&#x679C;&#xFF1B;none&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5F53;&#x503C;&#x4E3A;none&#x65F6;&#xFF0C;&#x5C06;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;
+&#x53E6;&#x5916;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x8DDF;&#x524D;&#x9762;&#x6240;&#x8BB2;&#x7684;transition&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x9644;&#x51E0;&#x4E2A;animation&#x7ED9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x7528;&#x9017;&#x53F7;&#x201C;&#xFF0C;&#x201D;&#x9694;&#x5F00;&#x3002;</p>
+<h3 id="2-animationduration&#xFF1A;">2. animation-duration&#xFF1A;</h3>
+<p>&#x8BED;&#x6CD5;</p>
+<p><code>animation-duration: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>[,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>]*</code></p>
+<p>&#x53D6;&#x503C;&#x8BF4;&#x660E;</p>
+<p>animation-duration&#x662F;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x64AD;&#x653E;&#x52A8;&#x753B;&#x6240;&#x6301;&#x7EED;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x53D6;&#x503C;: <time>&#x4E3A;&#x6570;&#x503C;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;s&#xFF08;&#x79D2;.&#xFF09;&#x5176;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; &#x201C;0&#x201D;&#x3002;
+&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x8DDF;transition&#x4E2D;&#x7684;transition-duration&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</time></p>
+<h3 id="3-animationtimingfunction">3. animation-timing-function:</h3>
+<p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-css">   <span class="token property">animation-timing-function</span><span class="token punctuation">:</span>ease | linear | ease-in | ease-out | ease-in-out |
+   <span class="token function">cubic-bezier</span>(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;) [, ease | linear | ease-in | ease-out |
+   ease-in-out | <span class="token function">cubic-bezier</span>(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)]*
+</code></pre>
+<p>&#x53D6;&#x503C;&#x8BF4;&#x660E;</p>
+<p>animation-timing-function: &#x662F;&#x6307;&#x5143;&#x7D20;&#x6839;&#x636E;&#x65F6;&#x95F4;&#x7684;&#x63A8;&#x8FDB;&#x6765;&#x6539;&#x53D8;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x53D8;&#x6362;&#x901F;&#x7387;&#xFF0C;&#x8BF4;&#x5F97;&#x7B80;&#x5355;&#x70B9;&#x5C31;&#x662F;&#x52A8;&#x753B;&#x7684;&#x64AD;&#x653E;&#x65B9;&#x5F0F;&#x3002;
+&#x4ED6;&#x548C;transition&#x4E2D;&#x7684;transition-timing-function&#x4E00;&#x6837;&#xFF0C;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x516D;&#x79CD;&#x53D8;&#x6362;&#x65B9;&#x5F0F;</p>
+<p>1&#x3001;ease&#xFF1A;&#xFF08;&#x9010;&#x6E10;&#x53D8;&#x6162;&#xFF09;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;ease&#x51FD;&#x6570;&#x7B49;&#x540C;&#x4E8E;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;(0.25, 0.1, 0.25, 1.0).</p>
+<p>2&#x3001;linear&#xFF1A;&#xFF08;&#x5300;&#x901F;&#xFF09;&#xFF0C;linear &#x51FD;&#x6570;&#x7B49;&#x540C;&#x4E8E;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;(0.0, 0.0, 1.0, 1.0).</p>
+<p>3&#x3001;ease-in&#xFF1A;(&#x52A0;&#x901F;)&#xFF0C;ease-in &#x51FD;&#x6570;&#x7B49;&#x540C;&#x4E8E;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;(0.42, 0, 1.0, 1.0).</p>
+<p>4&#x3001;ease-out&#xFF1A;&#xFF08;&#x51CF;&#x901F;&#xFF09;&#xFF0C;ease-out &#x51FD;&#x6570;&#x7B49;&#x540C;&#x4E8E;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;(0, 0, 0.58, 1.0).</p>
+<p>5&#x3001;ease-in-out&#xFF1A;&#xFF08;&#x52A0;&#x901F;&#x7136;&#x540E;&#x51CF;&#x901F;&#xFF09;&#xFF0C;ease-in-out &#x51FD;&#x6570;&#x7B49;&#x540C;&#x4E8E;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;(0.42, 0, 0.58, 1.0)</p>
+<p>6&#x3001;cubic-bezier&#xFF1A;&#xFF08;&#x8BE5;&#x503C;&#x5141;&#x8BB8;&#x4F60;&#x53BB;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x66F2;&#x7EBF;&#xFF09;&#xFF0C; &#x7279;&#x5B9A;&#x7684; <a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve" target="_blank">cubic-bezier&#x66F2;&#x7EBF;</a>&#x3002; (x1, y1, x2, y2)&#x56DB;&#x4E2A;&#x503C;&#x7279;&#x5B9A;&#x4E8E;&#x66F2;&#x7EBF;&#x4E0A;&#x70B9;P1&#x548C;&#x70B9;P2&#x3002;&#x6240;&#x6709;&#x503C;&#x9700;&#x5728;[0, 1]&#x533A;&#x57DF;&#x5185;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6548;&#x3002;</p>
+<h3 id="4-animationdelay">4. animation-delay:</h3>
+<p>&#x8BED;&#x6CD5;</p>
+<p><code>animation-delay: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>[,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span><span class="token punctuation">&gt;</span></span>]*</code></p>
+<p>&#x53D6;&#x503C;&#x8BF4;&#x660E;</p>
+<p>animation-delay: &#x662F;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x52A8;&#x753B;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x3002;&#x53D6;&#x503C;&#x4E3A;<time>&#x4E3A;&#x6570;&#x503C;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;s(&#x79D2;)&#xFF0C;&#x5176;&#x9ED8;&#x8BA4;&#x503C;&#x4E5F;&#x662F;0&#x3002;
+&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x548C;transition-delay&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</time></p>
+<h3 id="5-animationiterationcount">5. animation-iteration-count</h3>
+<p>&#x8BED;&#x6CD5;</p>
+<p><code>animation-iteration-count:infinite | <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span> [, infinite | <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span>]*</code></p>
+<p>&#x53D6;&#x503C;&#x8BF4;&#x660E;</p>
+<p>animation-iteration-count &#x662F;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x64AD;&#x653E;&#x52A8;&#x753B;&#x7684;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#xFF0C;&#x5176;&#x53EF;&#x4EE5;&#x53D6;&#x503C;<number>&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x5176;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 1
+infinite&#x4E3A;&#x65E0;&#x9650;&#x6B21;&#x6570;&#x5FAA;&#x73AF;&#x3002;</number></p>
+<h3 id="6-animationdirection">6. animation-direction</h3>
+<p>&#x8BED;&#x6CD5;</p>
+<p><code>animation-direction: normal | reverse | alternate | alternate-reverse</code></p>
+<p>&#x53D6;&#x503C;&#x8BF4;&#x660E;</p>
+<ul>
+<li>normal&#xFF08;&#x6B63;&#x5E38;&#xFF09;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x901A;&#x8FC7;&#x4F60;&#x5217;&#x51FA;&#x7684;&#x5173;&#x952E;&#x5E27;&#x58F0;&#x660E;&#x76F4;&#x63A5;&#x64AD;&#x653E;&#x7684;</li>
+<li>reverse&#xFF08;&#x53CD;&#x8F6C;&#xFF09;&#x8868;&#x793A;&#x4F60;&#x7684;&#x52A8;&#x753B;&#x662F;&#x6309;&#x7167;&#x4F60;&#x7684;&#x5173;&#x952E;&#x5E27;&#x5E8F;&#x5217;&#x53CD;&#x5411;&#x64AD;&#x653E;&#x7684;&#xFF0C;&#x5C31;&#x50CF;&#x56DE;&#x7ED5;&#x64AD;&#x653E;&#x4E00;&#x6837;</li>
+<li>alternate&#xFF08;&#x4EA4;&#x66FF;&#xFF09;&#x5982;&#x679C;&#x4F60;&#x7684;&#x52A8;&#x753B;&#x7684;iteration-count&#x5C5E;&#x6027;&#x7684;&#x503C;&#x5927;&#x4E8E;1&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;alternate&#x503C;&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x7684;&#x987A;&#x5E8F;&#x64AD;&#x653E;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x5C31;&#x4F1A;&#x53CD;&#x5411;&#x64AD;&#x653E;&#xFF0C;&#x7136;&#x540E;&#x6B63;&#x5411;&#xFF0C;&#x7136;&#x540E;&#x53CD;&#x5411;&#x2026;&#x2026;&#x65B9;&#x5411;&#x4EA4;&#x66FF;&#xFF0C;&#x4ECE;&#x6B63;&#x5411;&#x5F00;&#x59CB;&#xFF0C;&#x76F4;&#x5230;iteration-count&#x8DD1;&#x5B8C;</li>
+<li>alternate-reverse&#xFF08;&#x4EA4;&#x66FF;&#x53CD;&#x8F6C;&#xFF09;alternate-reverse&#x662F;&#x548C;alternate&#x4E00;&#x6837;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5B83;&#x662F;&#x4ECE;&#x53CD;&#x65B9;&#x5411;&#x5F00;&#x59CB;&#x7684;&#x3002;</li>
+</ul>
+<h3 id="7-animationfillmode">7. animation-fill-mode</h3>
+<p>animation-fill-mode &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x56DB;&#x4E2A;&#x503C;</p>
+<ul>
+<li>none &#x9ED8;&#x8BA4;&#x503C;</li>
+<li>backwards &#x5728;&#x52A8;&#x753B;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x4FDD;&#x6301;&#x6700;&#x540E;&#x4E00;&#x5E27;&#x7684;&#x6837;&#x5F0F;</li>
+<li>forwards &#x7528;&#x6765;&#x5904;&#x7406;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x5EF6;&#x8FDF;&#x540E;&#x64AD;&#x653E;&#xFF0C;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x52A8;&#x753B;&#x7684;&#x6D41;&#x7545;&#x6027;</li>
+<li>both forwards&#x548C;backwards&#x7684;&#x7ED3;&#x5408;</li>
+</ul>
+<h3 id="8-animationplaystate">8. animation-play-state</h3>
+<p>&#x8BED;&#x6CD5;</p>
+<p><code>animation-play-state:running | paused [, running | paused]*</code></p>
+<p>&#x53D6;&#x503C;&#x8BF4;&#x660E;</p>
+<p>animation-play-state &#x4E3B;&#x8981;&#x662F;&#x7528;&#x6765;&#x63A7;&#x5236;&#x5143;&#x7D20;&#x52A8;&#x753B;&#x7684;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x3002;&#x5176;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;running &#x548C; paused&#xFF0C;
+&#x5176;&#x4E2D;running&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;
+&#x4ED6;&#x4EEC;&#x7684;&#x4F5C;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;&#x6211;&#x4EEC;&#x7684;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x5668;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;paused&#x5C06;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x7684;&#x52A8;&#x753B;&#x505C;&#x4E0B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;running&#x5C06;&#x6682;&#x505C;&#x7684;&#x52A8;&#x753B;&#x91CD;&#x65B0;&#x64AD;&#x653E;&#xFF0C;
+&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x7684;&#x91CD;&#x65B0;&#x64AD;&#x653E;&#x4E0D;&#x662F;&#x4ECE;&#x5143;&#x7D20;&#x52A8;&#x753B;&#x7684;&#x5F00;&#x59CB;&#x64AD;&#x653E;&#xFF0C;&#x800C;&#x662F;&#x4ECE;&#x6682;&#x505C;&#x7684;&#x90A3;&#x4E2A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x64AD;&#x653E;&#x3002;&#x53E6;&#x5916;&#x5982;&#x679C;&#x6682;&#x505C;&#x4E86;&#x52A8;&#x753B;&#x7684;&#x64AD;&#x653E;&#xFF0C;
+&#x5143;&#x7D20;&#x7684;&#x6837;&#x5F0F;&#x5C06;&#x56DE;&#x5230;&#x6700;&#x539F;&#x59CB;&#x8BBE;&#x7F6E;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4E00;&#x56FE;&#x7247;&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x7406;&#x89E3;</p>
+<p><img src="images/animation-pro.png" alt="animation &#x5C5E;&#x6027;"></p>
+<h3 id="animation-&#x7B80;&#x5199;">animation &#x7B80;&#x5199;</h3>
+<p>W3C&#x76EE;&#x524D;&#x5B9A;&#x4E49;&#x7684;&#x7B80;&#x5199;&#x987A;&#x5E8F;&#x662F;&#x8FD9;&#x6837;&#x7684;</p>
+<pre><code class="lang-css">&lt;single-animation&gt; = &lt;single-animation-name&gt; || &lt;single-animation-duration&gt; ||
+ &lt;single-animation-timing-function&gt; || &lt;single-animation-delay&gt; || &lt;single-animation-iteration-count&gt;
+ || &lt;single-animation-direction&gt; || &lt;single-animation-fill-mode&gt; || &lt;single-animation-play-state&gt;
+</code></pre>
+<p>&#x8981;&#x4F7F;&#x7528;&#x7B80;&#x5199;&#x5728;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x52A8;&#x753B;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x6765;&#x5206;&#x9694;&#x6BCF;&#x4E2A;&#x52A8;&#x753B;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x3002;&#x6BD4;&#x5982;&#x5728;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x52A8;&#x753B;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-css"><span class="token property">animation</span><span class="token punctuation">:</span> myAnimation 1s ease-in-out 2s 4, myOtherAnimation 4s ease-out 2s<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;">&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;</h2>
+<p>&#x5DE5;&#x5177;&#x4E0E;&#x8D44;&#x6E90;</p>
+<ul>
+<li><a href="https://matthewlein.com/ceaser/" target="_blank">&#x521B;&#x5EFA;&#x4E09;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x7684;&#x5DE5;&#x5177;</a></li>
+<li><a href="http://cubic-bezier.com/" target="_blank">Lea Verou &#x521B;&#x5EFA;&#x4E09;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x5DE5;&#x5177;</a></li>
+<li><a href="http://easings.net/" target="_blank">&#x4E09;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x7684;&#x4EA4;&#x4E92;&#x7248;&#x672C;-&#x7F13;&#x52A8;&#x51FD;&#x6570;&#x901F;&#x67E5;&#x8868;</a></li>
+<li><a href="http://robertpenner.com/easing/" target="_blank">Penner easing&#x65B9;&#x7A0B;</a> &#x6709;&#x5404;&#x79CD;&#x8BED;&#x8A00;&#x7684;&#x7248;&#x672C;&#xFF0C;less&#xFF0C;sass &#x548C; js &#x7B49;</li>
+<li><a href="http://www.w3cplus.com/css3/animation-principles-for-the-web.html" target="_blank">&#x7F51;&#x9875;&#x52A8;&#x753B;&#x7684;&#x5341;&#x4E8C;&#x539F;&#x5219;</a></li>
+</ul>
+<h2 id="animation-&#x4E0E;-keyframes-&#x7ED3;&#x5408;&#x4F7F;&#x7528;">animation &#x4E0E; keyframes &#x7ED3;&#x5408;&#x4F7F;&#x7528;</h2>
+<p>&#x5148;&#x4ECE;&#x4F8B;&#x5B50;&#x5165;&#x624B;&#xFF0C;&#x57FA;&#x4E8E; webkit &#x5185;&#x6838;</p>
+<pre><code class="lang-css"><span class="token atrule">@-webkit-keyframes wobble</span> <span class="token punctuation">{</span>
+     <span class="token selector">0% </span><span class="token punctuation">{</span>
+        <span class="token property">margin-left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token selector">40% </span><span class="token punctuation">{</span>
+        <span class="token property">margin-left</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token selector">60% </span><span class="token punctuation">{</span>
+        <span class="token property">margin-left</span><span class="token punctuation">:</span> 75px<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token selector">100% </span><span class="token punctuation">{</span>
+        <span class="token property">margin-left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;&#x201C;wobble&#x201D;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x4ED6;&#x7684;&#x52A8;&#x753B;&#x662F;&#x4ECE;0%&#x5F00;&#x59CB;&#x5230;100%&#x65F6;&#x7ED3;&#x675F;&#xFF0C;&#x4ECE;&#x4E2D;&#x8FD8;&#x7ECF;&#x5386;&#x4E86;&#x4E00;&#x4E2A;40%&#x548C;60%&#x4E24;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x5177;&#x4F53;&#x610F;&#x601D;&#x662F;
+wobble&#x52A8;&#x753B;&#x5728;0%&#x65F6;&#x5143;&#x7D20; margin-left &#x4E3A;100px&#xFF0C; &#x80CC;&#x666F;&#x8272;&#x4E3A;green&#xFF0C;&#x7136;&#x540E;40%&#x65F6;&#x5143;&#x7D20;&#x8FC7;&#x6E21;&#x5230;  margin-left &#x4E3A;150px&#x5E76;&#x4E14;&#x80CC;&#x666F;&#x8272;&#x4E3A;orange&#xFF0C;60%&#x65F6;&#x5143;&#x7D20;&#x8FC7;&#x6E21;&#x5230; margin-left &#x4E3A;75px&#xFF0C;&#x80CC;&#x666F;&#x8272;&#x4E3A;blue&#xFF0C;&#x6700;&#x540E;100%&#x7ED3;&#x675F;&#x52A8;&#x753B;&#x7684;&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#x53C8;&#x56DE;&#x5230;&#x8D77;&#x70B9; margin-left &#x4E3A;100px&#x5904;,&#x80CC;&#x666F;&#x8272;&#x53D8;&#x6210;red&#x3002;</p>
+<p>Keyframes&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x8FC7; animation &#x6765;&#x8C03;&#x52A8;&#x753B; &#x201C;wobble&#x201D;</p>
+<p>CSS3&#x7684;animation&#x7C7B;&#x4F3C;&#x4E8E;transition&#x5C5E;&#x6027;&#xFF0C;&#x4ED6;&#x4EEC;&#x90FD;&#x662F;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x3002;&#x4ED6;&#x4EEC;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x662F;transition&#x9700;&#x8981;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;(hover&#x4E8B;&#x4EF6;&#x6216;click&#x4E8B;&#x4EF6;&#x7B49;)&#x624D;&#x4F1A;&#x968F;&#x65F6;&#x95F4;&#x6539;&#x53D8;&#x5176;css&#x5C5E;&#x6027;&#xFF1B;&#x800C;animation&#x5728;&#x4E0D;&#x9700;&#x8981;&#x89E6;&#x53D1;&#x4EFB;&#x4F55;&#x4E8B;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x7684;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x6765;&#x6539;&#x53D8;&#x5143;&#x7D20;css&#x7684;&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x4E00;&#x79CD;&#x52A8;&#x753B;&#x7684;&#x6548;&#x679C;&#x3002;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x8C03;&#x7528;animation&#x7684;&#x52A8;&#x753B;&#x5C5E;&#x6027;,&#x57FA;&#x4E8E;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;css3&#x7684;animation&#x5C31;&#x9700;&#x8981;&#x660E;&#x786E;&#x7684;&#x52A8;&#x753B;&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x8FD9;&#x4E5F;&#x5C31;&#x662F;&#x56DE;&#x5230;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x6240;&#x8BF4;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;keyframes&#x6765;&#x5B9A;&#x4E49;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x7684;css&#x5C5E;&#x6027;&#x503C;,&#x8FBE;&#x5230;&#x5143;&#x7D20;&#x5728;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x6BB5;&#x53D8;&#x5316;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x4E3A;&#x8C03;&#x7528; wobble &#x4EE3;&#x7801;</p>
+<pre><code class="lang-css"><span class="token selector">.animation-wobble </span><span class="token punctuation">{</span>
+     <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+     <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+     <span class="token property">margin-left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+     <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+     <span class="token property">-webkit-animation-name</span><span class="token punctuation">:</span> wobble<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x5C5E;&#x6027;&#x540D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x524D;&#x9762;keyframes&#x5B9A;&#x4E49;&#x7684;&#x52A8;&#x753B;&#x540D;*/</span>
+     <span class="token property">-webkit-animation-duration</span><span class="token punctuation">:</span> 10s<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x95F4;*/</span>
+     <span class="token property">-webkit-animation-timing-function</span><span class="token punctuation">:</span> ease-in-out<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x9891;&#x7387;&#xFF0C;&#x548C;transition-timing-function&#x662F;&#x4E00;&#x6837;&#x7684;*/</span>
+     <span class="token property">-webkit-animation-delay</span><span class="token punctuation">:</span> 2s<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;*/</span>
+     <span class="token property">-webkit-animation-iteration-count</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x5B9A;&#x4E49;&#x5FAA;&#x73AF;&#x8D44;&#x6599;&#xFF0C;infinite&#x4E3A;&#x65E0;&#x9650;&#x6B21;*/</span>
+     <span class="token property">-webkit-animation-direction</span><span class="token punctuation">:</span> alternate<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x65B9;&#x5F0F;*/</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x70B9;&#x51FB;&#x67E5;&#x770B; <a href="../../examples/css3/animation/animation/wobble.html">wobble &#x4F8B;&#x5B50;&#x6548;&#x679C;</a></p>
+<p>CSS Animation&#x52A8;&#x753B;&#x6548;&#x679C;&#x5C06;&#x4F1A;&#x5F71;&#x54CD;&#x5143;&#x7D20;&#x76F8;&#x5BF9;&#x5E94;&#x7684;css&#x503C;&#xFF0C;&#x5728;&#x6574;&#x4E2A;&#x52A8;&#x753B;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5143;&#x7D20;&#x7684;&#x53D8;&#x5316;&#x5C5E;&#x6027;&#x503C;&#x5B8C;&#x5168;&#x662F;&#x7531;animation&#x6765;&#x63A7;&#x5236;&#xFF0C;
+&#x52A8;&#x753B;&#x540E;&#x9762;&#x7684;&#x4F1A;&#x8986;&#x76D6;&#x524D;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x3002;&#x5982;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#xFF0C;&#x5176;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#xFF1A;margin-left:100px;background: blue&#xFF1B;
+&#x4F46;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x6267;&#x884C;&#x52A8;&#x753B;0%&#x65F6;&#xFF0C;margin-left:100px,background:green&#xFF1B;&#x5F53;&#x6267;&#x884C;&#x5230;40%&#x65F6;&#xFF0C;
+&#x5C5E;&#x6027;&#x53D8;&#x6210;&#x4E86;&#xFF1A;margin-left:150px;background:orange;&#x5F53;&#x6267;&#x884C;&#x5230;60%&#x65F6;margin-left:75px;background:blue;
+&#x5F53;&#x52A8;&#x753B; &#x6267;&#x884C;&#x5230;100%&#x65F6;&#xFF1A;margin-left:100px;background: red;&#x6B64;&#x65F6;&#x4E00;&#x6B21;&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x3002;
+margin-left&#x548C;background&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x5C06;&#x662F;&#x4EE5;100%&#x65F6;&#x4E3A;&#x4E3B;&#x3002;&#x63A5;&#x7740;&#x6267;&#x884C;&#x4E0B;&#x6B21;&#x52A8;&#x753B;&#x6548;&#x679C;&#xFF0C;&#x6B64;&#x65F6;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x53E0;&#x52A0;&#x6548;&#x679C;&#xFF0C;
+&#x53EA;&#x662F;&#x4E00;&#x6B21;&#x4E00;&#x6B21;&#x8986;&#x76D6;&#x524D;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;css&#x5C5E;&#x6027;&#x3002;&#x5C31;&#x5982;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x7684;css&#x4E00;&#x6837;&#xFF0C;&#x6700;&#x540E;&#x51FA;&#x73B0;&#x7684;&#x6743;&#x9650;&#x662F;&#x6700;&#x5927;&#x7684;&#x3002;&#x5F53;&#x52A8;&#x753B;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x6837;&#x5F0F;&#x56DE;&#x5230;&#x9ED8;&#x8BA4;&#x6548;&#x679C;&#x3002;</p>
+<h2 id="&#x5B9E;&#x4F8B;&#x8BB2;&#x89E3;">&#x5B9E;&#x4F8B;&#x8BB2;&#x89E3;</h2>
+<h3 id="1-&#x53D1;&#x5149;&#x53D8;&#x8272;&#x7684;button">1. &#x53D1;&#x5149;&#x53D8;&#x8272;&#x7684;button</h3>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;&#x5728; keyframes &#x4E2D;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684; background;color;box-shadow &#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x6765;&#x8FBE;&#x5230;&#x4E00;&#x79CD;&#x53D1;&#x5149;&#x53D8;&#x8272;&#x7684;button&#x6548;&#x679C;&#xFF0C;
+&#x6211;&#x4EEC;&#x6765;&#x770B;&#x5176;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</p>
+<p>HTML Code</p>
+<pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x53D1;&#x5149;&#x7684;button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>CSS Code</p>
+<pre><code class="lang-css">  <span class="token comment" spellcheck="true">/*&#x7ED9;&#x8FD9;&#x4E2A;&#x6309;&#x94AE;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x52A8;&#x540D;&#x540D;&#x79F0;&#xFF1A;buttonLight&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6BCF;&#x4E2A;&#x65F6;&#x95F4;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;background,color&#x6765;&#x8FBE;&#x5230;&#x53D8;&#x8272;&#x6548;&#x679C;&#xFF0C;&#x6539;&#x53D8;box-shadow&#x6765;&#x8FBE;&#x5230;&#x53D1;&#x5149;&#x6548;&#x679C;*/</span>
+  <span class="token atrule">@-webkit-keyframes buttonLight</span> <span class="token punctuation">{</span>
+     <span class="token selector">from </span><span class="token punctuation">{</span>
+       <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span>(96, 203, 27,0.5)<span class="token punctuation">;</span>
+       <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 0 5px <span class="token function">rgba</span>(255, 255, 255, 0.3) inset, 0 0 3px <span class="token function">rgba</span>(220, 120, 200, 0.5)<span class="token punctuation">;</span>
+       <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token selector">25% </span><span class="token punctuation">{</span>
+       <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span>(196, 203, 27,0.8)<span class="token punctuation">;</span>
+       <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 0 10px <span class="token function">rgba</span>(255, 155, 255, 0.5) inset, 0 0 8px <span class="token function">rgba</span>(120, 120, 200, 0.8)<span class="token punctuation">;</span>
+       <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">50% </span><span class="token punctuation">{</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span>(196, 203, 127,1)<span class="token punctuation">;</span>
+      <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 0 5px <span class="token function">rgba</span>(155, 255, 255, 0.3) inset, 0 0 3px <span class="token function">rgba</span>(220, 120, 100, 1)<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">75% </span><span class="token punctuation">{</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span>(196, 203, 27,0.8)<span class="token punctuation">;</span>
+      <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 0 10px <span class="token function">rgba</span>(255, 155, 255, 0.5) inset, 0 0 8px <span class="token function">rgba</span>(120, 120, 200, 0.8)<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+   <span class="token selector">to </span><span class="token punctuation">{</span>
+     <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span>(96, 203, 27,0.5)<span class="token punctuation">;</span>
+     <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 0 5px <span class="token function">rgba</span>(255, 255, 255, 0.3) inset, 0 0 3px <span class="token function">rgba</span>(220, 120, 200, 0.5)<span class="token punctuation">;</span>
+     <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">a.btn </span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/*&#x6309;&#x94AE;&#x7684;&#x57FA;&#x672C;&#x5C5E;&#x6027;*/</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #60cb1b<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 10px 15px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+    <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 -1px 1px <span class="token function">rgba</span>(0,0,0,0.3)<span class="token punctuation">;</span>
+    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">-moz-box-shadow</span><span class="token punctuation">:</span> 0 0 5px <span class="token function">rgba</span>(255, 255, 255, 0.6) inset, 0 0 3px <span class="token function">rgba</span>(220, 120, 200, 0.8)<span class="token punctuation">;</span>
+    <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 0 5px <span class="token function">rgba</span>(255, 255, 255, 0.6) inset, 0 0 3px <span class="token function">rgba</span>(220, 120, 200, 0.8)<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 5px <span class="token function">rgba</span>(255, 255, 255, 0.6) inset, 0 0 3px <span class="token function">rgba</span>(220, 120, 200, 0.8)<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/*&#x8C03;&#x7528;animation&#x5C5E;&#x6027;&#xFF0C;&#x4ECE;&#x800C;&#x8BA9;&#x6309;&#x94AE;&#x5728;&#x8F7D;&#x5165;&#x9875;&#x9762;&#x65F6;&#x5C31;&#x5177;&#x6709;&#x52A8;&#x753B;&#x6548;&#x679C;*/</span>
+    <span class="token property">-webkit-animation-name</span><span class="token punctuation">:</span> buttonLight<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x540D;&#x79F0;&#xFF0C;&#x9700;&#x8981;&#x8DDF;@keyframes&#x5B9A;&#x4E49;&#x7684;&#x540D;&#x79F0;&#x4E00;&#x81F4;*/</span>
+    <span class="token property">-webkit-animation-duration</span><span class="token punctuation">:</span> 5s<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x6301;&#x7EED;&#x7684;&#x65F6;&#x95F4;&#x957F;*/</span>
+    <span class="token property">-webkit-animation-iteration-count</span><span class="token punctuation">:</span> infinite<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x5FAA;&#x73AF;&#x64AD;&#x653E;&#x7684;&#x6B21;&#x6570;*/</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6548;&#x679C;</p>
+<p><a href="../../examples/css3/animation/animation/button-light.html">&#x53D1;&#x5149;&#x53D8;&#x8272;&#x7684;button</a></p>
+<h3 id="2-&#x65B9;&#x5F62;&#x65CB;&#x8F6C;&#x53D8;&#x6210;&#x5706;&#x5F62;">2. &#x65B9;&#x5F62;&#x65CB;&#x8F6C;&#x53D8;&#x6210;&#x5706;&#x5F62;</h3>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;demo&#x662F;&#x901A;&#x8FC7; transform &#x7684; rotate &#x548C; border-radius &#x503C;&#xFF0C;&#x628A;&#x4E00;&#x4E2A;&#x65B9;&#x5F62;&#x56FE;&#x7247;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x7684;&#x63A8;&#x79FB;&#xFF0C;&#x6162;&#x6162;&#x7684;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x5706;&#x5F62;&#x56FE;&#x7247;&#xFF0C;
+&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x5176;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x7684;&#x6548;&#x679C;</p>
+<p>HTML Code</p>
+<pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>round<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>click-btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Click<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>CSS Code</p>
+<pre><code class="lang-css">
+  <span class="token comment" spellcheck="true">/*&#x5B9A;&#x4E49;&#x65B9;&#x578B;&#x8F6C;&#x5316;&#x4E3A;&#x5706;&#x578B;&#x7684;&#x52A8;&#x753B;round*/</span>
+  <span class="token atrule">@-webkit-keyframes round</span> <span class="token punctuation">{</span>
+     <span class="token selector">from</span><span class="token punctuation">{</span>
+       <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(36deg)<span class="token punctuation">;</span>
+       <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+  <span class="token selector">10%</span><span class="token punctuation">{</span>
+      <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(72deg)<span class="token punctuation">;</span>
+      <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+  <span class="token selector">20% </span><span class="token punctuation">{</span>
+      <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(108deg)<span class="token punctuation">;</span>
+      <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token selector">30% </span><span class="token punctuation">{</span>
+      <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(144deg)<span class="token punctuation">;</span>
+      <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 9px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token selector">40%</span><span class="token punctuation">{</span>
+     <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(180deg)<span class="token punctuation">;</span>
+     <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">50%</span><span class="token punctuation">{</span>
+     <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(216deg)<span class="token punctuation">;</span>
+     <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">60% </span><span class="token punctuation">{</span>
+     <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(252deg)<span class="token punctuation">;</span>
+     <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">70% </span><span class="token punctuation">{</span>
+     <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(288deg)<span class="token punctuation">;</span>
+     <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 19px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">80%</span><span class="token punctuation">{</span>
+     <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(324deg)<span class="token punctuation">;</span>
+     <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 22px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">to </span><span class="token punctuation">{</span>
+     <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span>(360deg)<span class="token punctuation">;</span>
+     <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+   <span class="token comment" spellcheck="true">/*&#x7ED9;&#x65B9;&#x578B;box&#x4E00;&#x4E2A;&#x521D;&#x6B65;&#x6837;&#x5F0F;*/</span>
+   <span class="token selector">a.box </span><span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+      <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token comment" spellcheck="true">/*&#x5706;&#x578B;box&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x5E76;&#x5728;&#x8FD9;&#x91CC;&#x5E94;&#x7528;animation*/</span>
+   <span class="token selector">a.round </span><span class="token punctuation">{</span>
+      <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+      <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+      <span class="token property">-webkit-animation-name</span><span class="token punctuation">:</span> round<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x540D;&#x79F0;*/</span>
+      <span class="token property">-webkit-animation-duration</span><span class="token punctuation">:</span> 5s<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x64AD;&#x653E;&#x4E00;&#x6B21;&#x6240;&#x6301;&#x7EED;&#x65F6;&#x95F4;*/</span>
+      <span class="token property">-webkit-animation-timing-function</span><span class="token punctuation">:</span> ease<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x64AD;&#x653E;&#x9891;&#x7387;*/</span>
+      <span class="token property">-webkit-animation-iteration-count</span><span class="token punctuation">:</span> infinite<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*&#x52A8;&#x753B;&#x64AD;&#x653E;&#x6B21;&#x6D92;&#x4E3A;&#x65E0;&#x9650;&#x6B21;*/</span>
+    <span class="token punctuation">}</span>
+
+   <span class="token comment" spellcheck="true">/*click button&#x6548;&#x679C;*/</span>
+   <span class="token selector">.click-btn </span><span class="token punctuation">{</span>
+       <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span>(125,220,80,0.8)<span class="token punctuation">;</span>
+       <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+      <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+       <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+       <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> inset 0 0 8px <span class="token function">rgba</span>(255,255,255,0.8),0 0 10px <span class="token function">rgba</span>(10,255,120,0.3)<span class="token punctuation">;</span>
+       <span class="token property">-moz-box-shadow</span><span class="token punctuation">:</span> inset 0 0 8px <span class="token function">rgba</span>(255,255,255,0.8),0 0 10px <span class="token function">rgba</span>(10,255,120,0.3)<span class="token punctuation">;</span>
+       <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0 0 8px <span class="token function">rgba</span>(255,255,255,0.8),0 0 10px <span class="token function">rgba</span>(10,255,120,0.3)<span class="token punctuation">;</span>
+       <span class="token property">padding</span><span class="token punctuation">:</span> 5px 10px<span class="token punctuation">;</span>
+       <span class="token property">color</span><span class="token punctuation">:</span> #369<span class="token punctuation">;</span>
+       <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+       <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+       <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+       <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 -1px 0 <span class="token function">rgba</span>(0,0,0,0.5)<span class="token punctuation">;</span>
+       <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+</code></pre>
+<p>js Code:</p>
+<pre><code class="lang-javascript">document<span class="token punctuation">.</span><span class="token function">getElementByClass</span><span class="token punctuation">(</span><span class="token string">&apos;click-btn&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&apos;click&apos;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> round <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;round&apos;</span><span class="token punctuation">)</span>
+  round<span class="token punctuation">.</span>className <span class="token operator">=</span> round<span class="token punctuation">.</span>className <span class="token operator">+</span> <span class="token string">&apos; round&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8F7D;&#x5165;&#x65F6; box &#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x52A8;&#x753B;&#x6548;&#x679C;&#x7684;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x70B9;&#x51FB;&#x4E86;click button &#x540E;&#x4F1A;&#x7ED9;&#x539F; box &#x4E0A;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A; round &#x7684; class&#x6837;&#x5F0F;&#xFF0C;&#x4ECE;&#x800C;&#x89E6;&#x53D1;&#x4E86;&#x4E00;&#x4E2A;round&#x7684;&#x52A8;&#x4F5C;&#x3002;&#x8BF7;&#x770B;&#x6548;&#x679C;</p>
+<p><a href="../../examples/css3/animation/animation/round.html">&#x65B9;&#x5F62;&#x65CB;&#x8F6C;&#x53D8;&#x6210;&#x5706;&#x5F62;</a></p>
+<p>&#x66F4;&#x591A;&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x8FD9;&#x91CC;</p>
+<ul>
+<li><a href="http://www.webdesignersblog.net/css3/35-best-awesome-css3-animation-demos/" target="_blank">webdesignersblog</a></li>
+<li><a href="http://slodive.com/web-development/best-css3-animation-demos-tutorials/" target="_blank">slodive</a></li>
+<li><a href="http://www.impressivewebs.com/demo-files/css3-animated-scene/" target="_blank">impressivewebs</a></li>
+</ul>
+<h2 id="&#x52A8;&#x753B;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;">&#x52A8;&#x753B;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;</h2>
+<p>&#x53EF;&#x4EE5;&#x53C2;&#x89C1;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;
+<a href="http://www.sitepoint.com/css3-animation-javascript-event-handlers/" target="_blank">http://www.sitepoint.com/css3-animation-javascript-event-handlers/</a></p>
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;">&#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
+<ul>
+<li><a href="http://www.w3cplus.com/content/css3-animation" target="_blank">http://www.w3cplus.com/content/css3-animation</a></li>
+<li><a href="http://www.w3cplus.com/css3/CSS3-animation.html" target="_blank">http://www.w3cplus.com/css3/CSS3-animation.html</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation</a></li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2016-05-15 13:54:24
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../css3/animation/transition.html" class="navigation navigation-prev " aria-label="Previous page: 转换 transition"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../css3/animation/compatibility.html" class="navigation navigation-next " aria-label="Next page: css3 动画兼容性"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search-pro/search-pro.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbook","useIdentifier":false},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright &copy 2016","modify_label":"最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"splitter":{},"include-codeblock":{},"sectionx":{},"prism":{},"toggle-chapters":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book web 前端学习笔记 -->
+</html>
