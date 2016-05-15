@@ -130,24 +130,18 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   git checkout master
   ```
 
-2. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在，执行完会提示 _book 文件夹不存在，需要我们创建
+2. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在，执行完会提示 “pathspec '_book' did not match any file(s) known to git.”，需要我们创建 _book 目录
 
   ```
   git subtree add --prefix=_book origin gh-pages --squash
   ```
 
-3. 执行 `gitbook build` 重新在目录 _book 中生成 gitbook 文件
+3. 执行 `gitbook build` 在目录 _book 中生成 gitbook 文件
 
 4. 执行以下命令，提交修改的文件
 
   ```
   git add -A _book
-  git commit -m "Update gitbook"
-  ```
-  如果_book 在 master 分支上是忽略提交的（即在 .gitignore 中有此过滤条件），需要添加 `-f` 参数来提交
-
-  ```
-  git add -A -f _book
   git commit -m "Update gitbook"
   ```
 
