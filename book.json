@@ -10,7 +10,8 @@
       "sectionx",
       "prism",
       "toggle-chapters",
-      "-highlight"
+      "-highlight",
+      "disqus"
   ],
   "pluginsConfig": {
       "disqus": {
