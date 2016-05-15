@@ -1,0 +1,1268 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book web 前端学习笔记 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Flex 布局兼容性 | web 前端学习笔记</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search-pro/search-pro.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../css3/flex/compatibility2.html" />
+    
+    
+    <link rel="prev" href="../../css3/flex/subelement.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="1.1.3"
+        data-chapter-title="Flex 布局兼容性"
+        data-filepath="css3/flex/compatibility.md"
+        data-basepath="../.."
+        data-revision="Sun May 15 2016 15:17:17 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="css3/index.html">
+            
+                
+                    <a href="../../css3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        css3
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="css3/flex/index.html">
+            
+                
+                    <a href="../../css3/flex/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Flex 布局详解
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="css3/flex/container.html">
+            
+                
+                    <a href="../../css3/flex/container.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Flex 布局容器属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="css3/flex/subelement.html">
+            
+                
+                    <a href="../../css3/flex/subelement.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Flex 布局子元素属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.3" data-path="css3/flex/compatibility.html">
+            
+                
+                    <a href="../../css3/flex/compatibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        Flex 布局兼容性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="css3/flex/compatibility2.html">
+            
+                
+                    <a href="../../css3/flex/compatibility2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.4.</b>
+                        
+                        Flex 布局兼容性续
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="css3/animation/index.html">
+            
+                
+                    <a href="../../css3/animation/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        css3 动画
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="css3/animation/transform.html">
+            
+                
+                    <a href="../../css3/animation/transform.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        变形 transform
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="css3/animation/transition.html">
+            
+                
+                    <a href="../../css3/animation/transition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        转换 transition
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="css3/animation/animation.html">
+            
+                
+                    <a href="../../css3/animation/animation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.3.</b>
+                        
+                        动画 animation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="css3/animation/compatibility.html">
+            
+                
+                    <a href="../../css3/animation/compatibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.4.</b>
+                        
+                        css3 动画兼容性
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="html5/index.html">
+            
+                
+                    <a href="../../html5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        html5
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="javascript/index.html">
+            
+                
+                    <a href="../../javascript/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        JavaScript
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="javascript/es.next/index.html">
+            
+                
+                    <a href="../../javascript/es.next/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        es.next 学习笔记
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="javascript/standard/index.html">
+            
+                
+                    <a href="../../javascript/standard/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        JavaScript 代码规范
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="javascript/test/index.html">
+            
+                
+                    <a href="../../javascript/test/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        JavaScript 单元测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="javascript/react/index.html">
+            
+                
+                    <a href="../../javascript/react/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        React ecosystem
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="plugins/index.html">
+            
+                
+                    <a href="../../plugins/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        插件与框架
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chrome/index.html">
+            
+                
+                    <a href="../../chrome/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Chrome 相关
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chrome/devtools.html">
+            
+                
+                    <a href="../../chrome/devtools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Chrome 开发者工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chrome/extensions_development.html">
+            
+                
+                    <a href="../../chrome/extensions_development.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Chrome extensions 开发
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chrome/app.html">
+            
+                
+                    <a href="../../chrome/app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Chrome app 开发
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="chrome/extensions.html">
+            
+                
+                    <a href="../../chrome/extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Chrome 扩展程序
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="reference/index.html">
+            
+                
+                    <a href="../../reference/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        参考资料
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="tools/index.html">
+            
+                
+                    <a href="../../tools/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        相关工具
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="tools/git.html">
+            
+                
+                    <a href="../../tools/git.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        git
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="tools/atom.html">
+            
+                
+                    <a href="../../tools/atom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Atom 编辑器使用教程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="tools/markdown.html">
+            
+                
+                    <a href="../../tools/markdown.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Markdown 使用帮助
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="tools/switchHosts.html">
+            
+                
+                    <a href="../../tools/switchHosts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        SwitchHosts 切换 host
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="tools/charles.html">
+            
+                
+                    <a href="../../tools/charles.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        Charles 抓包工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="tools/mac.html">
+            
+                
+                    <a href="../../tools/mac.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        Mac 学习笔记
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="tools/codelint.html">
+            
+                
+                    <a href="../../tools/codelint.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        规范化代码风格插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="tools/WebStorm.html">
+            
+                
+                    <a href="../../tools/WebStorm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        WebStorm
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >web 前端学习笔记</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x517C;&#x5BB9;&#x578B;">&#x517C;&#x5BB9;&#x578B;</h1>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>&#x4ECE;2009&#x5E74;&#x63D0;&#x51FA;&#x7684;&#x6700;&#x521D;&#x8349;&#x6848;&#x5F00;&#x59CB;&#xFF0C;Flexbox&#x5E03;&#x5C40;&#x7ECF;&#x5386;&#x4E86;&#x591A;&#x6B21;&#x7684;&#x8FED;&#x4EE3;&#x548C;&#x51E0;&#x4E2A;&#x8BED;&#x6CD5;&#x7248;&#x672C;&#x7684;&#x53D8;&#x66F4;&#x3002;&#x8BE6;&#x7EC6;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x65B9;&#x8BF4;&#x660E;
+<a href="https://www.w3.org/TR/css-flexbox/" target="_blank">CSS Flexible Box&#x5E03;&#x5C40;&#x6A21;&#x5757;</a></p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x6700;&#x65B0;flexbox&#x89C4;&#x8303;&#x7684;&#x652F;&#x6301;&#x60C5;&#x51B5;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>Chrome 29+</li>
+<li>Firefox 28+</li>
+<li>Internet Explorer 11</li>
+<li>Opera 17+</li>
+<li>Safari 6.1+ (prefixed with -webkit-)</li>
+<li>Android 4.4+</li>
+<li>iOS 7.1+ (prefixed with -webkit-)</li>
+</ul>
+<p>&#x66F4;&#x591A;&#x5173;&#x4E8E; flexbox &#x517C;&#x5BB9;&#x578B;&#x53EF;&#x4EE5;&#x4ECE; <a href="http://caniuse.com/" target="_blank">Can I Use</a> &#x4E2D;&#x67E5;&#x770B; <a href="http://caniuse.com/#feat=flexbox" target="_blank">http://caniuse.com/#feat=flexbox</a></p>
+<iframe height="380px" src="http://caniuse.com/flexbox/embed" width="100%"></iframe>
+
+
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;">&#x53C2;&#x8003;&#x6587;&#x7AE0;</h2>
+<p>&#x5173;&#x4E8E;&#x65B0;&#x65E7;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x578B;&#x5199;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x6587;&#x7AE0;</p>
+<ul>
+<li><a href="http://www.w3cplus.com/css3/using-flexbox.html" target="_blank">&#x4F7F;&#x7528;Flexbox&#xFF1A;&#x65B0;&#x65E7;&#x8BED;&#x6CD5;&#x6DF7;&#x7528;&#x5B9E;&#x73B0;&#x6700;&#x4F73;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;</a></li>
+<li><a href="http://www.w3cplus.com/css3/old-flexbox-and-new-flexbox.html" target="_blank">&#x201C;&#x8001;&#x201D;&#x7684;Flexbox&#x548C;&#x201C;&#x65B0;&#x201D;&#x7684;Flexbox</a></li>
+<li><a href="http://www.w3cplus.com/css3/harnessing-flexbox-for-todays-web-apps.html" target="_blank">&#x65F6;&#x4E0B;Web App&#x4E2D;&#x7684;Flexbox&#x5E94;&#x7528;</a></li>
+<li><a href="http://www.w3cplus.com/css3/flexbox-adventures.html" target="_blank">&#x63A2;&#x7D22;Flexbox</a></li>
+<li><a href="http://www.w3cplus.com/css3/a-guide-to-flexbox-new.html" target="_blank">&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;Flexbox&#x6307;&#x5357;</a> &#x8BE5;&#x6587;&#x7AE0;&#x4ECB;&#x7ECD;&#x7684;&#x6BD4;&#x8F83;&#x5168;&#x9762;</li>
+<li><a href="https://github.com/philipwalton/flexbugs" target="_blank">flewbox bug &#x6574;&#x7406;</a></li>
+<li><a href="http://www.w3cplus.com/blog/tags/157.html" target="_blank">Flewbox &#x76F8;&#x5173;&#x6587;&#x7AE0;</a></li>
+<li><a href="http://www.tuicool.com/articles/quQVv2" target="_blank">Flexbox &#x975E;&#x5E38;&#x5BB9;&#x6613; &#x5236;&#x4F5C; CSS &#x5E03;&#x5C40;</a></li>
+<li><a href="http://my.oschina.net/yinyongcom666/blog/151085" target="_blank">Flex&#x5F39;&#x6027;&#x5E03;&#x5C40;&#x5728;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x5E94;&#x7528;</a></li>
+<li><a href="http://www.tuicool.com/articles/quQVv2" target="_blank">Flexbox &#x975E;&#x5E38;&#x5BB9;&#x6613; &#x5236;&#x4F5C; CSS &#x5E03;&#x5C40;</a></li>
+</ul>
+<h2 id="&#x517C;&#x5BB9;&#x6027;&#x5199;&#x6CD5;&#x4F8B;&#x5B50;">&#x517C;&#x5BB9;&#x6027;&#x5199;&#x6CD5;&#x4F8B;&#x5B50;</h2>
+<style>
+.flex-container {
+  display: -webkit-box;  /* 老版本语法: Safari 3.1-6,  iOS 6-, Android browser, older WebKit browsers.  */
+  display: -moz-box;    /* 老版本语法: Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;  /* 新版本语法： Chrome 21+ */
+  display: flex;       /* 新版本语法： Opera 12.1, Firefox 22+ */
+}
+
+.direction-row {
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction: row;
+}
+
+.direction-row-reverse {
+  /***兼容性写法***/
+  -moz-box-direction:reverse; /* Firefox */
+  -webkit-box-direction:reverse; /* Safari、Opera 以及 Chrome */
+  box-direction:reverse;
+
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.direction-column {
+  /***兼容性写法***/
+  -moz-box-orient:vertical; /* Firefox */
+  -webkit-box-orient:vertical; /* Safari、Opera 以及 Chrome */
+  box-orient:vertical;
+
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction: column;
+}
+
+.direction-column-reverse {
+  /***兼容性写法***/
+  -moz-box-orient:vertical; /* Firefox */
+  -webkit-box-orient:vertical; /* Safari、Opera 以及 Chrome */
+  box-orient:vertical;
+  -moz-box-direction:reverse; /* Firefox */
+  -webkit-box-direction:reverse; /* Safari、Opera 以及 Chrome */
+  box-direction:reverse;
+
+  -webkit-flex-direction: column-reverse; /* Safari */
+  flex-direction: column-reverse;
+}
+
+.flex-start{
+  /*老版本语法*/
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  /*混合版本语法*/
+  -ms-flex-pack: start;
+  /*新版本语法*/
+  -webkit-justify-content: flex-start; /* Safari */
+  justify-content: flex-start;
+}
+
+.flex-center {
+  /*老版本语法*/
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  /*混合版本语法*/
+  -ms-flex-pack: center;
+  /*新版本语法*/
+  -webkit-justify-content: center; /* Safari */
+  justify-content: center;   
+}
+
+.flex-end{
+  /*老版本语法*/
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  /*混合版本语法*/
+  -ms-flex-pack: end;
+  /*新版本语法*/
+  -webkit-justify-content: flex-end; /* Safari */
+  justify-content: flex-end;  
+}
+
+.flex-space-between{
+  /*老版本语法*/
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  /*混合版本语法*/
+  -ms-flex-pack: justify;
+  /*新版本语法*/
+  -webkit-justify-content: space-between; /* Safari */
+  justify-content: space-between;
+}
+
+.flex-space-around{
+  /*混合版本语法*/
+  -ms-flex-pack: distribute;
+  /*新版本语法*/
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content: space-around;
+}
+
+.align-items-start {
+  /*老版本语法*/
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  /*混合版本语法*/
+  -ms-flex-align: start;
+  /*新版本语法*/
+  -webkit-align-items: flex-start; /* Safari */
+  align-items: flex-start;
+}
+
+.align-items-end {
+  /*老版本语法*/
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  /*混合版本语法*/
+  -ms-flex-align: end;
+  /*新版本语法*/
+  -webkit-align-items: flex-end; /* Safari */
+  align-items: flex-end;
+}
+
+.align-items-center {
+  /*老版本语法*/
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  /*混合版本语法*/
+  -ms-flex-align: center;
+  /*新版本语法*/
+  -webkit-align-items: center; /* Safari */
+  align-items: center;
+}
+
+.align-items-baseline {
+  /*老版本语法*/
+  -webkit-box-align: baseline;
+  -moz-box-align: baseline;
+  /*混合版本语法*/
+  -ms-flex-align: baseline;
+  /*新版本语法*/
+  -webkit-align-items: baseline; /* Safari */
+  align-items: baseline;
+}
+
+.align-items-stretch {
+  /*老版本语法*/
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  /*混合版本语法*/
+  -ms-flex-align: stretch;
+  /*新版本语法*/
+  -webkit-align-items: stretch; /* Safari */
+  align-items: stretch;
+}
+
+.align-content-start {
+  /*混合版本语法*/
+  -ms-flex-line-pack: start;
+  /*新版本语法*/
+  -webkit-align-content: flex-start; /* Safari */
+  align-content: flex-start;
+}
+
+.align-content-end {
+  /*混合版本语法*/
+  -ms-flex-line-pack: end;
+  /*新版本语法*/
+  -webkit-align-content: flex-end; /* Safari */
+  align-content: flex-end;
+}
+
+.align-content-center {
+  /*混合版本语法*/
+  -ms-flex-line-pack: center;
+  /*新版本语法*/
+  -webkit-align-content: center; /* Safari */
+  align-content: center;
+}
+
+.align-content-between {
+  /*混合版本语法*/
+  -ms-flex-line-pack: justify;
+  /*新版本语法*/
+  -webkit-align-content: space-between; /* Safari */
+  align-content: space-between;
+}
+
+.align-content-around {
+  /*混合版本语法*/
+  -ms-flex-line-pack: distribute;
+  /*新版本语法*/
+  -webkit-align-content: space-around; /* Safari */
+  align-content: space-around;
+}
+
+.align-content-stretch {
+  /*混合版本语法*/
+  -ms-flex-line-pack: stretch;
+  /*新版本语法*/
+  -webkit-align-content: stretch; /* Safari */
+  align-content: stretch;
+}
+
+.container-demo {
+  border: 1px solid darkcyan;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.item-demo {
+  width:30px;
+  height:30px;
+  border:1px solid darkcyan;
+  text-align:center;
+}
+
+.align-content-demo {
+  width: 100px;
+  height:200px;
+  -webkit-flex-flow: wrap; /* Safari */
+  flex-wrap: wrap;
+}
+
+</style>
+
+<h3 id="&#x4E3B;&#x8F74;&#x65B9;&#x5411;">&#x4E3B;&#x8F74;&#x65B9;&#x5411;</h3>
+<p>&#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#x6392;&#x5217;</p>
+<div class="flex-container direction-row container-demo">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+</div>
+
+<p>&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x6392;&#x5217;</p>
+<div class="flex-container direction-row-reverse container-demo">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+</div>
+
+<p>&#x4ECE;&#x4E0A;&#x5411;&#x4E0B;&#x6392;&#x5217;</p>
+<div class="flex-container direction-column container-demo">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+</div>
+
+<p>&#x4ECE;&#x4E0B;&#x5411;&#x4E0A;&#x6392;&#x5217;</p>
+<div class="flex-container direction-column-reverse container-demo">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+</div>
+
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<blockquote>
+<p><a name="flex-direction.md" href="../../codes/flex/flex-direction.md">flex-direction.md</a></p>
+</blockquote>
+<pre><code class="lang-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span>
+
+.flex-container {
+  display: -webkit-box;  /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Safari 3.1-6,  iOS 6-, Android browser, older WebKit browsers.  <span class="token punctuation">*</span></span>/
+  display: -moz-box;    /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Firefox 19- (buggy but mostly works) <span class="token punctuation">*</span></span>/
+  display: -ms-flexbox;  /<span class="token italic"><span class="token punctuation">*</span> &#x6DF7;&#x5408;&#x7248;&#x672C;&#x8BED;&#x6CD5;: IE 10 <span class="token punctuation">*</span></span>/
+  display: -webkit-flex;  /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Chrome 21+ <span class="token punctuation">*</span></span>/
+  display: flex;       /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Opera 12.1, Firefox 22+ <span class="token punctuation">*</span></span>/
+}
+
+.direction-row {
+  -webkit-flex-direction: row; /<span class="token italic"><span class="token punctuation">*</span> Safari <span class="token punctuation">*</span></span>/
+  flex-direction: row;
+}
+</code></pre>
+<h3 id="&#x591A;&#x5217;&#x548C;&#x591A;&#x884C;&#x5E03;&#x5C40;&#xFF08;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x66F4;&#x597D;&#x7684;&#x517C;&#x5BB9;&#x578B;&#x5199;&#x6CD5;&#xFF0C;&#x6709;-boxlines-&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x652F;&#x6301;&#x6027;&#x4E0D;&#x662F;&#x5F88;&#x597D;&#xFF09;">&#x591A;&#x5217;&#x548C;&#x591A;&#x884C;&#x5E03;&#x5C40;&#xFF08;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x66F4;&#x597D;&#x7684;&#x517C;&#x5BB9;&#x578B;&#x5199;&#x6CD5;&#xFF0C;&#x6709; box-lines &#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x652F;&#x6301;&#x6027;&#x4E0D;&#x662F;&#x5F88;&#x597D;&#xFF09;</h3>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x5B9E;&#x73B0;&#x591A;&#x884C;&#x548C;&#x591A;&#x5217;&#x5E03;&#x5C40;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x91C7;&#x53D6; float &#x5E03;&#x5C40;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5224;&#x65AD; flex-wrap &#x652F;&#x6301;&#x6027;&#x6765;&#x52A8;&#x6001;&#x8BBE;&#x7F6E; css &#x6837;&#x5F0F;</p>
+<pre><code class="lang-javascript">  <span class="token comment" spellcheck="true">/**
+   * &#x5224;&#x65AD;&#x6837;&#x5F0F;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x662F;&#x5426;&#x652F;&#x6301;
+   * @param styleProp
+   * @returns {boolean}
+   */</span>
+  <span class="token keyword">function</span> <span class="token function">styleSupport</span><span class="token punctuation">(</span>styleProp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> prefix <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;webkit&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;moz&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;ms&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> $el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&apos;div&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> styleText <span class="token operator">=</span> $el<span class="token punctuation">.</span>style<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>styleText<span class="token punctuation">[</span>styleProp<span class="token punctuation">]</span> <span class="token operator">!</span><span class="token operator">==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> _styleProp <span class="token operator">=</span> prefix<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> styleProp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> styleProp<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>styleText<span class="token punctuation">[</span>_styleProp<span class="token punctuation">]</span> <span class="token operator">!</span><span class="token operator">==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">styleSupport</span><span class="token punctuation">(</span><span class="token string">&apos;flexWrap&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x4E3B;&#x8F74;&#x65B9;&#x5411;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;">&#x4E3B;&#x8F74;&#x65B9;&#x5411;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;</h3>
+<p>&#x5DE6;&#x5BF9;&#x9F50; flex-start</p>
+<div class="flex-container container-demo flex-start">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x53F3;&#x5BF9;&#x9F50; flex-end</p>
+<div class="flex-container container-demo flex-end">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x5C45;&#x4E2D; center</p>
+<div class="flex-container container-demo flex-center">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x4E24;&#x7AEF;&#x5BF9;&#x9F50; space-between</p>
+<div class="flex-container container-demo flex-space-between">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x5E73;&#x5747;&#x5206;&#x5E03; space-around</p>
+<div class="flex-container container-demo flex-space-around">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<blockquote>
+<p><a name="justify-content.md" href="../../codes/flex/justify-content.md">justify-content.md</a></p>
+</blockquote>
+<pre><code class="lang-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span>
+.flex-container {
+  display: -webkit-box;  /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Safari 3.1-6,  iOS 6-, Android browser, older WebKit browsers.  <span class="token punctuation">*</span></span>/
+  display: -moz-box;    /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Firefox 19- (buggy but mostly works) <span class="token punctuation">*</span></span>/
+  display: -ms-flexbox;  /<span class="token italic"><span class="token punctuation">*</span> &#x6DF7;&#x5408;&#x7248;&#x672C;&#x8BED;&#x6CD5;: IE 10 <span class="token punctuation">*</span></span>/
+  display: -webkit-flex;  /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Chrome 21+ <span class="token punctuation">*</span></span>/
+  display: flex;       /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Opera 12.1, Firefox 22+ <span class="token punctuation">*</span></span>/
+}
+
+.flex-start{
+  /<span class="token italic"><span class="token punctuation">*</span>&#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;<span class="token punctuation">*</span></span>/
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  /<span class="token italic"><span class="token punctuation">*</span>&#x6DF7;&#x5408;&#x7248;&#x672C;&#x8BED;&#x6CD5;<span class="token punctuation">*</span></span>/
+  -ms-flex-pack: start;
+</code></pre>
+<h3 id="&#x4FA7;&#x8F74;&#x6392;&#x5217;&#x65B9;&#x5F0F;">&#x4FA7;&#x8F74;&#x6392;&#x5217;&#x65B9;&#x5F0F;</h3>
+<p>&#x4FA7;&#x8F74;&#x7684;&#x8D77;&#x70B9;&#x5BF9;&#x9F50; flex-start</p>
+<div class="flex-container container-demo align-items-start">
+  <div class="item-demo" style="height:30px;">1</div>
+  <div class="item-demo" style="height:50px;">2</div>
+  <div class="item-demo" style="height:40px;">3</div>
+  <div class="item-demo" style="height:70px;">4</div>
+</div>
+
+<p>&#x4FA7;&#x8F74;&#x7684;&#x7EC8;&#x70B9;&#x5BF9;&#x9F50; flex-end</p>
+<div class="flex-container container-demo align-items-end">
+  <div class="item-demo" style="height:30px;">1</div>
+  <div class="item-demo" style="height:50px;">2</div>
+  <div class="item-demo" style="height:40px;">3</div>
+  <div class="item-demo" style="height:70px;">4</div>
+</div>
+
+<p>&#x4FA7;&#x8F74;&#x7684;&#x4E2D;&#x70B9;&#x5BF9;&#x9F50; center</p>
+<div class="flex-container container-demo align-items-center">
+  <div class="item-demo" style="height:30px;">1</div>
+  <div class="item-demo" style="height:50px;">2</div>
+  <div class="item-demo" style="height:40px;">3</div>
+  <div class="item-demo" style="height:70px;">4</div>
+</div>
+
+<p>&#x6309;&#x7167;&#x5B50;&#x5143;&#x7D20;&#x7B2C;&#x4E00;&#x884C;&#x6587;&#x5B57;&#x7684;&#x57FA;&#x7EBF;&#x5BF9;&#x9F50; baseline</p>
+<div class="flex-container container-demo align-items-baseline">
+  <div class="item-demo" style="height:30px;font-size:18px;">1</div>
+  <div class="item-demo" style="height:50px;font-size:12px;">2</div>
+  <div class="item-demo" style="height:40px;font-size:24px;">3</div>
+  <div class="item-demo" style="width:130px;height:100px;font-size:32px;">41333333</div>
+</div>
+
+<p>&#x586B;&#x6EE1;&#x5BB9;&#x5668; stretch</p>
+<div class="flex-container container-demo align-items-stretch" style="height: 100px;">
+  <div class="item-demo" style="height:auto;">1</div>
+  <div class="item-demo" style="height:auto;">2</div>
+  <div class="item-demo" style="height:auto;">3</div>
+  <div class="item-demo" style="height:auto;">4</div>
+</div>
+
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<blockquote>
+<p><a name="align-items.md" href="../../codes/flex/align-items.md">align-items.md</a></p>
+</blockquote>
+<pre><code class="lang-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span>
+.flex-container {
+  display: -webkit-box;  /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Safari 3.1-6,  iOS 6-, Android browser, older WebKit browsers.  <span class="token punctuation">*</span></span>/
+  display: -moz-box;    /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Firefox 19- (buggy but mostly works) <span class="token punctuation">*</span></span>/
+  display: -ms-flexbox;  /<span class="token italic"><span class="token punctuation">*</span> &#x6DF7;&#x5408;&#x7248;&#x672C;&#x8BED;&#x6CD5;: IE 10 <span class="token punctuation">*</span></span>/
+  display: -webkit-flex;  /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Chrome 21+ <span class="token punctuation">*</span></span>/
+  display: flex;       /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Opera 12.1, Firefox 22+ <span class="token punctuation">*</span></span>/
+}
+
+.align-items-start {
+  /<span class="token italic"><span class="token punctuation">*</span>&#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;<span class="token punctuation">*</span></span>/
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  /<span class="token italic"><span class="token punctuation">*</span>&#x6DF7;&#x5408;&#x7248;&#x672C;&#x8BED;&#x6CD5;<span class="token punctuation">*</span></span>/
+  -ms-flex-align: start;
+</code></pre>
+<h3 id="&#x591A;&#x884C;&#x4FA7;&#x8F74;&#x65B9;&#x5411;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;">&#x591A;&#x884C;&#x4FA7;&#x8F74;&#x65B9;&#x5411;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;</h3>
+<p>&#x4E0E;&#x4FA7;&#x8F74;&#x7684;&#x8D77;&#x70B9;&#x5BF9;&#x9F50; flex-start</p>
+<div class="flex-container container-demo align-content-demo align-content-start">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x4E0E;&#x4FA7;&#x8F74;&#x7684;&#x7EC8;&#x70B9;&#x5BF9;&#x9F50; flex-end</p>
+<div class="flex-container container-demo align-content-demo align-content-end">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x4E0E;&#x4FA7;&#x8F74;&#x7684;&#x4E2D;&#x70B9;&#x5BF9;&#x9F50; center</p>
+<div class="flex-container container-demo align-content-demo align-content-center">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x4E0E;&#x4FA7;&#x8F74;&#x4E24;&#x7AEF;&#x5BF9;&#x9F50; space-between</p>
+<div class="flex-container container-demo align-content-demo align-content-between">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x6BCF;&#x884C;&#x5E73;&#x5747;&#x5206;&#x5E03; space-around</p>
+<div class="flex-container container-demo align-content-demo align-content-around">
+  <div class="item-demo">1</div>
+  <div class="item-demo">2</div>
+  <div class="item-demo">3</div>
+  <div class="item-demo">4</div>
+</div>
+
+<p>&#x5404;&#x884C;&#x5360;&#x6EE1;&#x6574;&#x4E2A;&#x4FA7;&#x8F74;&#x7EBF; stretch</p>
+<div class="flex-container container-demo align-content-demo align-content-stretch">
+  <div class="item-demo" style="height:auto;">1</div>
+  <div class="item-demo" style="height:auto;">2</div>
+  <div class="item-demo" style="height:auto;">3</div>
+  <div class="item-demo" style="height:auto;">4</div>
+</div>
+
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<blockquote>
+<p><a name="align-content.md" href="../../codes/flex/align-content.md">align-content.md</a></p>
+</blockquote>
+<pre><code class="lang-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span>
+.flex-container {
+  display: -webkit-box;  /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Safari 3.1-6,  iOS 6-, Android browser, older WebKit browsers.  <span class="token punctuation">*</span></span>/
+  display: -moz-box;    /<span class="token italic"><span class="token punctuation">*</span> &#x8001;&#x7248;&#x672C;&#x8BED;&#x6CD5;: Firefox 19- (buggy but mostly works) <span class="token punctuation">*</span></span>/
+  display: -ms-flexbox;  /<span class="token italic"><span class="token punctuation">*</span> &#x6DF7;&#x5408;&#x7248;&#x672C;&#x8BED;&#x6CD5;: IE 10 <span class="token punctuation">*</span></span>/
+  display: -webkit-flex;  /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Chrome 21+ <span class="token punctuation">*</span></span>/
+  display: flex;       /<span class="token italic"><span class="token punctuation">*</span> &#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;&#xFF1A; Opera 12.1, Firefox 22+ <span class="token punctuation">*</span></span>/
+}
+
+.align-content-start {
+  /<span class="token italic"><span class="token punctuation">*</span>&#x6DF7;&#x5408;&#x7248;&#x672C;&#x8BED;&#x6CD5;<span class="token punctuation">*</span></span>/
+  -ms-flex-line-pack: start;
+  /<span class="token italic"><span class="token punctuation">*</span>&#x65B0;&#x7248;&#x672C;&#x8BED;&#x6CD5;<span class="token punctuation">*</span></span>/
+  -webkit-align-content: flex-start; /<span class="token italic"><span class="token punctuation">*</span> Safari <span class="token punctuation">*</span></span>/
+  align-content: flex-start;
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2016-05-15 15:10:15
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../css3/flex/subelement.html" class="navigation navigation-prev " aria-label="Previous page: Flex 布局子元素属性"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../css3/flex/compatibility2.html" class="navigation navigation-next " aria-label="Next page: Flex 布局兼容性续"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search-pro/search-pro.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbook","useIdentifier":false},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright &copy 2016","modify_label":"最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"splitter":{},"include-codeblock":{},"sectionx":{},"prism":{},"toggle-chapters":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book web 前端学习笔记 -->
+</html>
