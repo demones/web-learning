@@ -130,13 +130,13 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   git checkout master
   ```
 
-2. 把分支 gh-pages 添加到本地 subtree 中
+2. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在，执行完会提示 _book 文件夹不存在，需要我们创建
 
   ```
   git subtree add --prefix=_book origin gh-pages --squash
   ```
 
-3. 执行 `gitbook build` 重新在目录 _book 中生成 gitbook 文件，注意：** 2 和 3 的顺序颠倒也是可以的**
+3. 执行 `gitbook build` 重新在目录 _book 中生成 gitbook 文件
 
 4. 执行以下命令，提交修改的文件
 
