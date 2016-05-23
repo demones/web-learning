@@ -12,6 +12,15 @@
 * [高清显示屏原理及设计方案](http://www.cnblogs.com/PeunZhang/p/3441110.html)
 * [白色橡树博客](http://peunzhang.cnblogs.com/)
 
+## 工具类网站
+
+* [Searchcode](https://searchcode.com/)
+  Searchcode：是一个源码搜索引擎，目前支持从 Github、Bitbucket、Google Code、CodePlex、SourceForge和Fedora Project平台搜索公开的源码。
+* [在线模拟 http 请求](http://coolaf.com/)
+* [在线HTTP接口测试等](http://www.sojson.com/httpRequest/)
+* [GraphicsMagick](http://www.graphicsmagick.org/)
+  GraphicsMagick 能够动态的生成图片，特别适用于互联网的应用。可以用来处理调整尺寸、旋转、加亮、颜色调整、增加特效等方面
+
 ## 比较好的前端学习网站
 
 * [w3cplus](http://www.w3cplus.com/)

@@ -64,7 +64,7 @@
 
 2. 撤销已经同步到服务器的提交
 
-### 推送 'git push'
+### 推送 `git push`
 
 1. 删除远程分支和tag
   ```
@@ -130,6 +130,7 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   git checkout master
   ```
 
+  如果分支 gh-pages 已存在，则第一步忽略
 2. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在，执行完会提示 “pathspec '_book' did not match any file(s) known to git.”，需要我们创建 _book 目录
 
   ```
@@ -162,7 +163,7 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   ```
 7. 下次修改 _book 文件夹下的内容，只需从上面第三步执行即可。
 
-**注意：_book 需要同时也放到 master 分支中**
+**注意：这种方式的副作用是，_book 需要同时也放到 master 分支中。也许有其他命令，不需要把 _book 放到 master 分支中，待考证。**
 
 ## 在 mac 系统下，终端（terminal）显示分支等版本信息的设置
 
