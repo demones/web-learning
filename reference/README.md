@@ -6,6 +6,8 @@
 
 ## JavaScript
 
+* [代码高亮插件](https://highlightjs.org/)
+
 ## 综合
 
 * [html5移动端常见问题集锦](http://www.html5cn.org/article-9341-1.html)

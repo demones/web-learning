@@ -8,6 +8,7 @@
 
 ### which 定位命令所对应的路径，比如 `which node`
 ### 查看占用的端口 sudo lsof -i -P | grep -i "listen"
+### 杀死进程 sudo kill -9 8900       8900 表示对应的 PID
 
 
 ## 学习参考
