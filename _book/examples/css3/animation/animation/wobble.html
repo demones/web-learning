@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+  <meta charset="UTF-8">
+  <title>animation 例子</title>
+  <style>
+  body{
+    margin: 50px;
+  }
+  .animation-demo{
+    border: 1px solid #ffeedd;
+    padding: 20px;
+  }
+
+  @-webkit-keyframes wobble {
+       0% {
+          margin-left: 100px;
+          background: green;
+       }
+       40% {
+          margin-left: 150px;
+          background: orange;
+       }
+       60% {
+          margin-left: 75px;
+          background: blue;
+       }
+       100% {
+          margin-left: 100px;
+          background: red;
+       }
+    }
+
+    @keyframes wobble {
+         0% {
+            margin-left: 100px;
+            background: green;
+         }
+         40% {
+            margin-left: 150px;
+            background: orange;
+         }
+         60% {
+            margin-left: 75px;
+            background: blue;
+         }
+         100% {
+            margin-left: 100px;
+            background: red;
+         }
+      }
+
+  .animation-wobble {
+       width: 50px;
+       height: 50px;
+       margin-left: 100px;
+       background: blue;
+       -webkit-animation-name: wobble;/*动画属性名，也就是我们前面keyframes定义的动画名*/
+       -webkit-animation-duration: 10s;/*动画持续时间*/
+       -webkit-animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/
+       -webkit-animation-delay: 2s;/*动画延迟时间*/
+       -webkit-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+       -webkit-animation-direction: alternate;/*定义动画方式*/
+
+       animation-name: wobble;/*动画属性名，也就是我们前面keyframes定义的动画名*/
+       animation-duration: 10s;/*动画持续时间*/
+       animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/
+       animation-delay: 2s;/*动画延迟时间*/
+       animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+       animation-direction: alternate;/*定义动画方式*/
+    }
+  </style>
+</head>
+<body>
+
+<div class="animation-demo">
+  <div class="animation-wobble"></div>
+</div>
+</body>
+</html>
