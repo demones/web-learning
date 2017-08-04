@@ -2,11 +2,6 @@
 ## node
 node_modules
 
-# eBook build output
-*.epub
-*.mobi
-*.pdf
-
 # WebStorm
 .idea
 .DS_Store
