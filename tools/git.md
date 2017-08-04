@@ -42,6 +42,34 @@
    git push origin :refs/tags/0.0.1     删除远程tag
    ```
 
+6. 拉取远程分支到本地
+
+git pull <远程主机名> <远程分支名>:<本地分支名>
+
+举例如下：
+```
+git pull origin branch2:branch2
+```
+
+git pull origin dev-20160901:dev-20160901
+
+或者
+
+```
+git checkout -b local-branchname remotes/origin/remote_branchname
+```
+
+6. 从一个资源切换到另一个资源
+如果之前在 git 上创建了一个资源(repository)，如果想把本地的代码提交到另一个新的资源(repository)上，可以执行以下命令
+
+```
+git remote rm origin
+git remote add origin git@github.com:myname/newrep.git
+```
+
+详细参考[这里](https://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository)
+和[这里](https://www.kernel.org/pub/software/scm/git/docs/git-remote.html)
+
 ## git 常见命令 （持续完善中）
 
 ### 添加文件 `git add`
@@ -53,6 +81,19 @@
 * `git add file*.js` 添加指定的文件，可以用通配符
 
 ### 提交 `git commit`
+
+1. 修改最后一次提交
+   有时候我们提交完了才发现漏掉了几个文件没有加，或者提交信息写错了，这时我们可以使用 --amend 选项重新提交，把漏掉的文件补上或是
+   修改提交信息。
+   `git commit --amend`
+   ```
+   $ git commit -m 'initial commit'
+   $ git add forgotten_file
+   $ git commit --amend
+   ```
+2. 取消已经暂存的文件
+   我们不小心用 `git add .` 全加到了暂存区域，我们可以执行 `git reset HEAD <file>` 取消某个文件，或所有文件，
+   `<file>` 是指要取消的暂存文件，不输入，则取消所有。或者直接执行 `git reset` 取消所有暂存
 
 1. 撤销上一次的 commit
 
