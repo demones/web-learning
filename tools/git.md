@@ -204,7 +204,7 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   ```
 7. 下次修改 _book 文件夹下的内容，只需从上面第三步执行即可。
 
-**注意：这种方式的副作用是，_book 需要同时也放到 master 分支中。也许有其他命令，不需要把 _book 放到 master 分支中，待考证。**
+  **注意：这种方式的副作用是，_book 需要同时也放到 master 分支中。也许有其他命令，不需要把 _book 放到 master 分支中，待考证。**
 
 ## 在 mac 系统下，终端（terminal）显示分支等版本信息的设置
 
@@ -222,11 +222,11 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
     * 显示当前修改状态
       *   = 表示一个干净的分支
       *   ~ 表示文件有改动
-      *   * 表示文件有增加或删除 但未 commit
-      *   + 表示有新文件
-      *   # 表示已commit 但未 push
+      *   \* 表示文件有增加或删除 但未 commit
+      *   \+ 表示有新文件
+      *   \# 表示已commit 但未 push
 
-  ```
+```
   function parse_git_dirty {
     local git_status=$(git status 2> /dev/null | tail -n1) || $(git status 2> /dev/null | head -n 2 | tail -n1);
     if [[ "$git_status" != "" ]]; then
@@ -254,7 +254,8 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
 
   export PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;31m\]\$(parse_git_dirty)\[\033[0m\]$ "
 
-  ```
+```
+
 * 方法三： 推荐使用强大的 zsh https://github.com/robbyrussell/oh-my-zsh
   比较好的主题
   * robbyrussell 官方默认的
@@ -262,12 +263,43 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   * ys 可以显示时间
   * pygmalion 样式风格不错
 
+
 ## Github
 
 ### Github 相关资料
 
 * [Github Developer](https://developer.github.com/)
 * [Gitignore 各种语言忽略文件说明](https://developer.github.com/.gitignore)
+
+## GitHub中如何更新已经fork的代码
+github上有个很方便的功能叫fork，将别人的工程一键复制到自己账号下。当被 fork 的资源有更新时，我们需要手动更新，请按下面步骤操作
+
+1. 下载 fork 后的资源到本地
+   ```
+   git clone git@github.com:username/repository.git
+   ```
+2. 增加源分支地址到你项目远程分支列表中(此处是关键)，需要将原来的仓库指定为 upstream，命令如下
+   ```
+   git remote add upstream git@github.com/被fork的仓库.git
+   ```
+
+3. fetch源分支的新版本到本地
+   ```
+   git fetch upstream
+   ```
+   在 fetch 前也可以执行命令来查看远程分支列表 `git remote -v`
+
+4. 合并两个版本的代码
+   ```
+   git merge upstream/master
+   ```
+   如果本地有修改过的内容，合并的过程可能有冲突，根据提示修改冲突的文件，重新提交到本地即可。
+6. 将合并后的代码push到github上去
+   ```
+   git push
+   ```
+
+如果先麻烦或是本地代码没有修改，也可以直接先删除以前 fork 的资源，然后再重新 fork 一个即可。另外 fork 下来的资源如果有修改，最好新创建一个分支
 
 
 ## 学习参考

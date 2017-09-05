@@ -6,6 +6,7 @@
 
 ## mac 相关命令
 
+### cat 查看文件内容，比如查看 host 内容  cat /etc/hosts
 ### which 定位命令所对应的路径，比如 `which node`
 ### 查看占用的端口 sudo lsof -i -P | grep -i "listen"
 ### 杀死进程 sudo kill -9 8900       8900 表示对应的 PID
@@ -37,3 +38,5 @@ echo $PATH >> ~/.bash_profile
 ## node 设置
 export PATH=/Users/wangyanjun/development-tools/mongodb-osx-x86_64-3.2.8/bin:$PATH  
 echo $PATH >> ~/.bash_profile
+
+## linux 系统下安装 rz 命令 `yum -y install lrzsz` ，使用 `yum -y install` 可以安装其他命令
