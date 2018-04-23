@@ -65,10 +65,27 @@ git checkout -b local-branchname remotes/origin/remote_branchname
 ```
 git remote rm origin
 git remote add origin git@github.com:myname/newrep.git
+git branch --set-upstream-to=origin/master master
+```
+
+7. 查看远程分支
+```
+git branch -a
 ```
 
 详细参考[这里](https://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository)
 和[这里](https://www.kernel.org/pub/software/scm/git/docs/git-remote.html)
+
+## 从服务端拉取某一分支到本地
+
+1. 本地 `git init` 初始化项目
+2. 用服务端分支名给本地创建一个分支 `git checkout -b branchName`
+3. 提交本地分支代码
+4. 绑定服务端资源 `git remote add origin http://jcode.cbpmgt.com/git/ft_personal_account.git`
+5. 本地分支与服务端关联  `git branch --set-upstream-to=origin/dev dev`
+6. 更新服务端代码 `git pull --allow-unrelated-histories` 加上 --allow-unrelated-histories 允许合并有冲突的代码
+7. 解决冲突，提交代码
+
 
 ## git 常见命令 （持续完善中）
 
@@ -287,20 +304,39 @@ github上有个很方便的功能叫fork，将别人的工程一键复制到自�
    ```
    git fetch upstream
    ```
-   在 fetch 前也可以执行命令来查看远程分支列表 `git remote -v`
+   在 fetch 前也可以执行命令来查看远程分支列表 `git remote -v` 或 `git branch -a`
 
 4. 合并两个版本的代码
    ```
    git merge upstream/master
+   # 或者其他分支
    ```
    如果本地有修改过的内容，合并的过程可能有冲突，根据提示修改冲突的文件，重新提交到本地即可。
-6. 将合并后的代码push到github上去
+
+   如果想合并 tag 比如 v4.8.3 可以先执行 `git checkout v4.8.3` `git checkout -b v4.8.3` `git merge v4.8.3`
+
+6. 将合并后的代码push到 github 上去
    ```
    git push
    ```
 
-如果先麻烦或是本地代码没有修改，也可以直接先删除以前 fork 的资源，然后再重新 fork 一个即可。另外 fork 下来的资源如果有修改，最好新创建一个分支
+如果嫌麻烦或是本地代码没有修改，也可以直接先删除以前 fork 的资源，然后再重新 fork 一个即可。另外 fork 下来的资源如果有修改，最好新创建一个分支
 
+另外如果想使用被 fork 资源的某一分支或某一 tag，比如想修改被 fork 的资源某一稳定版本，并重新修改名称发布到 npm 上，可按照以下方式处理
+
+1. 切换到某一 branch 或 tag
+  ```
+  git checkout -b branch_name tag_name
+  ```   
+2. 修改代码
+3. npm publish
+
+或者使用 github desktop 界面操作更简洁
+https://www.cnblogs.com/mff520mff/archive/2017/08/13/7355118.html
+
+
+## http 或 https 保存当前密码设置
+git config --global credential.helper store
 
 ## 学习参考
 * [git 官网](https://www.git-scm.com/)
