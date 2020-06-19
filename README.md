@@ -14,7 +14,7 @@ This book help us to quickly build web front-end page. It contain html5 css3 jav
 ### 安装依赖
 
 ```bash
-gitbook update
+gitbook install
 ```
 
 ### 启动服务

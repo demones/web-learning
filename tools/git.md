@@ -2,6 +2,7 @@
 
 ## 添加到github中相关步骤（简单版）
 
+
 1. 在github上创建一个资源库 Repository
 2. 在当前项目路径下
     - 初始化 git init
@@ -42,39 +43,43 @@
    git push origin :refs/tags/0.0.1     删除远程tag
    ```
 
-6. 拉取远程分支到本地
+7. 拉取远程分支到本地
 
-git pull <远程主机名> <远程分支名>:<本地分支名>
+git checkout -b local-branchname remotes/origin/remote_branchname
 
 举例如下：
-```
-git pull origin branch2:branch2
-```
-
-git pull origin dev-20160901:dev-20160901
-
-或者
 
 ```
 git checkout -b local-branchname remotes/origin/remote_branchname
 ```
 
-6. 从一个资源切换到另一个资源
+8. 从一个资源切换到另一个资源
 如果之前在 git 上创建了一个资源(repository)，如果想把本地的代码提交到另一个新的资源(repository)上，可以执行以下命令
 
 ```
 git remote rm origin
 git remote add origin git@github.com:myname/newrep.git
-git branch --set-upstream-to=origin/master master
+git branch --set-upstream-to=origin/dev dev # 服务端已存在 dev 分支，dev 也可以改成 master
+# 或者
+git push --set-upstream origin dev #服务端没有 dev 分支时，dev 也可以改成 master
+# 对于与服务端有冲突的代码时，可以加上 --allow-unrelated-histories 允许合并有冲突的代码
+git pull --allow-unrelated-histories
 ```
 
-7. 查看远程分支
+9. 查看远程分支
 ```
 git branch -a
 ```
 
 详细参考[这里](https://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository)
 和[这里](https://www.kernel.org/pub/software/scm/git/docs/git-remote.html)
+
+10. 切换到 tag
+
+tag_name 值本地分支，或远程分支
+```
+git checkout -b branch_name tag_name
+```
 
 ## 从服务端拉取某一分支到本地
 
@@ -112,7 +117,7 @@ git branch -a
    我们不小心用 `git add .` 全加到了暂存区域，我们可以执行 `git reset HEAD <file>` 取消某个文件，或所有文件，
    `<file>` 是指要取消的暂存文件，不输入，则取消所有。或者直接执行 `git reset` 取消所有暂存
 
-1. 撤销上一次的 commit
+3. 撤销上一次的 commit，也可以是上几次的
 
   `git reset --soft HEAD~1` 后面数字可以看作是取消的 commit 次数，--soft 参数表示只取消 commit 但保留文件的修改（相当于git add 之后的的状态），如果你想连修改都不要的话就用 --hard 参数。
 
@@ -120,7 +125,21 @@ git branch -a
 
   根据每次版本 hashId 来撤销，首先执行 `git log` ，找到要恢复的 hashId，然后 `git reset --hard hashId`
 
-2. 撤销已经同步到服务器的提交
+4. 撤销上一次或前几次的 commit 后，执行 git status 发现以前的 commit 没有记录了，如果我们此事又不想撤销了，这时可以使用以下命令来处理
+  ```
+  $ git reflog
+  b7057a9 HEAD@{0}: reset: moving to b7057a9
+  98abc5a HEAD@{1}: commit: more stuff added to foo
+  b7057a9 HEAD@{2}: commit (initial): initial commit
+
+  # 再执行以下操作，强制回退到上一处提交的代码，注意执行以下命令，本地已经修改的文件会全部回退，所以需要做好备份
+  git reset --hard 98abc5a
+  ```
+
+5. 撤销已经同步到服务器的提交
+  * git log 查看要回退的记录
+  * git reset --hard logid 撤回到某一 logid
+  * git push --force 强制提交到远程服务端
 
 ### 推送 `git push`
 
@@ -172,6 +191,7 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   * https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt
 
 ## 快速把代码发布到 Github Pages
+
 这里要利用到 `git subtree` 命令来实现。首先我们想一想，如果不借助于 `git subtree` ，通常做法是怎样来处理的。
 我们首先需要创建分支 gh-pages, 然后切换到该分支下，最后把文件提交到 gh-pages 分支中。
 对于 master 和 gh-pages 中的内容一样的情况下，这种实现尚且可以，如果不一样，我们就得复制来复制去，很麻烦，还容易出错，
@@ -337,6 +357,13 @@ https://www.cnblogs.com/mff520mff/archive/2017/08/13/7355118.html
 
 ## http 或 https 保存当前密码设置
 git config --global credential.helper store
+
+## pre-commit 的使用
+
+pre-commit 是用来执行 git commit 之前处理的脚本，可以直接修改 .git/hooks 下的文件 pre-commit.sample
+改成 pre-commit，然后修改文件中的 shell 脚本
+参见 http://ju.outofmemory.cn/entry/255503
+也可以安装 npm 包 pre-commit 来处理
 
 ## 学习参考
 * [git 官网](https://www.git-scm.com/)

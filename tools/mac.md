@@ -8,8 +8,8 @@
 
 ### cat 查看文件内容，比如查看 host 内容  cat /etc/hosts
 ### which 定位命令所对应的路径，比如 `which node`
-### 查看占用的端口 sudo lsof -i -P | grep -i "listen"
-### 杀死进程 sudo kill -9 8900       8900 表示对应的 PID
+### 查看占用的端口 sudo lsof -i -P | grep -i "listen" 也可以用这个命令 sudo ps -ef |grep [关键字]
+### 杀死进程 sudo kill -9 17967       8900 表示对应的 PID
 
 ### 解压 tar.xz结尾的压缩文件
 
@@ -57,3 +57,12 @@ oh-my-zsh 插件：  ls ~/.oh-my-zsh/plugins 修改插件，在 .zshrc 中修改
 tail -50f filename 表示查看后 50行内容
 
 tail filename |grep "搜索的内容" -a(或-b 或-c)   -a 表示从前查找，-b 从后查找 -c 表示从前后查找
+
+## chmod 命令
+chmod -R 777 file     -R 表示递归设置，777 表示最高权限，file 指文件或文件夹
+
+## curl 命令
+检测 url 是否能访问通
+curl url
+
+## dig

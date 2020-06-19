@@ -5,8 +5,8 @@ Window 系统为 Ctrl(Command)，Mac 系统为 Command
 
 | 英文 | 中文 |	快捷键	| 功能 |
 |------|-----|-------| ----|
-| New Window|	新建界面窗口|	Ctrl(Command) + Shift + N|	如中文意思 |
-| New File|	新建文件|	Ctrl(Command) + N|	如中文意思|
+| New Window |	新建界面窗口 |	Ctrl(Command) + Shift + N |	如中文意思 |
+| New File |	新建文件|	Ctrl(Command) + N|	如中文意思|
 | Open File	| 打开文件| 	Ctrl(Command) + O	| 如中文意思|
 | Open Folder| 	打开文件夹	| Ctrl(Command) + Shift + O	| 如中文意思|
 | Add Project Folder	| 加载项目目录	| Ctrl(Command) + Alt + O	| 如中文意思|
