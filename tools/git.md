@@ -16,6 +16,9 @@
 
         > git pull git@github.com:username/repository.git master
 
+    - 如果pull失败，可强制 pull
+        > git pull --allow-unrelated-histories
+
     - 设置 git push 直接提交到远程仓库中可以执行以下命令
 
          > git push --set-upstream origin master

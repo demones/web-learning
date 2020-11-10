@@ -66,3 +66,36 @@ chmod -R 777 file     -R 表示递归设置，777 表示最高权限，file 指�
 curl url
 
 ## dig
+
+
+## 常用软件
+
+
+### node
+npm 安装包缓存 ~/.npm 删除即可
+
+### brew
+
+https://brew.sh/index_zh-cn
+
+镜像设置
+
+还原成官方
+
+```shell
+
+cd "$(brew --repo)"
+
+git remote set-url origin https://github.com/Homebrew/brew.git
+
+```
+
+替换成阿里巴巴的 brew.git 仓库地址
+
+```shell
+
+cd "$(brew --repo)"
+
+git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
+
+```
