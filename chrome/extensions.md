@@ -1,5 +1,8 @@
 # chrome 扩展程序和开发者工具
 
+## 扩展程序国内镜像地址
+https://chrome.pictureknow.com/
+
 ##  扩展程序
 下面介绍开发过程中比较实用的工具
 

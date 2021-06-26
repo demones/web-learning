@@ -2,20 +2,16 @@
 
 ## 添加到github中相关步骤（简单版）
 
-
 1. 在github上创建一个资源库 Repository
 2. 在当前项目路径下
     - 初始化 git init
     - 添加： git add -A 或 git add .
     - 提交： git commit -m "Init this project."
     - 绑定 github远程仓库（我们用ssh方式，这样每次提交不用输入密码）：
-
         > git remote add origin git@github.com:username/repository.git
     - 提交到服务器端：git push origin master
   这里需要注意的是：如果我们在github中创建资源库的时候添加了readme.md等文件，在提交到服务器之前需要git pull，执行以下命令
-
         > git pull git@github.com:username/repository.git master
-
     - 如果pull失败，可强制 pull
         > git pull --allow-unrelated-histories
 
@@ -23,7 +19,6 @@
 
          > git push --set-upstream origin master
 3. 我们也可以直接用以下命令先把远程代码clone到本地，再 add commit。这种方式比较简单一些
-
    > git clone git@github.com:username/repository.git
 
 4. 创建分支
@@ -46,43 +41,44 @@
    git push origin :refs/tags/0.0.1     删除远程tag
    ```
 
-7. 拉取远程分支到本地
+6. 拉取远程分支到本地
 
-git checkout -b local-branchname remotes/origin/remote_branchname
+    git checkout -b local-branchname remotes/origin/remote_branchname
 
-举例如下：
+    举例如下：
 
-```
-git checkout -b local-branchname remotes/origin/remote_branchname
-```
+    ```hash
+    git checkout -b local-branchname remotes/origin/remote_branchname
+    ```
 
-8. 从一个资源切换到另一个资源
-如果之前在 git 上创建了一个资源(repository)，如果想把本地的代码提交到另一个新的资源(repository)上，可以执行以下命令
+7. 从一个资源切换到另一个资源
 
-```
-git remote rm origin
-git remote add origin git@github.com:myname/newrep.git
-git branch --set-upstream-to=origin/dev dev # 服务端已存在 dev 分支，dev 也可以改成 master
-# 或者
-git push --set-upstream origin dev #服务端没有 dev 分支时，dev 也可以改成 master
-# 对于与服务端有冲突的代码时，可以加上 --allow-unrelated-histories 允许合并有冲突的代码
-git pull --allow-unrelated-histories
-```
+    如果之前在 git 上创建了一个资源(repository)，如果想把本地的代码提交到另一个新的资源(repository)上，可以执行以下命令
 
-9. 查看远程分支
-```
-git branch -a
-```
+    ```
+    git remote rm origin
+    git remote add origin git@github.com:myname/newrep.git
+    git branch --set-upstream-to=origin/dev dev # 服务端已存在 dev 分支，dev 也可以改成 master
+    # 或者
+    git push --set-upstream origin dev #服务端没有 dev 分支时，dev 也可以改成 master
+    # 对于与服务端有冲突的代码时，可以加上 --allow-unrelated-histories 允许合并有冲突的代码
+    git pull --allow-unrelated-histories
+    ```
 
-详细参考[这里](https://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository)
-和[这里](https://www.kernel.org/pub/software/scm/git/docs/git-remote.html)
+8. 查看远程分支
+    ```
+    git branch -a
+    ```
 
-10. 切换到 tag
+    详细参考[这里](https://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository)
+    和[这里](https://www.kernel.org/pub/software/scm/git/docs/git-remote.html)
 
-tag_name 值本地分支，或远程分支
-```
-git checkout -b branch_name tag_name
-```
+9. 切换到 tag
+
+    tag_name 值本地分支，或远程分支
+    ```
+    git checkout -b branch_name tag_name
+    ```
 
 ## 从服务端拉取某一分支到本地
 
@@ -367,6 +363,10 @@ pre-commit 是用来执行 git commit 之前处理的脚本，可以直接修改
 改成 pre-commit，然后修改文件中的 shell 脚本
 参见 http://ju.outofmemory.cn/entry/255503
 也可以安装 npm 包 pre-commit 来处理
+
+## github 多账户设置
+
+https://www.cnblogs.com/yanbinliu/p/4095433.html
 
 ## 学习参考
 * [git 官网](https://www.git-scm.com/)

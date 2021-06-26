@@ -12,3 +12,7 @@ fetch('http://hongbao-api.jdpay.com:8099/redbag/uploadWishImg', {
   method: 'post',
   body: formData
 });
+
+## iframe sandbox
+
+https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe

@@ -10,6 +10,7 @@ node_modules
 # WebStorm
 .idea
 .DS_Store
+.history
 
 # 日常工作不上传
 daily-work

@@ -58,6 +58,28 @@ Window 系统为 Ctrl(Command)，Mac 系统为 Command
 | Select Line Move below	| 选中行下移	| Ctrl(Command) + down	| 如中文意思|
 | Symbol-view	| 进入变量、函数跳转面板。	| Ctrl(Command) + R |	如中文意思|
 
+## 主题
+
+https://atom.io/themes/atom-material-ui
+https://atom.io/themes/atom-material-syntax
+https://atom.io/themes/atom-material-syntax-light
+
+## 插件
+
+https://atom.io/packages/atom-clock 显示时间
+https://atom.io/packages/scroll-through-time
+https://atom.io/packages/hey-pane 分屏
+https://atom.io/packages/platformio-ide-terminal
+https://atom.io/packages/atom-beautify
+https://atom.io/packages/emmet
+https://atom.io/packages/file-icons
+https://atom.io/packages/markdown-preview-plus
+https://atom.io/packages/regex-railroad-diagram
+https://atom.io/packages/markdown-table-editor
+https://atom.io/packages/activate-power-mode
+https://atom.io/packages/highlight-selected
+
+
 ## 参考资料
 
 * [Atom 使用教程](http://wiki.jikexueyuan.com/project/atom/)

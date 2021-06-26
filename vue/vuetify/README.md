@@ -10,3 +10,10 @@
 
 https://stackoverflow.com/questions/52772475/disable-options-in-v-autocomplete
 https://stackoverflow.com/questions/59983308/vuetify-v-select-disable-options-based-on-object-type-value
+
+## 自动截取
+```html
+<div class="text-truncate" style="width: 120px;">
+  {{ JSON.stringify(item) }}
+</div>
+```

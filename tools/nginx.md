@@ -1,13 +1,35 @@
 # nginx 学习笔记
 
-## 安装
+## brew 安装
+brew install nginx
+
+brew 安装的 nginx 配置文件路径 /usr/local/etc/nginx/nginx.conf
+
+命令目录：/usr/local/bin/nginx
+
+安装完提示信息
+
+Docroot is: /usr/local/var/www
+
+The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /usr/local/etc/nginx/servers/.
+
+To have launchd start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  nginx
+
+
+## 官方安装
 mac 和 nginx 安装都可以从官方下载，到[这里](http://nginx.org/en/download.html)下载最新版本
 下载解压后，运行以下命令
 
 ```bash
 ./configure
 // mac 下
-shell ./configure
+sh ./configure
 ```
 
 安装后，命令、配置信息
@@ -28,10 +50,23 @@ nginx http uwsgi temporary files: "uwsgi_temp"
 nginx http scgi temporary files: "scgi_temp"
 ```  
 
-* 本地安装路径 /usr/local/etc/nginx
+## 启动、停止
+brew 安装，命令目录 /usr/local/bin/nginx
 * 启动命令 nginx
 * 重启命令 nginx -s reload
-* 关闭命令 nginx -s stop
+* 停止命令 nginx -s stop
+
+## 常用命令及配置信息
+nginx services start // 启动NGINX
+nginx -t // 检测nginx是否可以正常启动
+nginx -s reload // 重启nginx 一般是在操作nginx.conf之后 执行这个操作
+nginx -s stop // 停止nginx进程
+ps aux | grep "nginx: worker process" 查看当前nginx的work user是谁。
+
+nginx.conf => /usr/local/etc/nginx/nginx.conf
+nginx 文件夹 => /usr/local/bin/nginx
+error.log 报错日志 => /usr/local/var/log/nginx/error.log
+nginx root根路径 => /usr/local/var/www/
 
 ## 问题
 
@@ -42,19 +77,6 @@ nginx http scgi temporary files: "scgi_temp"
     }
   ```
 
-brew 安装的 nginx 配置文件路径 /usr/local/etc/nginx/nginx.conf
-
-Docroot is: /usr/local/var/www
-
-The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
-nginx can run without sudo.
-
-nginx will load all files in /usr/local/etc/nginx/servers/.
-
-To have launchd start nginx now and restart at login:
-  brew services start nginx
-Or, if you don't want/need a background service you can just run:
-  nginx
 
 ## location 匹配
 
@@ -80,3 +102,16 @@ https://juejin.im/post/5cbe89b6f265da0373718707
 https://blog.csdn.net/t8116189520/article/details/81909574
 
 [/usr/local/nginx/logs/nginx.pid 路径下找不到nginx.pid](https://blog.csdn.net/solly793755670/article/details/70742011)
+
+## expires过期时间设置
+
+```
+expires 30s;   #缓存30秒
+expires 30m;  #缓存30分钟   
+expires 2h;     #缓存2小时
+expires 30d;    #缓存30天
+```
+
+## 502错误
+
+502 错误一般是后端服务出错了，或者ngnix配置有问题，比如端口、域名等

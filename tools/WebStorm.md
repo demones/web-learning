@@ -32,6 +32,11 @@ colors 存放地址 ~/Library/Preferences/WebStorm2016.1/colors
 * https://github.com/rofrol/oceanic-next-jetbrains-theme
 * https://github.com/jumbojett/WebStorm-Verou-Theme
 
-## 去掉保存文件时自动在行尾加上一空行
+## 配置项说明
+### 去掉保存文件时自动在行尾加上一空行
 
 Preferences - Editor - General - Other 去掉 "Ensure line feed at file on Save" 勾选
+
+### Vue 文件 script 和 style 空两行
+
+Preferences - Editor - Code Style - Vue - Tabs and Indents - Indent children of top-level-tag，加上 script 和 style
