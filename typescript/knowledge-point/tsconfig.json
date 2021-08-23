@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "allowJs": false, // 默认 false，是否允许引入后缀是js的文件
+    "checkJs": false, // 默认 false，是否检测js文件语法
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "ES6",
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // "strict": true,
+    "removeComments": true,
+    "pretty": true,
+    "strictPropertyInitialization": true,
+    "lib": ["es6"],
+    "typeRoots": [
+      "./typings"
+    ],
+    "paths": {
+      "@vant/weapp/*": ["/Users/wangyanjun/git-jci-workspace/qidian-mini-example/node_modules/@vant/weapp/dist/*"]
+    }
+  },
+  "extends": "./configs/base",
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
