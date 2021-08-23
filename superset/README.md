@@ -30,7 +30,7 @@ superset fab create-admin \
     --firstname Qidian \
     --lastname Superset \
     --email admin@superset.com \
-    --password qidianSuperset
+    --password xxxx
 
 superset db upgrade
 
@@ -118,6 +118,8 @@ superset init
 
 ### 本地启动
 
+#### 本地安装
+
 以下为mac环境
 
 1. 确保安装了xcode，如没有安装，请先安装或者执行命令 ```xcode-select --install```
@@ -154,6 +156,8 @@ superset init
    ```shell
      pip install -i https://mirrors.aliyun.com/pypi/simple/ apache-superset
    ```
+
+#### 命令启动
 
 1. 依次执行以下命令启动superset服务
 
@@ -204,26 +208,17 @@ docker build -t="qidian/superset:v2" .
 参考官网说明：<https://superset.apache.org/docs/installation/installing-superset-from-scratch>
 
 'connector'='jdbc',
-  'url'='jdbc:clickhouse://172.25.223.55:8123/default',
+  'url'='jdbc:clickhouse://x.x.x.x:8123/default',
   'username'='default',
   'password'='',
 
-地址 172.25.223.55:8123  
+地址 x.x.x.x:8123  
 库名:shard
 'username'='default',
   'password'='',
-clickhouse+native://default@172.25.223.55:8123/shard
+clickhouse+native://default@x.x.x.x:8123/shard
 
 chUsername: clickhouse_operator
-chPassword: clickhouse_operator_password
+chPassword: xxx
 chPort: 8123
 10.240.206.65
-
-8123 9000
-clickhouse+native://clickhouse_operator:clickhouse_operator_password@10.240.206.65:8123/shard
-
-mysql+mysqlconnector://idp_strategy:sw9pi41nOIw7@mydb-idpstrategy-01.db.jdfin.local:3306/idp_strategy
-
-mysql://idp_strategy:sw9pi41nOIw7@mydb-idpstrategy-01.db.jdfin.local:3306/idp_strategy?charset=utf8
-
-clickhouse+native://clickhouse_operator:clickhouse_operator_password@10.240.206.65:8123/default?secure=true
