@@ -20,10 +20,11 @@
 * tar -xvf name.tar
 
 ## vim
+
 查询 /关键字，快捷键 n 查找下一个，也可以使用 grep 在制定文件中查询
 
 ```shell
-grep "keyword" path/filename.txt 
+grep "keyword" path/filename.txt
 ```
 
 ## 设置环境变量 path 路径
@@ -31,15 +32,15 @@ grep "keyword" path/filename.txt
 方法1：
 
 ```shell
-export PATH=/usr/local/xxx/bin:$PATH  
-echo $PATH >> ~/.bash_profile  
+export PATH=/usr/local/xxx/bin:$PATH
+echo $PATH >> ~/.bash_profile
 ```
 
 如果只是临时的可以不需要下面这段
 
-echo $PATH >> ~/.bash_profile  
+echo $PATH >> ~/.bash_profile
 
-方法2：编辑文件 ~/.bash_profile，添加要加入的path，重启终端。  
+方法2：编辑文件 ~/.bash_profile，添加要加入的path，重启终端。
 
 ## 学习参考
 
@@ -47,7 +48,7 @@ echo $PATH >> ~/.bash_profile
 
 ## node 设置
 
-export PATH=/Users/wangyanjun/development-tools/mongodb-osx-x86_64-3.2.8/bin:$PATH  
+export PATH=/Users/username/development-tools/mongodb-osx-x86_64-3.2.8/bin:$PATH
 echo $PATH >> ~/.bash_profile
 
 ## linux 系统下安装 rz 命令 `yum -y install lrzsz` ，使用 `yum -y install` 可以安装其他命令
