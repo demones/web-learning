@@ -41,3 +41,12 @@ vue inspect > output.js
 ```
 
 具体可查看官方文档 https://cli.vuejs.org/zh/guide/webpack.html#%E5%AE%A1%E6%9F%A5%E9%A1%B9%E7%9B%AE%E7%9A%84-webpack-%E9%85%8D%E7%BD%AE
+
+## 查看生成的webpack配置文件
+
+* vue inspect
+  可以查看所有的配置，```vue inspect > output.js```，会把配置输出到 output.js 文件中
+* vue inspect --rules
+  列出对应的配置规则
+* vue inspect --rule vue
+  对应某一规则详情

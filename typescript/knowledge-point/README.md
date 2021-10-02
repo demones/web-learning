@@ -747,7 +747,7 @@ type infoJson = Record<keyof ReturnType<typeof func>, string>
 * downlevelIteration 默认 false，迭代器降级时，更准确的模拟es6行为
 * importHelpers 默认 false，导入辅助，如果启用了 importHelpers 选项，这些辅助函数将从 tslib 中被导入
 * incremental true if composite, false otherwise，使 TypeScript 将上次编译的工程图信息保存到磁盘上的文件中。这将会在您编译输出的同一文件夹中创建一系列 .tsbuildinfo 文件，TS编译器在第一次编译之后会生成一个存储编译信息的文件，第二次编译会在第一次的基础上进行增量编译，可以提高编译的速度
-* isolatedModules 默认 false，孤立模块
+* isolatedModules 默认 false，设为 true 时将每个文件转换为一个单独的模块
 * jsx 指定jsx输出方式
 * lib 设置库文件，TS需要引用的库，即声明文件，es5 默认引用dom、es5、scripthost,如需要使用es的高级版本特性，通常都需要配置，如es8的数组新特性需要引入"ES2019.Array",
 * module 设置模块格式，主要有以下几种方式：CommonJS、ES6、UMD、AMD等

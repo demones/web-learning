@@ -1,6 +1,7 @@
 # sql 常用函数
 
 ## charindex() 和 patindex() 函数
+
 charindex()是原始的SQL函数，用于寻找在一个字符串中某子字符串第一次出现的位置。如函数名所示，这个函数返回一个整型值，表示某子字符串的第一个字符在整个字符串中的位置索引。以下脚本用于在字符串Washington中寻找子字符串sh的出现位置:
 
 SELECT charindex('sh', 'Washington')
@@ -20,6 +21,7 @@ SELECT charindex('Mars', 'The stars near Mars are far from ours')
 这两个函数都返回索引值16。请注意这些函数的执行过程。下一节将把这两个函数和SUBSTRING()函数组合在一起，演示如何使用界定符解析字符串。
 
 ## LEFT() 和 RIGHT() 函数
+
 LEFT()与RIGHT()函数是相似的，它们都返回一定长度的子字符串。这两个函数的区别是，它们返回的分别是字符串的不同部分。LEFT()函数返回字符串最左边的字符，顺序从左数到右。RIGHT()函数正好相反，它从最右边的字符开始，以从右到左的顺序返回特定数量的字符。看一看使用这两个函数返回"GeorgeWashington"这个字符串的子字符串的例子。
 
 如果使用LEFT()函数返回一个5字符的子字符串，则函数先定位最左边的字符，向右数5个字符，然后返回这个子字符串，如下所示。
@@ -61,26 +63,28 @@ SET @SpaceIndex = CHARINDEX(' ' , @FullName)
 
 SELECT LEFT(@FullName, @SpaceIndex - 1)
 ```
+
  结果为：George
 
 如果不想在结果中包含空格，就需要从@SpaceIndex值中减去1，这样结果中就只有名字了。
 
-# ide.jd.com 用到的函数
-* instr 查询某一字符在字段中的位置，例如 ```instr(url,'?')```，如没查找到返回 0
-* substr 截取字符串，例如 ```substr(url, 1, 20)```， 注意从 1 开始；```substr(url, 20)```表示截取 20 以后的内容
-  ```SQL
+## 常用函数
+
+### instr 查询某一字符在字段中的位置，例如 ```instr(url,'?')```，如没查找到返回 0
+
+### substr 截取字符串，例如 ```substr(url, 1, 20)```， 注意从 1 开始；```substr(url, 20)```表示截取 20 以后的内容
+
+  ```sql
     select
     (case when instr(url,'?') = 0 then url else substr(url, 1, instr(url,'?') - 1) end) as _url
-    from odm.odm_brs_jr_jmqsink_jrflow_p_i_d
+    from xxx
     where
-    t = 'page'
-    and sdk = '2.0.5'
-    and dt = '2020-12-09'
+    dt = '2020-12-09'
   ```
 
   具体实例，截取url中https:// 或 http://
 
-  ```
+  ```sql
   select
     (case when instr(url,'https://') = 0 then
         (case when instr(url,'http://') = 0 then
@@ -88,46 +92,81 @@ SELECT LEFT(@FullName, @SpaceIndex - 1)
         else substr(url, 8) end)
     else substr(url, 9) end)
     as _url
-    from odm.odm_brs_jr_jmqsink_jrflow_p_i_d
+    from xxx
     where
-    t = 'page'
-    and sdk = '2.0.10'
-    and dt = '2021-05-08'
+    dt = '2021-05-08'
   ```
-* get_json_object
-```SQL
-select
-  cls,
-  v,
-  get_json_object(v, '$.orderid') as orderid
-from
-  odm.odm_brs_jr_jmqsink_jrflow_cic_i_d
-where
-  t = 'data'
-  and dt = '2020-12-16'
-  and get_json_object(v, '$.orderid') <> ''
+
+### get_json_object
+
+  注意：该函数返回的不是字符串类型，需要使用 cast 强制转换为字符串
+
+  ```sql
+  select
+    cls,
+    v,
+    cast(get_json_object(v, '$.xxx') as string) as orderid
+  from
+    xxx
+  where
+    cast(get_json_object(v, '$.xx') as string) <> ''
+  ```
+
+  下面为具体的示例
+
+  ```sql
+  select dt, count(distinct xx) UV
+  from
+  (select
+      param_json, dt,
+      cast(get_json_object(param_json, '$.a') as string) as a,
+      cast(get_json_object(param_json, '$.b') as string) as b
+      from xxx
+      where dt between '2021-02-01' and '2021-02-07'
+  )
+  where a like 'xxxx%'
+  group by dt
+  order by cast(UV as double) desc
+  ```
+
+### length 查询某一列长度，例如 ```length(url)```，如没查找到返回 0
+
+### regexp_extract
+
+  正则表达式函数，示例
+
+  ```sql
+    select regexp_extract(url, '/$'), concat(
+        parse_url(url, 'HOST'),
+        parse_url(url, 'PATH')
+      ) as url1, * from
+     xxx
+    where
+    dt='2021-09-22'
+  ```
+
+### parse_url 格式化url
+
+* parse_url(url, 'HOST') 返回 host部分
+* parse_url(url, 'PATH') 返回 path部分
+* parse_url(url, 'PROTOCOL') 返回协议部分，如：https或http
+
+### concat 字符串连接
+
+### from_unixtime 格式化日期
+
+```sql
+  from_unixtime(cast(substr(stm,1,10) as bigint), 'yyyy-MM-dd HH:mm:ss')
 ```
 
-下面为具体的示例
-```SQL
-select dt, count(distinct uuid) UV
-from
-(select
-    param_json, dt,
-    cast(get_json_object(param_json, '$.matid') as string) as matid,
-    cast(get_json_object(param_json, '$.uuid') as string) as uuid
-    from odm.odm_brs_jr_app_qd_all_data_i_d
-    where bid='app_search_1019'
-    and dt between '2021-02-01' and '2021-02-07'
-)    
-where matid like '相关基金%'
-group by dt
-order by cast(UV as double) desc
+其中 stm 为毫秒，截取后为秒
+
+### sum 求和函数
+
+```sql
+  select sum(pv) pv from xxx where dt='2021-09-20'
 ```
 
-* len 查询某一列长度，例如 ```len(url)```，如没查找到返回 0
-
-# 参考
+## 参考
 
 * https://www.cnblogs.com/accumulater/p/6255003.html
-*

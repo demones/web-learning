@@ -23,7 +23,7 @@
 
 4. 创建分支
 
-   ```
+   ```shell
    git branch v0.0.1 创建本地分支
    git checkout v0.0.1 切换到本地分支
    git merge -m "Merge from master" master 合并分支（需要的话）
@@ -34,7 +34,7 @@
 
    参考文章 http://blog.csdn.net/wh_19910525/article/details/7470850
 
-   ```
+   ```shell
    git tag 0.0.1   创建tag
    git push origin --tags   提交的服务器端（github）
    git tag -d 0.0.1     删除本地tag
@@ -55,7 +55,7 @@
 
     如果之前在 git 上创建了一个资源(repository)，如果想把本地的代码提交到另一个新的资源(repository)上，可以执行以下命令
 
-    ```
+    ```shell
     git remote rm origin
     git remote add origin git@github.com:myname/newrep.git
     git branch --set-upstream-to=origin/dev dev # 服务端已存在 dev 分支，dev 也可以改成 master
@@ -66,7 +66,8 @@
     ```
 
 8. 查看远程分支
-    ```
+
+    ```shell
     git branch -a
     ```
 
@@ -76,7 +77,8 @@
 9. 切换到 tag
 
     tag_name 值本地分支，或远程分支
-    ```
+
+    ```shell
     git checkout -b branch_name tag_name
     ```
 
@@ -85,17 +87,17 @@
 1. 本地 `git init` 初始化项目
 2. 用服务端分支名给本地创建一个分支 `git checkout -b branchName`
 3. 提交本地分支代码
-4. 绑定服务端资源 `git remote add origin http://jcode.cbpmgt.com/git/ft_personal_account.git`
+4. 绑定服务端资源 `git remote add origin http://xxx.xxx.xxx/git/xxx.git`
 5. 本地分支与服务端关联  `git branch --set-upstream-to=origin/dev dev`
 6. 更新服务端代码 `git pull --allow-unrelated-histories` 加上 --allow-unrelated-histories 允许合并有冲突的代码
 7. 解决冲突，提交代码
-
 
 ## git 常见命令 （持续完善中）
 
 ### 添加文件 `git add`
 
 选项和说明
+
 * `-u` 只添加修改的文件
 * `-A` 添加所有文件，包括已删除的文件
 * `git add .` 添加修改和新增的文件（不包括已删除的文件）
@@ -106,12 +108,15 @@
 1. 修改最后一次提交
    有时候我们提交完了才发现漏掉了几个文件没有加，或者提交信息写错了，这时我们可以使用 --amend 选项重新提交，把漏掉的文件补上或是
    修改提交信息。
+
    `git commit --amend`
+
+   ```shell
+      $ git commit -m 'initial commit'
+      $ git add forgotten_file
+      $ git commit --amend
    ```
-   $ git commit -m 'initial commit'
-   $ git add forgotten_file
-   $ git commit --amend
-   ```
+
 2. 取消已经暂存的文件
    我们不小心用 `git add .` 全加到了暂存区域，我们可以执行 `git reset HEAD <file>` 取消某个文件，或所有文件，
    `<file>` 是指要取消的暂存文件，不输入，则取消所有。或者直接执行 `git reset` 取消所有暂存
@@ -125,7 +130,8 @@
   根据每次版本 hashId 来撤销，首先执行 `git log` ，找到要恢复的 hashId，然后 `git reset --hard hashId`
 
 4. 撤销上一次或前几次的 commit 后，执行 git status 发现以前的 commit 没有记录了，如果我们此事又不想撤销了，这时可以使用以下命令来处理
-  ```
+
+  ```shell
   $ git reflog
   b7057a9 HEAD@{0}: reset: moving to b7057a9
   98abc5a HEAD@{1}: commit: more stuff added to foo
@@ -136,6 +142,7 @@
   ```
 
 5. 撤销已经同步到服务器的提交
+
   * git log 查看要回退的记录
   * git reset --hard logid 撤回到某一 logid
   * git push --force 强制提交到远程服务端
@@ -143,11 +150,11 @@
 ### 推送 `git push`
 
 1. 删除远程分支和tag
-  ```
+
+  ```shell
   git push origin --delete <branchName>
   git push origin --delete tag <tagname>
   ```
-
 
 ### git subtree
 
@@ -166,9 +173,10 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   ```
 
 2. 增加一个 subtree bash
+
   ```bash
   $ git remote add bash git@github.com:username/bash.git  # bash 可以理解为远程仓库的别名
-  $ git subtree add pull -P home/bash bash master --squash # 拉取远程仓库 bash 到本地仓库的home/bash 目录  
+  $ git subtree add pull -P home/bash bash master --squash # 拉取远程仓库 bash 到本地仓库的home/bash 目录
   ```
 
 3. 修改 subtree bash 下代码然后提交到远程 bash 的 master分支
@@ -181,9 +189,11 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   ```
 
 4. 远程的子项目有更新了，拉下来合并
+
   ```bash
   $ git subtree pull -P home/bash bash master --squash
   ```
+
 5. 参考
   * http://havee.me/linux/2012-07/the-git-advanced-subtree.html
   * http://aoxuis.me/post/2013-08-06-git-subtree
@@ -198,7 +208,7 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
 
 1. 首先需要在本地或 github 中创建分支 gh-pages，如果要发布到 gh-pages 分支与 master 上的内容不同，首先需要删除分支中的内容，执行命令为
 
-  ```
+  ```shell
   git checkout gh-pages
   //利用命令或手动删除不需要放到 gh-pages 分支中的内容
   git add -A
@@ -210,7 +220,7 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   如果分支 gh-pages 已存在，则第一步忽略
 2. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在，执行完会提示 “pathspec '_book' did not match any file(s) known to git.”，需要我们创建 _book 目录
 
-  ```
+  ```shell
   git subtree add --prefix=_book origin gh-pages --squash
   ```
 
@@ -224,20 +234,25 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   ```
 
 5. push 到远程 gh-pages 分支中
-  ```
+
+  ```shell
   git subtree push --prefix=_book origin gh-pages --squash
   ```
 
   如果本地与远程不同步，需要执行
+
   ```bash
   git subtree pull --prefix=_book origin gh-pages --squash
   ```
+
   所以建议先 pull 再 push，这样确保本地与远程同步
 
 6. 上面的操作，只是把内容提交到 gh-pages 分支中，而没有把内容提交到 master 分支中，所以需要同时提交到 master 分支中，执行以下命令
-  ```
+
+  ```shell
   git push
   ```
+
 7. 下次修改 _book 文件夹下的内容，只需从上面第三步执行即可。
 
   **注意：这种方式的副作用是，_book 需要同时也放到 master 分支中。也许有其他命令，不需要把 _book 放到 master 分支中，待考证。**
@@ -262,7 +277,8 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
       *   \+ 表示有新文件
       *   \# 表示已commit 但未 push
 
-```
+```shell
+
   function parse_git_dirty {
     local git_status=$(git status 2> /dev/null | tail -n1) || $(git status 2> /dev/null | head -n 2 | tail -n1);
     if [[ "$git_status" != "" ]]; then
@@ -346,7 +362,7 @@ github上有个很方便的功能叫fork，将别人的工程一键复制到自�
 1. 切换到某一 branch 或 tag
   ```
   git checkout -b branch_name tag_name
-  ```   
+  ```
 2. 修改代码
 3. npm publish
 

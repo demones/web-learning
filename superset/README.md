@@ -16,19 +16,11 @@ SQLALCHEMY_DATABASE_URI = 'mysql://username:password@database_source:3306/dabtab
 
 ## docker部署
 
-创建镜像
-
-1. docker login idockerhub.jd.com
-2. docker tag qidian/superset:v2.1 idockerhub.jd.com/qidian-superset/superset:v2.1
-3. docker push idockerhub.jd.com/qidian-superset/superset:v2.1
-
-在 lambda 上创建完项目并上线后，登录终端，输入以下命令或参考官方命令：<https://registry.hub.docker.com/r/apache/superset>
-
 ```bash
 superset fab create-admin \
     --username admin \
-    --firstname Qidian \
-    --lastname Superset \
+    --firstname xxx \
+    --lastname xxx \
     --email admin@superset.com \
     --password xxxx
 
@@ -47,74 +39,6 @@ superset init
 
 * superset-frontend 前端页面展示
   用到的技术：react + antd + immutable + d3
-
-### 数据库
-
-* 启动服务时会自动创建数据表
-
-  | 表名                    |
-  | ----------------------- |
-  | ab_permission           |
-  | ab_permission_view      |
-  | ab_permission_view_role |
-  | ab_register_user        |
-  | ab_role                 |
-  | ab_user                 |
-  | ab_user_role            |
-  | ab_view_menu            |
-
-* 执行 superset db upgrade 创建以下表
-
-  | 表名 |
-  | ----------------------- |
-  | access_request             |
-  | alembic_version            |
-  | alert_logs                 |
-  | alert_owner                |
-  | alerts                     |
-  | annotation                 |
-  | annotation_layer           |
-  | cache_keys                 |
-  | clusters                   |
-  | columns                    |
-  | css_templates              |
-  | dashboard_email_schedules  |
-  | dashboard_roles            |
-  | dashboard_slices           |
-  | dashboard_user             |
-  | dashboards                 |
-  | datasources                |
-  | dbs                        |
-  | druiddatasource_user       |
-  | dynamic_plugin             |
-  | favstar                    |
-  | keyvalue                   |
-  | logs                       |
-  | metrics                    |
-  | query                      |
-  | report_execution_log       |
-  | report_recipient           |
-  | report_schedule            |
-  | report_schedule_user       |
-  | rls_filter_roles           |
-  | rls_filter_tables          |
-  | row_level_security_filters |
-  | saved_query                |
-  | slice_email_schedules      |
-  | slice_user                 |
-  | slices                     |
-  | sql_metrics                |
-  | sql_observations           |
-  | sqlatable_user             |
-  | tab_state                  |
-  | table_columns              |
-  | table_schema               |
-  | tables                     |
-  | tag                        |
-  | tagged_object              |
-  | test_table                 |
-  | url                        |
-  | user_attribute             |
 
 ### 本地启动
 
@@ -197,7 +121,7 @@ USER superset
 执行 docker 构建命令，生成新的镜像
 
 ```bash
-docker build -t="qidian/superset:v2" .
+docker build -t="xxx/superset:v2" .
 ```
 
 ## 参考资料
@@ -213,12 +137,11 @@ docker build -t="qidian/superset:v2" .
   'password'='',
 
 地址 x.x.x.x:8123  
-库名:shard
+库名:xxx
 'username'='default',
   'password'='',
-clickhouse+native://default@x.x.x.x:8123/shard
+clickhouse+native://default@x.x.x.x:8123/xxx
 
 chUsername: clickhouse_operator
 chPassword: xxx
 chPort: 8123
-10.240.206.65

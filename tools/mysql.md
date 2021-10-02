@@ -69,8 +69,6 @@ mysql -uroot
 
 1. ```mysql -uroot -p``` 回车无密码登录
 2. 执行命令 ```flush privileges;```
-3. 修改密码 ```SET PASSWORD FOR root@localhost = '123456';```，修改成功后退出 ```exit;```
+3. 修改密码 ```SET PASSWORD FOR root@localhost = 'xxxxxx';```，修改成功后退出 ```exit;```
 4. 重启服务 ```mysql.server restart```
 5. 输入密码登录mysql  ```mysql -uroot -p```
-
-本地数据库密码为：admin123456

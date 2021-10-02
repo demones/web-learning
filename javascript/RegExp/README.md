@@ -15,7 +15,7 @@
    正向：(?=x) x 表示匹配的内容，例如：/x(?=y)/ x只有在y前面才匹配
    负向：(?!x) x 表示不匹配的内容，例如：/x(?!y)/ x只有不在y前面才匹配
 3. 零宽后行断言（ES2018 引入），只匹配（正向）或不匹配（反向）表达式后面的内容
-   [https://es6.ruanyifeng.com/#docs/regex#后行断言](https://es6.ruanyifeng.com/#docs/regex#%E5%90%8E%E8%A1%8C%E6%96%AD%E8%A8%80)
+   [https://es6.ruanyifeng.com/#docs/regex#后行断言](https://es6.ruanyifeng.com/#docs/regex)
    正向：(?<=y) x 表示匹配的内容，例如：/(?<y)x/  x只有在y后面才匹配
    负向：(?<!x) x 表示不匹配的内容，例如：/(?<!y)x/  x只有不在y后面才匹配
 4. 关于 stringObject.replace(regexp/substr,replacement) 中 replacement 几个特殊字符说明

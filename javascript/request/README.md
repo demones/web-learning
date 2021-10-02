@@ -4,13 +4,13 @@
 
 ## 请求超时
 
-* 请求超时，没有设置超时时间
+* 请求超时，没有设置超时时间（采用浏览器默认超时策略，一般2分钟）
   * 不论是ajax还是fetch都会在控制台给出错误提示 ```net::ERR_CONNECTION_TIMED_OUT```
   * ajax：监听事件onreadystatechange，readyState === 4 时，此时 status 为 0，如果监听了onerror，会捕获错误信息，但错误信息中没有错误描述，此时 type 值为 error， loaded 值为 0，total 值为 0
   * fetch在catch中可以捕获错误信息，输出：TypeError: Failed to fetch
 * 请求超时，设置超时时间
   * ajax 支持设置timeout超时，fetch不支持，但可以变相的设置，参见 https://juejin.cn/post/6844903845282185223
-  * ajax 超时：监听事件onreadystatechange，readyState === 4 时，此时 status 为 0，如果监听了ontimeout，会捕获超时信息，但错误信息中没有错误描述，此时 type 值为 error， loaded 值为 0，total 值为 0
+  * ajax 设置了timeout超时时间：监听事件onreadystatechange，readyState === 4 时，此时 status 为 0，如果监听了ontimeout，会捕获超时信息，但错误信息中没有错误描述，此时 type 值为 error， loaded 值为 0，total 值为 0
 
 ## 跨域请求
 

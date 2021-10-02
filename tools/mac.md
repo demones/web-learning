@@ -19,9 +19,9 @@
 * xz -d name.tar.xz
 * tar -xvf name.tar
 
-## vim
+## grep 命令 查询文件内容
 
-查询 /关键字，快捷键 n 查找下一个，也可以使用 grep 在制定文件中查询
+查询 / 关键字，快捷键 n 查找下一个，也可以使用 grep 在制定文件中查询
 
 ```shell
 grep "keyword" path/filename.txt

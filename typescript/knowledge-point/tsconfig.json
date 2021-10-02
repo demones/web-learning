@@ -24,7 +24,7 @@
       "./typings"
     ],
     "paths": {
-      "@vant/weapp/*": ["/Users/wangyanjun/git-jci-workspace/qidian-mini-example/node_modules/@vant/weapp/dist/*"]
+      "@vant/weapp/*": ["/Users/username/userpath/node_modules/@vant/weapp/dist/*"]
     }
   },
   "extends": "./configs/base",
