@@ -32,7 +32,7 @@
 
 5. 创建tag（所创建的tag指向所在的分支，这里创建轻量级的tag）
 
-   参考文章 http://blog.csdn.net/wh_19910525/article/details/7470850
+   参考文章 <http://blog.csdn.net/wh_19910525/article/details/7470850>
 
    ```shell
    git tag 0.0.1   创建tag
@@ -98,10 +98,10 @@
 
 选项和说明
 
-* `-u` 只添加修改的文件
-* `-A` 添加所有文件，包括已删除的文件
-* `git add .` 添加修改和新增的文件（不包括已删除的文件）
-* `git add file*.js` 添加指定的文件，可以用通配符
+- `-u` 只添加修改的文件
+- `-A` 添加所有文件，包括已删除的文件
+- `git add .` 添加修改和新增的文件（不包括已删除的文件）
+- `git add file*.js` 添加指定的文件，可以用通配符
 
 ### 提交 `git commit`
 
@@ -112,16 +112,16 @@
    `git commit --amend`
 
    ```shell
-      $ git commit -m 'initial commit'
-      $ git add forgotten_file
-      $ git commit --amend
+      git commit -m 'initial commit'
+      git add forgotten_file
+      git commit --amend
    ```
 
-2. 取消已经暂存的文件
+1. 取消已经暂存的文件
    我们不小心用 `git add .` 全加到了暂存区域，我们可以执行 `git reset HEAD <file>` 取消某个文件，或所有文件，
    `<file>` 是指要取消的暂存文件，不输入，则取消所有。或者直接执行 `git reset` 取消所有暂存
 
-3. 撤销上一次的 commit，也可以是上几次的
+1. 撤销上一次的 commit，也可以是上几次的
 
   `git reset --soft HEAD~1` 后面数字可以看作是取消的 commit 次数，--soft 参数表示只取消 commit 但保留文件的修改（相当于git add 之后的的状态），如果你想连修改都不要的话就用 --hard 参数。
 
@@ -129,7 +129,7 @@
 
   根据每次版本 hashId 来撤销，首先执行 `git log` ，找到要恢复的 hashId，然后 `git reset --hard hashId`
 
-4. 撤销上一次或前几次的 commit 后，执行 git status 发现以前的 commit 没有记录了，如果我们此事又不想撤销了，这时可以使用以下命令来处理
+1. 撤销上一次或前几次的 commit 后，执行 git status 发现以前的 commit 没有记录了，如果我们此事又不想撤销了，这时可以使用以下命令来处理
 
   ```shell
   $ git reflog
@@ -141,11 +141,11 @@
   git reset --hard 98abc5a
   ```
 
-5. 撤销已经同步到服务器的提交
+1. 撤销已经同步到服务器的提交
 
-  * git log 查看要回退的记录
-  * git reset --hard logid 撤回到某一 logid
-  * git push --force 强制提交到远程服务端
+- git log 查看要回退的记录
+- git reset --hard logid 撤回到某一 logid
+- git push --force 强制提交到远程服务端
 
 ### 推送 `git push`
 
@@ -168,18 +168,18 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
 1. clone 一个远程仓库 dotfiles 到你本地
 
   ```bash
-  $ git clone git@github.com:username/dotfiles.git
-  $ cd dotfiles
+  git clone git@github.com:username/dotfiles.git
+  cd dotfiles
   ```
 
-2. 增加一个 subtree bash
+1. 增加一个 subtree bash
 
   ```bash
-  $ git remote add bash git@github.com:username/bash.git  # bash 可以理解为远程仓库的别名
-  $ git subtree add pull -P home/bash bash master --squash # 拉取远程仓库 bash 到本地仓库的home/bash 目录
+  git remote add bash git@github.com:username/bash.git  # bash 可以理解为远程仓库的别名
+  git subtree add pull -P home/bash bash master --squash # 拉取远程仓库 bash 到本地仓库的home/bash 目录
   ```
 
-3. 修改 subtree bash 下代码然后提交到远程 bash 的 master分支
+1. 修改 subtree bash 下代码然后提交到远程 bash 的 master分支
 
   ```bash
   ...... edit home/bash/file......
@@ -188,16 +188,17 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   $ git push origin master # 顺便主项目也 push
   ```
 
-4. 远程的子项目有更新了，拉下来合并
+1. 远程的子项目有更新了，拉下来合并
 
   ```bash
-  $ git subtree pull -P home/bash bash master --squash
+  git subtree pull -P home/bash bash master --squash
   ```
 
-5. 参考
-  * http://havee.me/linux/2012-07/the-git-advanced-subtree.html
-  * http://aoxuis.me/post/2013-08-06-git-subtree
-  * https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt
+1. 参考
+
+- <http://havee.me/linux/2012-07/the-git-advanced-subtree.html>
+- <http://aoxuis.me/post/2013-08-06-git-subtree>
+- <https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt>
 
 ## 快速把代码发布到 Github Pages
 
@@ -218,22 +219,23 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
   ```
 
   如果分支 gh-pages 已存在，则第一步忽略
-2. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在，执行完会提示 “pathspec '_book' did not match any file(s) known to git.”，需要我们创建 _book 目录
+
+1. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在，执行完会提示 “pathspec '_book' did not match any file(s) known to git.”，需要我们创建 _book 目录
 
   ```shell
   git subtree add --prefix=_book origin gh-pages --squash
   ```
 
-3. 执行 `gitbook build` 在目录 _book 中生成 gitbook 文件
+1. 执行 `gitbook build` 在目录 _book 中生成 gitbook 文件
 
-4. 执行以下命令，提交修改的文件
+1. 执行以下命令，提交修改的文件
 
-  ```
+  ```shell
   git add -A _book
   git commit -m "Update gitbook"
   ```
 
-5. push 到远程 gh-pages 分支中
+1. push 到远程 gh-pages 分支中
 
   ```shell
   git subtree push --prefix=_book origin gh-pages --squash
@@ -241,44 +243,45 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
 
   如果本地与远程不同步，需要执行
 
-  ```bash
+  ```shell
   git subtree pull --prefix=_book origin gh-pages --squash
   ```
 
   所以建议先 pull 再 push，这样确保本地与远程同步
 
-6. 上面的操作，只是把内容提交到 gh-pages 分支中，而没有把内容提交到 master 分支中，所以需要同时提交到 master 分支中，执行以下命令
+1. 上面的操作，只是把内容提交到 gh-pages 分支中，而没有把内容提交到 master 分支中，所以需要同时提交到 master 分支中，执行以下命令
 
   ```shell
   git push
   ```
 
-7. 下次修改 _book 文件夹下的内容，只需从上面第三步执行即可。
+1. 下次修改 _book 文件夹下的内容，只需从上面第三步执行即可。
 
   **注意：这种方式的副作用是，_book 需要同时也放到 master 分支中。也许有其他命令，不需要把 _book 放到 master 分支中，待考证。**
 
 ## 在 mac 系统下，终端（terminal）显示分支等版本信息的设置
 
-* 方法一： 在 ~/.bash_profile 中添加以下脚本（如果不存在~/.bash_profile则创建，命令为： `touch ~/.bash_profile`）
-  ```
+- 方法一： 在 ~/.bash_profile 中添加以下脚本（如果不存在~/.bash_profile则创建，命令为： `touch ~/.bash_profile`）
+
+  ```shell
   parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
   }
   export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
   ```
-* 方法二：也是在 ~/.bash_profile 中添加脚本
+
+- 方法二：也是在 ~/.bash_profile 中添加脚本
   主要实现有：
-    * 显示当前路径
-    * 显示当前所在分支
-    * 显示当前修改状态
-      *   = 表示一个干净的分支
-      *   ~ 表示文件有改动
-      *   \* 表示文件有增加或删除 但未 commit
-      *   \+ 表示有新文件
-      *   \# 表示已commit 但未 push
+  - 显示当前路径
+  - 显示当前所在分支
+  - 显示当前修改状态
+    - = 表示一个干净的分支
+    - ~ 表示文件有改动
+    - \* 表示文件有增加或删除 但未 commit
+    - \+ 表示有新文件
+    - \# 表示已commit 但未 push
 
 ```shell
-
   function parse_git_dirty {
     local git_status=$(git status 2> /dev/null | tail -n1) || $(git status 2> /dev/null | head -n 2 | tail -n1);
     if [[ "$git_status" != "" ]]; then
@@ -303,55 +306,62 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
       echo "("${ref#refs/heads/}") ";
   }
 
-
   export PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;31m\]\$(parse_git_dirty)\[\033[0m\]$ "
 
 ```
 
-* 方法三： 推荐使用强大的 zsh https://github.com/robbyrussell/oh-my-zsh
+- 方法三： 推荐使用强大的 zsh <https://github.com/robbyrussell/oh-my-zsh>
   比较好的主题
-  * robbyrussell 官方默认的
-  * blinks 每次执行命令时，背景高亮显示
-  * ys 可以显示时间
-  * pygmalion 样式风格不错
-
+  - robbyrussell 官方默认的
+  - blinks 每次执行命令时，背景高亮显示
+  - ys 可以显示时间
+  - pygmalion 样式风格不错
 
 ## Github
 
 ### Github 相关资料
 
-* [Github Developer](https://developer.github.com/)
-* [Gitignore 各种语言忽略文件说明](https://developer.github.com/.gitignore)
+- [Github Developer](https://developer.github.com/)
+- [Gitignore 各种语言忽略文件说明](https://developer.github.com/.gitignore)
 
 ## GitHub中如何更新已经fork的代码
+
 github上有个很方便的功能叫fork，将别人的工程一键复制到自己账号下。当被 fork 的资源有更新时，我们需要手动更新，请按下面步骤操作
 
 1. 下载 fork 后的资源到本地
-   ```
+
+   ```shell
    git clone git@github.com:username/repository.git
    ```
+
 2. 增加源分支地址到你项目远程分支列表中(此处是关键)，需要将原来的仓库指定为 upstream，命令如下
-   ```
+
+   ```shell
    git remote add upstream git@github.com/被fork的仓库.git
    ```
 
 3. fetch源分支的新版本到本地
-   ```
+
+   ```shell
    git fetch upstream
    ```
+
    在 fetch 前也可以执行命令来查看远程分支列表 `git remote -v` 或 `git branch -a`
 
 4. 合并两个版本的代码
-   ```
+
+   ```shell
    git merge upstream/master
    # 或者其他分支
    ```
+
    如果本地有修改过的内容，合并的过程可能有冲突，根据提示修改冲突的文件，重新提交到本地即可。
 
    如果想合并 tag 比如 v4.8.3 可以先执行 `git checkout v4.8.3` `git checkout -b v4.8.3` `git merge v4.8.3`
 
-6. 将合并后的代码push到 github 上去
-   ```
+5. 将合并后的代码push到 github 上去
+
+   ```shell
    git push
    ```
 
@@ -360,32 +370,59 @@ github上有个很方便的功能叫fork，将别人的工程一键复制到自�
 另外如果想使用被 fork 资源的某一分支或某一 tag，比如想修改被 fork 的资源某一稳定版本，并重新修改名称发布到 npm 上，可按照以下方式处理
 
 1. 切换到某一 branch 或 tag
-  ```
+
+  ```shell
   git checkout -b branch_name tag_name
   ```
-2. 修改代码
-3. npm publish
+
+1. 修改代码
+
+1. npm publish
 
 或者使用 github desktop 界面操作更简洁
-https://www.cnblogs.com/mff520mff/archive/2017/08/13/7355118.html
-
+<https://www.cnblogs.com/mff520mff/archive/2017/08/13/7355118.html>
 
 ## http 或 https 保存当前密码设置
+
 git config --global credential.helper store
 
 ## pre-commit 的使用
 
 pre-commit 是用来执行 git commit 之前处理的脚本，可以直接修改 .git/hooks 下的文件 pre-commit.sample
 改成 pre-commit，然后修改文件中的 shell 脚本
-参见 http://ju.outofmemory.cn/entry/255503
+参见 <http://ju.outofmemory.cn/entry/255503>
 也可以安装 npm 包 pre-commit 来处理
 
-## github 多账户设置
+## git 多账户设置
 
-https://www.cnblogs.com/yanbinliu/p/4095433.html
+1. 在多个git上设置ssh
+1. 把不同的ssh设置到 .ssh/config中
+
+<https://www.cnblogs.com/yanbinliu/p/4095433.html>
+
+## 常见问题
+
+1. git fatal: 拒绝合并无关的历史的错误解决
+
+本地初始化的项目 与 github 版本不一致, 导致无法提交
+
+问题复现
+
+```shell
+$ git pull
+fatal: 拒绝合并无关的历史
+```
+
+解决方法：在 pull 时候, 添加 –allow-unrelated-histories 参数 即可。
+
+```shell
+$ git pull origin master --allow-unrelated-histories
+```
 
 ## 学习参考
-* [git 官网](https://www.git-scm.com/)
-* [中文文档](https://www.git-scm.com/book/zh/v2)
-* [版本控制入门 – 搬进 Github](http://www.imooc.com/learn/390)
-* [上面视频对应电子书](http://happypeter.github.io/gitbeijing/)
+
+- [git 官网](https://www.git-scm.com/)
+
+- [中文文档](https://www.git-scm.com/book/zh/v2)
+- [版本控制入门 – 搬进 Github](http://www.imooc.com/learn/390)
+- [上面视频对应电子书](http://happypeter.github.io/gitbeijing/)

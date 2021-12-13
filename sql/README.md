@@ -150,6 +150,7 @@ SELECT LEFT(@FullName, @SpaceIndex - 1)
 * parse_url(url, 'HOST') 返回 host部分
 * parse_url(url, 'PATH') 返回 path部分
 * parse_url(url, 'PROTOCOL') 返回协议部分，如：https或http
+* parse_url(url, 'QUERY', 'channel') 返回URL参数 channel 的值
 
 ### concat 字符串连接
 
@@ -166,6 +167,58 @@ SELECT LEFT(@FullName, @SpaceIndex - 1)
 ```sql
   select sum(pv) pv from xxx where dt='2021-09-20'
 ```
+
+### 特殊字符转义
+
+* ; 用 \073 代替，使用引擎 MR 或 Tez 查询
+
+### limit
+
+* limit 如果只指定一个参数，则表示从0开始查询
+* 使用 limit 查询多页数据时，应该结合 order by col ，列 col 最好是主键或唯一值
+
+```sql
+  select * from table1 order by col limit 10
+  -- 与下面功能一样
+  select * from table1 order by col limit 0,10
+```
+
+第二页
+
+```sql
+  select * from table1 order by col limit 10,10
+```
+
+只能使用MR或Tez引擎查询
+
+### nvl 空值转换为空字符串
+
+```sql
+  select nvl(url) from table1
+```
+
+### concat_ws 连接字符串
+
+```sql
+  select concat_ws('%', url, 'abc') from table1
+```
+
+### 日期处理函数
+
+* date_sub
+  date_sub('2021-12-01', 3) 传两个参数，第一个为日期格式，第二个为减去的天数
+
+```sql
+  select date_sub('2021-12-01',3), date_sub('{TX_DATE}',2), * from table1
+```
+
+### 特殊字符格式
+
+* '{TX_DATE}' 返回昨天日期
+
+  ```sql
+    select '{TX_DATE}', * from table1
+  ```
 
 ## 参考
 
