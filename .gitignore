@@ -1,16 +1,10 @@
-## Dependency directory
-## node
+.DS_Store
+
+# Editor directories and files
+.vscode
+
+# npm dependencies
 node_modules
 
-# eBook build output
-*.epub
-*.mobi
-*.pdf
-
-# WebStorm
-.idea
-.DS_Store
-.history
-
-# 日常工作不上传
-daily-work
+# build
+dist

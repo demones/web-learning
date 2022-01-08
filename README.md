@@ -1,30 +1,23 @@
-# web 前端学习笔记
-=======
+# web-learning
 
-This book help us to quickly build web front-end page. It contain html5 css3 javascript and the front-end technology for web etc.
+WEB 前端学习笔记
 
-## 开发与部署
+## 开发
 
-### 安装 gitbook-cli
-
-```bash
- npm install -g gitbook-cli
-```
-
-### 安装依赖
+### 本地启动服务
 
 ```bash
-gitbook install
+npm start
 ```
 
-### 启动服务
+启动后访问 <http://localhost:8080/>
+
+### 打包构建
 
 ```bash
-gitbook serve
+npm run build
 ```
 
-### 打包编译
+## 参考
 
-```bash
-gitbook build
-```
+* <https://vuepress.vuejs.org/zh/>
