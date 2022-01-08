@@ -249,6 +249,40 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
 
   **注意：这种方式的副作用是，_book 需要同时也放到 master 分支中。也许有其他命令，不需要把 _book 放到 master 分支中，待考证。**
 
+### 实例：利用 git subtree 把代码 gitbook 提交到 GitHub Pages
+
+利用 git subtree 可以很方便的管理 gh-pages 分支
+
+以下命令列出了详细操作，初始化的时候需要先执行前两步，再执行第三步，以后更新 gh-pages 时，只需执行第三步即可。
+
+1. 创建 gh-pages 分支，**注意：在执行 git subtree add 命令之前，需确保 gh-pages 分支下至少存在一个文件**
+
+    ```shell
+    git checkout -b gh-pages //创建并切换到分支 gh-pages
+    rm -rf *  //隐藏文件需要单独删除，结合命令 ls -a
+    vim .gitignore //输入要忽略的文件
+    git add .
+    git commit -m "init branch gh-pages"
+    git push --set-upstream origin gh-pages
+    git checkout master
+    ```
+
+2. 把分支 gh-pages 添加到本地 subtree 中，执行该命令前，请确保 _book 文件夹不存在
+
+    ```shell
+    git subtree add --prefix=_book origin gh-pages --squash
+    ```
+
+3. 生成 docs
+
+    ```shell
+    gitbook build
+    git add _book
+    git commit -m "Update docs"
+    git subtree push --prefix=_book origin gh-pages --squash
+    git push
+    ```
+
 ## 终端显示git信息设置
 
 - 方法一： 在 ~/.bash_profile 中添加以下脚本（如果不存在~/.bash_profile则创建，命令为： `touch ~/.bash_profile`）
