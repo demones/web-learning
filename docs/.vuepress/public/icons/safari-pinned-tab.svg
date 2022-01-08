@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>纯色-蓝色</title>
+	<defs>
+		<image  width="24" height="22" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAMAAADto6y6AAAAAXNSR0IB2cksfwAAARpQTFRFIZbzIZbzIZbzIZbzIZbzIZbzIZbzAAAAIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbzIZbz3pFoZwAAAF50Uk5TKM7/9NSHMwBY+/1mDRqVwcLL5P72lwsBBAUYTMPzSHHEEQDPVztaWSUDF080B3ZC6syP/D5J3zCi+EvltmppJmE8BoWCDNPumqwKQbr1TQif+vFyAh3dOXrFvlYegQPXmFcAAADlSURBVHicndDXVsJQEIXhYUDHGLDQYghFKYKCggIKUo2CinSRKu//GgTOcRlJrvhvv4vZawAs+C+rbW+ftOBAwO0ORbsGjqNjfSenThe6PV4Cks70yT7FjxgIamDIG0I8vzABCkcwEAU5dvlbPHF1nUzdEN26UYR05m/OHdxnMzmivFMDUbfz4bGAxScipcSgXGFVa5Kv/qwSvQgMXreON5r4phghDO+IHy0D2D/bLux0iUGv3xnw1iOGXyMO32PdNmE8kYiDOvXPePP+4mfzdnZDklXeiN8ym7sr1BGXpgCWSMwMVjaiKcbQnFE7AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="1" />
+</svg>
