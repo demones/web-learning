@@ -2,9 +2,9 @@
 
 ## 资源链接
 
-https://www.npmjs.com/package/crypto-js
-https://cryptojs.gitbook.io/docs/
-https://code.google.com/archive/p/crypto-js/
+* <https://www.npmjs.com/package/crypto-js>
+* <https://cryptojs.gitbook.io/docs/>
+* <https://code.google.com/archive/p/crypto-js/>
 
 ## 知识点
 
