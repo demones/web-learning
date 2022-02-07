@@ -146,7 +146,7 @@ function getWebSidebar() {
         ['css/animation/transform.html', '变形(transform)'],
         ['css/animation/transition.html', '转换(transition)'],
         ['css/animation/animation.html', '动画(animation)'],
-        ['css/flex/', 'flex 布局'],
+        ['css/flex/', 'Flexbox 布局'],
         ['css/icon/', 'css 图标'],
       ]
     },
