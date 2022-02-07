@@ -35,3 +35,28 @@
 * cmd + shift + f：在项目内搜索
 * ctrl + - 跳转到上一次操作
 * shift + ctrl + - 反向跳转到上一次操作
+
+## 解决下载慢的原因
+
+* 从官方下载，如果发现下载慢，是因为走的是国外下载资源，这时我们替换成国内的就可以了
+* 先复制生成的下载链接地址，如 https://vscode.cdn.azure.cn/stable/899d46d82c4c95423fb7e10e68eba52050e30ba3/VSCode-darwin-universal.zip
+* 修改成国内镜像链接，只需要该前面的 vscode.cdn.azure.cn 替换为 vscode.cdn.azure.cn 即可
+
+## 彻底卸载 vscode
+
+* 退出vscode
+* 删除配置文件
+
+```shell
+rm -rf $HOME/Library/Application\ Support/Code
+# if you're using insider*
+rm -rf $HOME/Library/Application\ Support/Code\ -\ Insiders/
+```
+* 删除配置文件
+```shell
+rm -rf $HOME/.vscode
+# if you're using insider*
+rm -rf $HOME/.vscode-insiders/
+```
+* 从应用中删除vscode
+* 卸载所有vscode系统配置

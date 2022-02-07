@@ -129,7 +129,7 @@ function getWebSidebar() {
     {
       title: 'Web前端知识点',
       children: [
-        ['web/cache/', 'Web前端 缓存'],
+        ['web/cache/', 'Web 前端缓存'],
         ['web/file-accept.html', '文件上传类型'],
         ['web/url-hash-query.html', 'url 中 hash 和参数解析'],
         ['web/mobile/', '移动端调试'],
@@ -143,6 +143,9 @@ function getWebSidebar() {
       children: [
         ['css/', 'CSS'],
         ['css/animation/', 'CSS 动画'],
+        ['css/animation/transform.html', '变形(transform)'],
+        ['css/animation/transition.html', '转换(transition)'],
+        ['css/animation/animation.html', '动画(animation)'],
         ['css/flex/', 'flex 布局'],
         ['css/icon/', 'css 图标'],
       ]
@@ -167,6 +170,12 @@ function getWebSidebar() {
       title: 'TypeScript',
       children: [
         ['typescript/', 'TypeScript'],
+      ]
+    },
+    {
+      title: '埋点',
+      children: [
+        ['event-tracking/', '埋点'],
       ]
     },
   ]

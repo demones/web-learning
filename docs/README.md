@@ -12,5 +12,5 @@ features:
   details: 开发框架、脚手架、组件库
 - title: WEB 前端辅助工具
   details: 日常工作常用工具整理
-footer: Copyright © 2020-2021  体验未来 版权所有
+footer: Copyright © 2020-2022  体验未来 版权所有
 ---

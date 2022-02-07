@@ -6,6 +6,7 @@ module.exports = [
       { text: 'CSS', link: '/web-skills/css/' },
       { text: 'JavaScript', link: '/web-skills/javascript/' },
       { text: 'TypeScript', link: '/web-skills/typescript/' },
+      { text: '埋点', link: '/web-skills/event-tracking/' },
     ]
   },
   {

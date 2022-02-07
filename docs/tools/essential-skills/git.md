@@ -189,6 +189,16 @@ git subtree 不只是可以引用其他的仓库，也可以引用自己仓库�
 - <http://aoxuis.me/post/2013-08-06-git-subtree>
 - <https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt>
 
+### git config
+
+查看 git 相关配置项
+
+### 查看 gitconfig 配置文件在哪里
+
+```shell
+git config --list --show-origin
+```
+
 ## 快速把代码发布到 Github Pages
 
 这里要利用到 `git subtree` 命令来实现。首先我们想一想，如果不借助于 `git subtree` ，通常做法是怎样来处理的。
