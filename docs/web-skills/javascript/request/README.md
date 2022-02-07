@@ -11,7 +11,7 @@ ajax 和 fetch 请求机制和返回码详解
   * ajax：监听事件onreadystatechange，readyState === 4 时，此时 status 为 0，如果监听了onerror，会捕获错误信息，但错误信息中没有错误描述，此时 type 值为 error， loaded 值为 0，total 值为 0
   * fetch在catch中可以捕获错误信息，输出：TypeError: Failed to fetch
 * 请求超时，设置超时时间
-  * ajax 支持设置timeout超时，fetch不支持，但可以变相的设置，参见 https://juejin.cn/post/6844903845282185223
+  * ajax 支持设置timeout超时，fetch不支持，但可以变相的设置，参见 <https://juejin.cn/post/6844903845282185223>
   * ajax 设置了timeout超时时间：监听事件onreadystatechange，readyState === 4 时，此时 status 为 0，如果监听了ontimeout，会捕获超时信息，但错误信息中没有错误描述，此时 type 值为 error， loaded 值为 0，total 值为 0
 
 ## 跨域请求
@@ -74,7 +74,7 @@ status的值一定会返回结果。
 
 ## 参考
 
-* https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
-* https://fetch.spec.whatwg.org/
+* <https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch>
+* <https://fetch.spec.whatwg.org/>
 * [Fetch超时设置和终止请求](https://juejin.cn/post/6844903845282185223)
 * [HTTP 响应代码](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)

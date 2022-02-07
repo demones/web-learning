@@ -154,8 +154,7 @@ function getWebSidebar() {
       title: 'JavaScript',
       children: [
         ['javascript/', 'JavaScript'],
-        ['javascript/crypto/', '加密原理'],
-        ['javascript/crypto/crypto-js.html', 'crypto-js'],
+        ['javascript/crypto/', '加密'],
         ['javascript/sendBeacon.html', 'sendBeancon'],
         ['javascript/esnext/', 'esnext 学习笔记'],
         ['javascript/react/', 'React'],

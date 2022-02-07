@@ -74,46 +74,46 @@ if(!navigator.sendBeacon(url, data)){
 当用户关闭浏览器、刷新浏览器或者跳转其他页面时，向服务器发送一些统计数据。
 
 1. 常规方案-直接发送 xhr 请求
-  我们会优先想到监听页面的unload或者beforeunload事件，在事件回调里使用XMLHttpRequest发送异步请求。
+    我们会优先想到监听页面的unload或者beforeunload事件，在事件回调里使用XMLHttpRequest发送异步请求。
 
-  但是由于是xhr请求是异步发送，很可能在它即将发送的时候，页面已经卸载了，从而导致发送取消或者发送失败。异步请求响应返回后，由于页面和相关资源已经卸载，会引起function not found的错误。
+    但是由于是xhr请求是异步发送，很可能在它即将发送的时候，页面已经卸载了，从而导致发送取消或者发送失败。异步请求响应返回后，由于页面和相关资源已经卸载，会引起function not found的错误。
 
-  解决方法就是 AJAX 通信改成同步发送，即只有发送完成，页面才能卸载。
+    解决方法就是 AJAX 通信改成同步发送，即只有发送完成，页面才能卸载。
 
-  ```javascript
-  const syncReport = (url, { data = {}, headers = {} } = {}) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', url, false);
-    xhr.withCredentials = true;
-    Object.keys(headers).forEach((key) => {
-      xhr.setRequestHeader(key, headers[key]);
-    });
-    xhr.send(JSON.stringify(data));
-  };
-  ```
+    ```javascript
+    const syncReport = (url, { data = {}, headers = {} } = {}) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url, false);
+      xhr.withCredentials = true;
+      Object.keys(headers).forEach((key) => {
+        xhr.setRequestHeader(key, headers[key]);
+      });
+      xhr.send(JSON.stringify(data));
+    };
+    ```
 
-  将xhr请求改为同步，虽然能够完成发送数据，但存在以下两个问题：
+    将xhr请求改为同步，虽然能够完成发送数据，但存在以下两个问题：
 
-  部分浏览器已经不支持同步的 XMLHttpRequest 对象了（即open()方法的第三个参数为false）；
-  xhr请求改为同步后，会阻塞页面的卸载和跳转，导致下一个页面导航加载的时机变晚，用户体验较差。
+    部分浏览器已经不支持同步的 XMLHttpRequest 对象了（即open()方法的第三个参数为false）；
+    xhr请求改为同步后，会阻塞页面的卸载和跳转，导致下一个页面导航加载的时机变晚，用户体验较差。
 
 2. 动态图片
 
-  通过在unload事件处理器中，创建一个图片元素并设置它的 src 属性的方法来延迟卸载以保证数据的发送。因为绝大多数浏览器会延迟卸载以保证图片的载入，所以数据可以在卸载事件中发送。
+    通过在unload事件处理器中，创建一个图片元素并设置它的 src 属性的方法来延迟卸载以保证数据的发送。因为绝大多数浏览器会延迟卸载以保证图片的载入，所以数据可以在卸载事件中发送。
 
-  ```javascript
-  const reportData = (url, data) => {
-    let img = document.createElement('img');
-    const params = [];
-    Object.keys(data).forEach((key) => {
-      params.push(`${key}=${encodeURIComponent(data[key])}`);
-    });
-    img.onload = () => img = null;
-    img.src = `${url}?${params.join('&')}`;
-  };
-  ```
+    ```javascript
+    const reportData = (url, data) => {
+      let img = document.createElement('img');
+      const params = [];
+      Object.keys(data).forEach((key) => {
+        params.push(`${key}=${encodeURIComponent(data[key])}`);
+      });
+      img.onload = () => img = null;
+      img.src = `${url}?${params.join('&')}`;
+    };
+    ```
 
-  这种方法存在同样的问题，页面卸载流程被阻塞，后面页面的加载时机被延迟，用户体验不好
+    这种方法存在同样的问题，页面卸载流程被阻塞，后面页面的加载时机被延迟，用户体验不好
 
 3. 通过使用 sendBeacon来发送，上面已提到
 
@@ -139,6 +139,7 @@ if(!navigator.sendBeacon(url, data)){
 * 发出的请求，是放到的浏览器任务队列执行的，脱离了当前页面，所以不会阻塞当前页面的卸载和后面页面的加载过程，用户体验较好
 * 移动端不支持事件 beforeunload，请使用 pagehide
   关于 visibilityState、pagehide 参看这里
+
   <http://www.ruanyifeng.com/blog/2018/10/page_visibility_api.html>
   <http://www.ruanyifeng.com/blog/2018/11/page_lifecycle_api.html>
   <https://www.cnblogs.com/sunshq/p/10286283.html>

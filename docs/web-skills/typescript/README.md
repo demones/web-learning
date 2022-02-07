@@ -1,4 +1,4 @@
-# TypeScript 知识点
+# TypeScript
 
 ## 数据类型
 
@@ -781,7 +781,7 @@ type infoJson = Record<keyof ReturnType<typeof func>, string>
 * esModuleInterop ES 模块，是否有 default
 * moduleResolution 指定模块解析策略，使用 'node'即可
 * paths 一些模块path 路径设置
-* preserveSymlinks 解析路径预处理，启用后，对于模块和包的引用（例如 import 和 /// <reference type="..." /> 指令都相对于符号链接所在的位置进行解析，而不是相对于符号链接解析后的路径。
+* preserveSymlinks 解析路径预处理，启用后，对于模块和包的引用（例如 import 和 /// &lt;reference type="..." /&gt; 指令都相对于符号链接所在的位置进行解析，而不是相对于符号链接解析后的路径。
 * rootDirs 设置多个根目录
 * typeRoots 默认 @types 包都将包含在你的编译过程中，可以通过typeRoots设置仅参与编译的目录类型，比如："typeRoots": ["./typings", "./vendor/types"]
 * types  默认 @types 包都将包含在你的编译过程中，可以通过typeRoots设置仅参与编译的 @types，比如 "types": ["node", "jest", "express"]
