@@ -218,7 +218,7 @@ function getToolsSidebar() {
         ['essential-skills/puppeteer.html', 'puppeteer 学习指南'],
         ['essential-skills/ruby.html', 'ruby 知识点'],
         ['essential-skills/terminal.html', '终端'],
-        ['essential-skills/python.html', 'python 知识点'],
+        ['essential-skills/python/', 'Python 学习笔记'],
         ['essential-skills/tool-software.html', '常用工具软件'],
       ]
     },

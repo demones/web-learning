@@ -16,5 +16,6 @@
 * [nginx 学习笔记](nginx.html)
 * [puppeteer 学习指南](puppeteer.html)
 * [ruby 知识点](ruby.html)
+* [Python 学习笔记](python/)
 * [终端](terminal.html)
 * [常用工具软件](tool-software.html)
