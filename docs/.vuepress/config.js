@@ -124,6 +124,7 @@ module.exports = {
   ]
 };
 
+// web 必备技能
 function getWebSidebar() {
   return [
     {
@@ -180,18 +181,21 @@ function getWebSidebar() {
   ]
 }
 
+// web 前端框架
 function getFrameworkSidebar() {
   return [{
       title: 'VUE 学习笔记',
       children: [
-        ['vue/', 'VUE'],
-        ['vue/vue3/', 'VUE3']
+        ['vue/', 'Vue'],
+        ['vue/vue3/', 'Vue3'],
+        ['vue/vue-cli/', 'Vue cli'],
+        ['vue/vuetify/', 'vuetify 组件库'],
       ]
     },
     {
       title: 'vite',
       children: [
-        ['vue/vite/', 'vite+vue3搭建']
+        ['vite/', 'vite+vue3搭建'],
       ]
     }
   ]

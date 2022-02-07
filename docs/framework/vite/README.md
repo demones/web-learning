@@ -84,8 +84,8 @@ vite.config.ts 对应的设置为
 
 参考
 
-* https://juejin.cn/post/6985500915969032222
-* https://github.com/YuanDaoDao001/vue3-vite-typescript-eslint
+* <https://juejin.cn/post/6985500915969032222>
+* <https://github.com/YuanDaoDao001/vue3-vite-typescript-eslint>
 
 ## vue-router
 
@@ -133,6 +133,8 @@ app.mount('#app')
 
 此时目录结构为：
 
+```shell
+
 ├── assets
 │   └── logo.png
 ├── components
@@ -153,6 +155,7 @@ app.mount('#app')
             │   └── index.vue
             └── home
                 └── index.vue
+```
 
 ## vuex
 

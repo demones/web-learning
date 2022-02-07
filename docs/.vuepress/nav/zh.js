@@ -12,7 +12,8 @@ module.exports = [
   {
     text: 'WEB前端框架',
     items: [
-      { text: 'VUE', link: '/framework/vue/' }
+      { text: 'Vue', link: '/framework/vue/' },
+      { text: 'Vite', link: '/framework/vite/' }
     ]
   },
   {
