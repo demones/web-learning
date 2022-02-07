@@ -1,4 +1,4 @@
-# css 动画 - animation 动画效果
+# 动画(animation)
 
 ## 概述
 
@@ -64,7 +64,7 @@ animation 适应于所有元素，包括伪类 after 和 before
 
 下面分别介绍一下个属性的用法
 
-### 1. animation-name:
+### 1. animation-name
 
 语法
 
@@ -76,19 +76,18 @@ animation-name: 是用来定义一个动画的名称，其主要有两个值：I
 要和Keyframes中的IDENT一致，如果不一致,将不能实现任何动画效果；none为默认值，当值为none时，将没有任何动画效果。
 另外我们这个属性跟前面所讲的transition一样，可以同时附几个animation给一个元素，我们只需要用逗号“，”隔开。
 
-### 2. animation-duration：
+### 2. animation-duration
 
 语法
 
 ```animation-duration: <time>[,<time>]*```
 
-
 取值说明
 
-animation-duration是用来指定元素播放动画所持续的时间，取值: <time>为数值，单位为s（秒.）其默认值为 “0”。
+animation-duration是用来指定元素播放动画所持续的时间，取值: &lt;time>为数值，单位为s（秒.）其默认值为 “0”。
 这个属性跟transition中的transition-duration使用方法是一样的。
 
-### 3. animation-timing-function:
+### 3. animation-timing-function
 
 语法
 
@@ -115,8 +114,7 @@ animation-timing-function: 是指元素根据时间的推进来改变属性值�
 
 6、cubic-bezier：（该值允许你去自定义一个时间曲线）， 特定的 [cubic-bezier曲线](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)。 (x1, y1, x2, y2)四个值特定于曲线上点P1和点P2。所有值需在[0, 1]区域内，否则无效。
 
-
-### 4. animation-delay:
+### 4. animation-delay
 
 语法
 
@@ -124,9 +122,8 @@ animation-timing-function: 是指元素根据时间的推进来改变属性值�
 
 取值说明
 
-animation-delay: 是用来指定元素动画开始时间。取值为<time>为数值，单位为s(秒)，其默认值也是0。
+animation-delay: 是用来指定元素动画开始时间。取值为&lt;time>为数值，单位为s(秒)，其默认值也是0。
 这个属性和transition-delay使用方法是一样的。
-
 
 ### 5. animation-iteration-count
 
@@ -134,10 +131,9 @@ animation-delay: 是用来指定元素动画开始时间。取值为<time>为数
 
 ```animation-iteration-count:infinite | <number> [, infinite | <number>]*```
 
-
 取值说明
 
-animation-iteration-count 是用来指定元素播放动画的循环次数，其可以取值<number>为数字，其默认值为 1
+animation-iteration-count 是用来指定元素播放动画的循环次数，其可以取值&lt;number>为数字，其默认值为 1
 infinite为无限次数循环。
 
 ### 6. animation-direction
@@ -153,7 +149,6 @@ infinite为无限次数循环。
 * alternate（交替）如果你的动画的iteration-count属性的值大于1，你可以使用alternate值。第一次按照正常的顺序播放，第二次就会反向播放，然后正向，然后反向……方向交替，从正向开始，直到iteration-count跑完
 * alternate-reverse（交替反转）alternate-reverse是和alternate一样的意思，它是从反方向开始的。
 
-
 ### 7. animation-fill-mode
 
 animation-fill-mode 属性可以接受四个值
@@ -165,11 +160,9 @@ animation-fill-mode 属性可以接受四个值
 
 ### 8. animation-play-state
 
-
 语法
 
 ```animation-play-state:running | paused [, running | paused]*```
-
 
 取值说明
 
@@ -208,7 +201,6 @@ animation: myAnimation 1s ease-in-out 2s 4, myOtherAnimation 4s ease-out 2s;
 * [三次贝塞尔曲线的交互版本-缓动函数速查表](http://easings.net/)
 * [Penner easing方程](http://robertpenner.com/easing/) 有各种语言的版本，less，sass 和 js 等
 * [网页动画的十二原则](http://www.w3cplus.com/css3/animation-principles-for-the-web.html)
-
 
 ## animation 与 keyframes 结合使用
 
@@ -259,7 +251,7 @@ CSS3的animation类似于transition属性，他们都是随着时间改变元素
   }
 ```
 
-点击查看 [wobble 例子效果](../../examples/css3/animation/animation/wobble.html)
+点击查看 [wobble 例子效果](/examples/css/animation/animation/wobble.html)
 
 CSS Animation动画效果将会影响元素相对应的css值，在整个动画过程中，元素的变化属性值完全是由animation来控制，
 动画后面的会覆盖前面的属性值。如上面例子，其默认值是：margin-left:100px;background: blue；
@@ -338,7 +330,7 @@ CSS Code
 
 效果
 
-[发光变色的button](../../examples/css3/animation/animation/button-light.html)
+[发光变色的button](/examples/css/animation/animation/button-light.html)
 
 ### 2. 方形旋转变成圆形
 
@@ -351,7 +343,6 @@ HTML Code
 <a href="#" class="box" id="round"></a>
 <span class="click-btn">Click</span>
 ```
-
 
 CSS Code
 
@@ -448,25 +439,24 @@ document.getElementByClass('click-btn')[0].addEventListener('click', function() 
 }, false);
 ```
 
-
 载入时 box 是没有任何动画效果的，当我们点击了click button 后会给原 box 上加上一个 round 的 class样式，从而触发了一个round的动作。请看效果
 
-[方形旋转变成圆形](../../examples/css3/animation/animation/round.html)
-
+[方形旋转变成圆形](/examples/css/animation/animation/round.html)
 
 更多例子可以参考这里
+
 * [webdesignersblog](http://www.webdesignersblog.net/css3/35-best-awesome-css3-animation-demos/)
 * [slodive](http://slodive.com/web-development/best-css3-animation-demos-tutorials/)
 * [impressivewebs](http://www.impressivewebs.com/demo-files/css3-animated-scene/)
 
-
 ## 动画相关事件
 
 可以参见这篇文章
-http://www.sitepoint.com/css3-animation-javascript-event-handlers/
+
+<http://www.sitepoint.com/css3-animation-javascript-event-handlers/>
 
 ## 参考文章
 
-* http://www.w3cplus.com/content/css3-animation
-* http://www.w3cplus.com/css3/CSS3-animation.html
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation
+* <http://www.w3cplus.com/content/css3-animation>
+* <http://www.w3cplus.com/css3/CSS3-animation.html>
+* <https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation>

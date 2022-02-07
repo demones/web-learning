@@ -1,38 +1,37 @@
-# css 动画 - transform 变形
+# 变形(transform)
 
 ## transform
 
 ### 语法
 
 ```css
-transform: none;
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
-transform: translate(12px, 50%);
-transform: translateX(2em);
-transform: translateY(3in);
-transform: scale(2, 0.5);
-transform: scaleX(2);
-transform: scaleY(0.5);
-transform: rotate(0.5turn);
-transform: skew(30deg 30deg);
-transform: skewX(30deg);
-transform: skewY(1.07rad);
-transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0);
-transform: translate3d(12px, 50%, 3em);
-transform: translateZ(2px);
-transform: scale3d(2.5, 1.2, 0.3);
-transform: scaleZ(0.3);
-transform: rotate3d(1, 2.0, 3.0, 10deg);
-transform: rotateX(10deg);
-transform: rotateY(10deg);
-transform: rotateZ(10deg);
-transform: perspective(17px);
-
-transform: translateX(10px) rotate(10deg) translateY(5px);
+  transform: none;
+  transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+  transform: translate(12px, 50%);
+  transform: translateX(2em);
+  transform: translateY(3in);
+  transform: scale(2, 0.5);
+  transform: scaleX(2);
+  transform: scaleY(0.5);
+  transform: rotate(0.5turn);
+  transform: skew(30deg 30deg);
+  transform: skewX(30deg);
+  transform: skewY(1.07rad);
+  transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0);
+  transform: translate3d(12px, 50%, 3em);
+  transform: translateZ(2px);
+  transform: scale3d(2.5, 1.2, 0.3);
+  transform: scaleZ(0.3);
+  transform: rotate3d(1, 2.0, 3.0, 10deg);
+  transform: rotateX(10deg);
+  transform: rotateY(10deg);
+  transform: rotateZ(10deg);
+  transform: perspective(17px);
+  transform: translateX(10px) rotate(10deg) translateY(5px);
 ```
 
 ```css
-transform:  <transform-function> [<transform-function>]* | none
+  transform:  <transform-function> [<transform-function>]* | none
 ```
 
 ### 说明
@@ -53,7 +52,7 @@ transform:  <transform-function> [<transform-function>]* | none
 
 ### 例子
 
-[各种属性值实例](../../examples/css3/animation/transform/transform.html)
+[各种属性值实例](/examples/css/animation/transform/transform.html)
 
 transform运用多个属性值例子
 
@@ -64,7 +63,7 @@ transform运用多个属性值例子
    background: red;
    display: block;
  }
- .transform-multi a:hover {  
+ .transform-multi a:hover {
    -moz-transform: rotate(45deg) scale(0.8,1.2) skew(60deg,-30deg);
    -webkit-transform: rotate(45deg) scale(0.8,1.2) skew(60deg,-30deg);
    -o-transform: rotate(45deg) scale(0.8,1.2) skew(60deg,-30deg);
@@ -74,7 +73,6 @@ transform运用多个属性值例子
 ```
 
 这里需要注意的是使用多个属性值时，其之间不能用逗号（,）分隔，必须使用空格分隔。
-
 
 ## transform-origin
 
@@ -104,22 +102,24 @@ transform-origin: bottom right 2cm; /* y-offset-keyword x-offset-keyword z-offse
 ```
 
 ### 说明
-定义的基点值偏移量是指：
-* x-offset 距离盒模型的左侧的<length>或<percentage>偏移值。
-* y-offset 距离盒模型的顶部的<length>或<percentage>偏移值。
-* z-offset 定义变形中心距离用户视线（z=0处）的<length>（不能是百分比 &lt;percentage&gt;）偏移值。
-* 可以指定负值
 
+定义的基点值偏移量是指：
+
+* x-offset 距离盒模型的左侧的&lt;length&gt;或&lt;percentage&gt;偏移值。
+* y-offset 距离盒模型的顶部的&lt;length&gt;或&lt;percentage&gt;偏移值。
+* z-offset 定义变形中心距离用户视线（z=0处）的&lt;length&gt;（不能是百分比 &lt;percentage&gt;）偏移值。
+* 可以指定负值
 
 ## transform-style
 
 ### 语法
 
-```
+```css
 transform-style: flat | preserve-3d
 ```
 
 ### 说明
+
 transform-style属性可以指定该元素在三维空间（3D）中展示，还是在二维空间中展示。有两个属性值：flat和preserve-3d，默认为 flat。
 
 其中flat值为默认值，表示所有子元素在2D平面呈现。preserve-3d表示所有子元素在3D空间中呈现。
@@ -128,35 +128,36 @@ transform-style属性可以指定该元素在三维空间（3D）中展示，还
 
 transform-style属性需要设置在父元素中，并且高于任何嵌套的变形元素。
 
-[实例](../../examples/css3/animation/transform/transform-style.html)
+[实例](/examples/css/animation/transform/transform-style.html)
 
 从上面的实例可以看出，当元素.rotate设置了flat值时，其子元素img不会根据translateZ()值摊开，而在同一平面旋转；当元素.rotate设置了preserve-3d值时，其子元素img会根据translateZ()值摊开，不再会堆叠在一起。
 
 有一点需要特别注意，如果你的元素设置了transform-style值为preserve-3d，就不能为了防止子元素溢出容器而设置overflow值为hidden，如果设置了overflow:hidden同样可以迫死子元素出现在同一平面（和元素设置了transform-style为flat效果一样）。
 
-
 ## perspective
 
 ### 说明
+
 perspective 属性对于3D变形来说至关重要。该属性会设置查看者的位置，并将可视内容映射到一个视锥上，继而投到一个2D视平面上。如果不指定透视 perspective，则Z轴空间中的所有点将平铺到同一个2D视平面中，并且变换结果中将不存在景深效果。
 
 上面的描述可能让人难以理解，其实对于perspective属性，我们可以简单的理解为视距，用来设置用户和元素3D空间Z平面之间的距离。而其效应由他的值来决定，值越小，用户与3D空间Z平面距离越近，3D视觉效果更令人印象深刻；反之，值越大，用户与3D空间Z平面距离越远，3D视觉效果就很小。
 
-[实例](../../examples/css3/animation/transform/perspective.html)
+[实例](/examples/css/animation/transform/perspective.html)
 
 从上面的例子中可以看出，当没有设置 perspective 时，3d 属性值是不起作用的。
 
 ### 语法
+
 我们再看一下 perspective 的语法
 
-```
+```css
 perspective：none | <length>
 
 /* Keyword value */
 perspective: none;
 
 /* <length> values */
-perspective: 20px;  
+perspective: 20px;
 perspective: 3.5em;
 
 /* Global values */
@@ -166,13 +167,11 @@ perspective: unset;
 ```
 
 perspective属性包括两个属性值：none和具有单位的长度值。其中perspective属性的默认值为none，表示从无限的角度来看3D物体，所以看上去是平的（2D）。
-另一个值<length>接受一个长度单位大于0的值。而且其单位不能为百分比值，也不能为负值或0。<length>值越大，角度出现的越远，从而创建一个相当低的强度和非常小的3D空间变化。反之，此值越小，角度出现的越近，从而创建一个高强度的角度和一个大型3D变化。
+另一个值&lt;length&gt;接受一个长度单位大于0的值。而且其单位不能为百分比值，也不能为负值或0。&lt;length&gt;值越大，角度出现的越远，从而创建一个相当低的强度和非常小的3D空间变化。反之，此值越小，角度出现的越近，从而创建一个高强度的角度和一个大型3D变化。
 
+比如你站在10英尺和1000英尺的地方看一个10英尺的立方体。在10英尺的地方，你距离立方体是一样的尺寸。因此视角转变远远大于站在1000英尺处的，立体尺寸是你距离立方体距离的百分之一。同样的思维适用于perspective的&lt;length&gt;值。我们一起来看一个实例，来加强这方面的理解：
 
-比如你站在10英尺和1000英尺的地方看一个10英尺的立方体。在10英尺的地方，你距离立方体是一样的尺寸。因此视角转变远远大于站在1000英尺处的，立体尺寸是你距离立方体距离的百分之一。同样的思维适用于perspective的<length>值。我们一起来看一个实例，来加强这方面的理解：
-
-[实例2](../../examples/css3/animation/transform/perspective2.html)
-
+[实例2](/examples/css/animation/transform/perspective2.html)
 
 ### perspective 属性 与 transform 属性函数值 perspective 的区别
 
@@ -196,7 +195,7 @@ perspective属性包括两个属性值：none和具有单位的长度值。其�
 
 看以下例子：
 
-[实例3](../../examples/css3/animation/transform/perspective3.html)
+[实例3](/examples/css/animation/transform/perspective3.html)
 
 从上面的例子可以看出，虽然书写的形式，属性名称不一致，但是效果却一样。
 
@@ -208,11 +207,12 @@ perspective属性包括两个属性值：none和具有单位的长度值。其�
 * perspective属性用于变形对像父元素；而perspective()函数用于变形对像自身，并可以和transform其他函数一起使用。
 
 ## perspective-origin
+
 利用 perspective 设置3D 效果，默认情况下，消失点位于元素的中心，但是可以通过设置perspective-origin属性来改变其位置。它实际上设置了X轴和Y轴位置，在该位置观看者好像在观看该元素的子元素。
 
 ### 语法
 
-```
+```css
 perspective-origin：[<percentage> | <length> | left | center | right | top | bottom] |
  [[<percentage> | <length> | left | center | right] && [<percentage> | <length> | top |
   center | bottom]]
@@ -227,9 +227,9 @@ perspective-origin：[<percentage> | <length> | left | center | right | top | bo
 
 ### 示例
 
-[例子](../../examples/css3/animation/transform/perspective3.html)
+[例子](/examples/css/animation/transform/perspective3.html)
 
-该示例来至于 https://css-tricks.com/almanac/properties/p/perspective-origin/
+该示例来至于 <https://css-tricks.com/almanac/properties/p/perspective-origin/>
 
 ## backface-visibility
 
@@ -241,7 +241,7 @@ backface-visibility 属性指定当元素背面朝向观察者时是否可见。
 
 ### 语法
 
-```
+```css
 backface-visibility: visible
 backface-visibility: hidden
 ```
@@ -251,26 +251,27 @@ backface-visibility: hidden
 
 简单点来说，backface-visibility 属性可用于隐藏内容的背面。默认情况下，背面可见，这意味着即使在翻转后，旋转的内容仍然可见。但当 backface-visibility 设置为hidden时，旋转后内容将隐藏，因为旋转后正面将不再可见。该功能可帮助您模拟多面的对象，例如下例中使用的纸牌。通过将backface-visibility设置为hidden，您可以轻松确保只有正面可见。
 
-[扑克牌翻转例子](../../examples/css3/animation/transform/backface-visibility.html)
+[扑克牌翻转例子](/examples/css/animation/transform/backface-visibility.html)
 
 下面我们再看一个例子，通过3D立方体的展示来说明 backface-visibility 的用法
 
-[3D立方体](../../examples/css3/animation/transform/backface-visibility2.html)
+[3D立方体](/examples/css/animation/transform/backface-visibility2.html)
 
 ## 3D 翻转例子
+
 该例子来至于互联网
-[3D翻转](../../examples/css3/animation/transform/Cubelnformation/)
+[3D翻转](/examples/css/animation/transform/Cubelnformation/)
 
 ## 参考文章
 
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective-origin
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/backface-visibility
-* http://www.w3cplus.com/content/css3-transform
-* http://www.w3cplus.com/css3/transform-origin.html
-* http://www.w3cplus.com/css3/transform-basic-property.html
-* http://www.w3cplus.com/css3/css3-2d-transform.html
-* http://www.w3cplus.com/css3/css3-3d-transform.html
+* <https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform>
+* <https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin>
+* <https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms>
+* <https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective>
+* <https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective-origin>
+* <https://developer.mozilla.org/zh-CN/docs/Web/CSS/backface-visibility>
+* <http://www.w3cplus.com/content/css3-transform>
+* <http://www.w3cplus.com/css3/transform-origin.html>
+* <http://www.w3cplus.com/css3/transform-basic-property.html>
+* <http://www.w3cplus.com/css3/css3-2d-transform.html>
+* <http://www.w3cplus.com/css3/css3-3d-transform.html>
