@@ -6,6 +6,7 @@
 * [mac 实用技能](mac.html)
 * [node 知识点](node.html)
 * [npm 学习笔记](npm.html)
+* [pnpm 学习笔记](pnpm.html)
 * [vscode 操作指南](vscode.html)
 * [WebStorm 操作指南](webstorm.html)
 * [atom 使用技巧](atom.html)
