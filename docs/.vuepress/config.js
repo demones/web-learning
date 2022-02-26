@@ -149,6 +149,7 @@ function getWebSidebar() {
         ['css/animation/animation.html', '动画(animation)'],
         ['css/flex/', 'Flexbox 布局'],
         ['css/icon/', 'css 图标'],
+        ['css/stylelint.html/', 'stylelint 格式化代码'],
       ]
     },
     {
@@ -170,6 +171,7 @@ function getWebSidebar() {
       title: 'TypeScript',
       children: [
         ['typescript/', 'TypeScript'],
+        ['typescript/skills', 'TypeScript 技巧'],
       ]
     },
     {
@@ -211,6 +213,7 @@ function getToolsSidebar() {
         ['essential-skills/mac.html', 'mac 实用技能'],
         ['essential-skills/node.html', 'node 知识点'],
         ['essential-skills/npm.html', 'npm 学习笔记'],
+        ['essential-skills/pnpm.html', 'pnpm 学习笔记'],
         ['essential-skills/vscode.html', 'vscode 操作指南'],
         ['essential-skills/webstorm.html', 'WebStorm 操作指南'],
         ['essential-skills/atom.html', 'atom 使用技巧'],
